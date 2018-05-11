@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//后台
+Route::group([],function(){
+
+	Route::get('admin/index','admin\IndexController@index');
+
+});
+
+//前台
+Route::group([],function(){
+
+
+
+});
