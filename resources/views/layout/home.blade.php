@@ -57,9 +57,7 @@
 
     </head>
 
-    @section('content')
-
-    @show
+    
 
     <body class="">
 
@@ -230,7 +228,10 @@
 
 </header>
 
+@section('content')
 
+
+@show
 
 
         <footer id="oc-footer" class="oc-footer miniprogram-hide">
