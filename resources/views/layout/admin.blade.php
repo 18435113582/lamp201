@@ -32,7 +32,7 @@
 <link rel="stylesheet" type="text/css" href="/admins/css/mws-theme.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/admins/css/themer.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/admins/css/admins.css" media="screen">
-
+<link rel="stylesheet" type="text/css" href="/layui/css/layui.css"  media="screen">
 <title>@yield('title')</title>
 
 </head>
@@ -112,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- User Information and functions section -->
             <div id="mws-user-info" class="mws-inset">
             
@@ -168,6 +168,18 @@
                     </li>
                 </ul>
             </div>
+
+            <div id="mws-navigation">
+                <ul>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> 店铺管理</a>
+                        <ul>
+                            <li><a href="/admin/StoreIndex/create">添加店铺</a></li>
+                            <li><a href="/admin/StoreIndex">店铺列表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         
         <!-- Main Container Start -->
@@ -214,6 +226,8 @@
             $.fn.tabs && $('.mws-tabs').tabs();
         });
     </script>
+
+    <script src="/layui/layui.js"></script>
 
     @section('js')
 
