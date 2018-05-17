@@ -20,6 +20,7 @@ Route::group([],function(){
 
 	Route::get('admin/index','admin\IndexController@index');
 
+
 });
 
 //前台
@@ -108,6 +109,8 @@ Route::group([],function(){
 Route::group([],function(){
 
 	Route::get('home/index','home\StoreController@index');
+	Route::get('home/StoreIndex','home\StoreController@store');
+	Route::get('home/StoreAjax','home\StoreController@stajax');
 
 });
 

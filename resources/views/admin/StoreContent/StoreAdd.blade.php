@@ -65,7 +65,7 @@
     			<div class="mws-form-row">
     				<label class="mws-form-label">地域选择</label>
     				<div class="mws-form-item">
-    					<select class="form-control" placeholder="请选择" name="city" id="city">
+    					<select class="form-control" name="city" id="city">
     						
 						</select>
 						<select class="form-control" name="area" id="area">
@@ -132,7 +132,7 @@
 
 			var op = new Option(ass[cv][i],i);
 
-			area.options.add(op)
+			area.options.add(op);
 
 		}
 

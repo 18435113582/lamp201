@@ -58,7 +58,7 @@
     <tr>
       <th>id</th>
       <th>店铺名</th>
-      <th>店铺地址</th>
+      <th style="width:200px">店铺地址</th>
       <th>营业时间</th>
       <th>店铺类型</th>
       <th>联系电话</th>
