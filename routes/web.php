@@ -308,6 +308,7 @@ Route::group([],function(){
 
 
 
+
  
 
 
@@ -326,3 +327,8 @@ Route::group([],function(){
 	Route::get('/','home\FirstController@index');
 
 });
+
+
+
+
+
