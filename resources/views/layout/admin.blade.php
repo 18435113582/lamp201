@@ -166,6 +166,20 @@
                             <li><a href="#">用户列表</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> 商品类别管理</a>
+                        <ul>
+                            <li><a href="/admin/cate/create">添加分类</a></li>
+                            <li><a href="/admin/cate">分类列表</a></li>
+                        </ul>
+                    </li>
+                     <li>
+                        <a href="#"><i class="icon-list"></i> 商品管理</a>
+                        <ul>
+                            <li><a href="/admin/goods/create">添加商品</a></li>
+                            <li><a href="/admin/goods">浏览商品</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
