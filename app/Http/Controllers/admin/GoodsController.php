@@ -211,6 +211,13 @@ class GoodsController extends Controller
            
         if($request->hasFile('gpic')){
 
+            $info = DB::table('shop_goods')->where('gid',$id)->first();
+            if($info->gpic){
+
+                unlink('.'.$info->gpic);
+            }
+            
+
             $gimg = $request->file('gpic');
 
             $name = rand(1111,9999).time();
@@ -253,7 +260,10 @@ class GoodsController extends Controller
             }
             $show = DB::table('goods_show')->where('gid',$id)->get();
             foreach ($show as $k => $v) {
-                unlink('.'.$v->gpic);
+                if($info->gpic){
+
+                unlink('.'.$info->gpic);
+                }
             }
             DB::table('goods_show')->where('gid',$id)->delete();
             DB::table('goods_show')->insert($imgs);
@@ -287,13 +297,17 @@ class GoodsController extends Controller
             }
             $det = DB::table('goods_det')->where('gid',$id)->get();
             foreach ($det as $k => $v) {
-                unlink('.'.$v->gpic);
+               if($info->gpic){
+
+                    unlink('.'.$info->gpic);
+                }
             }
             DB::table('goods_det')->where('gid',$id)->delete();
             DB::table('goods_det')->insert($imgs);
         }
-        $info = DB::table('shop_goods')->where('gid',$id)->first();
-        unlink('.'.$info->gpic);
+
+        
+
         $data = DB::table('shop_goods')->where('gid',$id)->update($res);
         if($data){
 

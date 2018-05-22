@@ -20,6 +20,7 @@ Route::group([],function(){
 
 	Route::get('admin/index','admin\IndexController@index');
 
+
 });
 
 //前台
@@ -324,7 +325,12 @@ Route::group([],function(){
 
 	Route::resource('admin/cate','admin\CateController');
 	Route::resource('admin/goods','admin\GoodsController');
-	Route::get('/','home\FirstController@index');
+	Route::get('home/shop','home\GoodsController@index');
+	Route::get('home/read/{id}','home\GoodsController@read');
+	Route::get('cart/create','home\CartController@create');
+	Route::get('cart/index','home\CartController@index');
+	Route::get('cart/delete','home\CartController@delete');
+	Route::get('cart/cnt','home\CartController@cnt');
 
 });
 
