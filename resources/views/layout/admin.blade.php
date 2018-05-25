@@ -112,24 +112,33 @@
                     </div>
                 </div>
             </div>
+
+
+            <?php 
+                    $res = DB::table('user')->where('id',session('uid'))->first();
+
+            ?>
             
             <!-- User Information and functions section -->
             <div id="mws-user-info" class="mws-inset">
             
                 <!-- User Photo -->
                 <div id="mws-user-photo">
-                    <img src="/admins/example/profile.jpg" alt="User Photo">
+                    <img src="{{$res->profile}}" alt="User Photo">
                 </div>
+
+
+
                 
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
                     <div id="mws-username">
-                        Hello, John Doe
+                        您好! {{$res->username}}
                     </div>
                     <ul>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Change Password</a></li>
-                        <li><a href="index.html">Logout</a></li>
+                        <li><a href="/admin/profile">修改头像</a></li>
+                        <li><a href="/admin/pass">修改密码</a></li>
+                        <li><a href="/admin/loginout">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -160,10 +169,10 @@
             <div id="mws-navigation">
                 <ul>
                     <li>
-                        <a href="#"><i class="icon-list"></i> 用户管理</a>
+                        <a href="#"><i class="icon-users"></i> 用户管理</a>
                         <ul>
-                            <li><a href="#">添加用户</a></li>
-                            <li><a href="#">用户列表</a></li>
+                            <li><a href="/admin/user/create">添加用户</a></li>
+                            <li><a href="/admin/user">用户列表</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -172,14 +181,26 @@
         
         <!-- Main Container Start -->
         <div id="mws-container" class="clearfix">
+
+                @if(session('msg'))
+                <div class="mws-form-message success">
+                    <ul class="list-unstyled">
+                        <li sytle='font-size:20px'>{{session('msg')}}</li>
+                       
+                    </ul>
+                </div>
+                @endif
+        
+            <!-- Inner Container Start -->
             <div class="container">
             @section('content')
 
             @show
-            </div>     
+            </div> 
+            <!-- Inner Container End -->    
             <!-- Footer -->
             <div id="mws-footer">
-                Copyright Your Website 2012. All Rights Reserved.
+                Copyright Your Website 2018. All Rights Reserved.
             </div>
             
         </div>
