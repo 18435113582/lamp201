@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "acd084b5358b65616e22bbbb262d6db8",
+    "content-hash": "5a0edabe899f7ed5e00ea6eaba064e5e",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -330,7 +330,11 @@
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
                 "url": "https://api.github.com/repos/Gregwar/Captcha/zipball/a96d8dffc80d6213958bd19fbdef1555e8b63ca3",
+=======
+                "url": "https://files.phpcomposer.com/files/Gregwar/Captcha/a96d8dffc80d6213958bd19fbdef1555e8b63ca3.zip",
+>>>>>>> origin/wsm123
                 "reference": "a96d8dffc80d6213958bd19fbdef1555e8b63ca3",
                 "shasum": ""
             },
@@ -374,6 +378,7 @@
             "time": "2018-04-24T09:20:08+00:00"
         },
         {
+<<<<<<< HEAD
             "name": "guzzlehttp/psr7",
             "version": "1.4.2",
             "source": {
@@ -509,6 +514,8 @@
             "time": "2017-09-21T16:29:17+00:00"
         },
         {
+=======
+>>>>>>> origin/wsm123
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {

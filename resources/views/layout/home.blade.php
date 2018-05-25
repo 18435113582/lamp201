@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="zh-CN" class="no-js">
 
     <head>
@@ -12,14 +13,24 @@
         <meta name="baidu-site-verification" content="e2wIIvjSch" />
         <meta name="monitor" content="AI智能拍照，让美更自然" />
         <link media="all" type="text/css" rel="stylesheet" href="/css/common.css">
+
         <link rel="stylesheet" type="text/css" href="/layui/css/layui.css"  media="screen">
-        <!-- <link media="all" type="text/css" rel="stylesheet" href="/css/products.css"> -->
+
+
+        <link media="all" type="text/css" rel="stylesheet" href="/css/shop.css">
+        <link media="all" type="text/css" rel="stylesheet" href="/css/store.css">
+            <link media="all" type="text/css" rel="stylesheet" href="/css/products.css">
+
+
+
+
         <link rel="stylesheet" href="/bs/css/bootstrap.min.css">
         <link rel="stylesheet" href="/bs/css/bootstrap-theme.min.css">
         <script type="text/javascript" src="/bs/js/jquery.js"></script>
         <script type="text/javascript" src="/bs/js/bootstrap.min.js"></script>
 
         <!-- <script>
+
           window['OPPO_CONFIG_ATTR'] = {};
 
           OPPO_CONFIG_ATTR['base_url']          = '//www.opposhop.cn';
@@ -63,7 +74,7 @@
 
       
       <div id="oc-wrapper" class="">
-        <header id="oc-header" class="oc-header">
+        <header id="oc-header" class="oc-header oh-theme-black">
         <span style="display: none;">
         <svg xmlns="http://www.w3.org/2000/svg"><symbol id="oppo-logo-common"viewBox="0 0 415 67"><path d="M48.9.3C22.1.3.3 11.2.3 24.5s21.8 24.2 48.6 24.2 48.6-10.8 48.6-24.2S75.8.3 48.9.3zm-4.7 41.4c-17.9 0-32.4-7.8-32.4-17.5S26.3 6.7 44.2 6.7s32.4 7.8 32.4 17.5-14.5 17.5-32.4 17.5zM366.1.3c-26.9 0-48.6 10.8-48.6 24.2s21.8 24.2 48.6 24.2 48.6-10.8 48.6-24.2S392.9.3 366.1.3zm-4.8 41.4c-17.9 0-32.4-7.8-32.4-17.5s14.5-17.5 32.4-17.5 32.4 7.8 32.4 17.5-14.4 17.5-32.4 17.5zM156.1.3c-8.3 0-16.7 1-22.7 2.9v6.6c5.8-2.1 11.9-3.1 18-3 17.9 0 32.3 7.8 32.3 17.5s-14.5 17.5-32.4 17.5c-12.6 0-23.9-3.9-28.9-9.6V1.7h-18v65h18V42c9 4.1 20.5 6.7 33.5 6.7 26.8 0 48.7-10.8 48.7-24.2S182.9.3 156.1.3zM262.6.3c-7.8 0-15.6.9-23.2 2.9v6.6c6-2 12.2-3 18.5-3 17.9 0 32.5 7.8 32.5 17.5S276 41.7 258.1 41.7c-12.6 0-23.7-3.9-28.7-9.6V1.7h-18v65h17.8V42.3c8.7 4.1 20.5 6.6 33.6 6.6 26.8 0 48.5-10.9 48.5-24.3S289.4.3 262.6.3z"/></symbol></svg>
     </span>
@@ -230,7 +241,7 @@
 
 @section('content')
 
-
+    
 @show
 
 
@@ -350,3 +361,4 @@
 
 </html>
 <!-- cached at 2018-05-10 21:00:32 -->
+

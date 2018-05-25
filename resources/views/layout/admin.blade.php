@@ -33,6 +33,7 @@
 <link rel="stylesheet" type="text/css" href="/admins/css/themer.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/admins/css/admins.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/layui/css/layui.css"  media="screen">
+<script type="text/javascript" src="/bs/js/jquery.js"></script>
 <title>@yield('title')</title>
 
 </head>
@@ -113,23 +114,33 @@
                 </div>
             </div>
 
+
+
+            <?php 
+                    $res = DB::table('user')->where('id',session('uid'))->first();
+
+            ?>
+            
             <!-- User Information and functions section -->
             <div id="mws-user-info" class="mws-inset">
             
                 <!-- User Photo -->
                 <div id="mws-user-photo">
-                    <img src="/admins/example/profile.jpg" alt="User Photo">
+                    <img src="{{$res->profile}}" alt="User Photo">
                 </div>
+
+
+
                 
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
                     <div id="mws-username">
-                        Hello, John Doe
+                        您好! {{$res->username}}
                     </div>
                     <ul>
-                        <li><a href="#">Profile</a></li>
-                        <li><a href="#">Change Password</a></li>
-                        <li><a href="index.html">Logout</a></li>
+                        <li><a href="/admin/profile">修改头像</a></li>
+                        <li><a href="/admin/pass">修改密码</a></li>
+                        <li><a href="/admin/loginout">退出</a></li>
                     </ul>
                 </div>
             </div>
@@ -159,10 +170,38 @@
             <div id="mws-navigation">
                 <ul>
                     <li>
-                        <a href="#"><i class="icon-list"></i> 用户管理</a>
+                        <a href="#"><i class="icon-users"></i> 用户管理</a>
                         <ul>
-                            <li><a href="#">添加用户</a></li>
-                            <li><a href="#">用户列表</a></li>
+                            <li><a href="/admin/user/create">添加用户</a></li>
+                            <li><a href="/admin/user">用户列表</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> 商品类别管理</a>
+                        <ul>
+                            <li><a href="/admin/cate/create">添加分类</a></li>
+                            <li><a href="/admin/cate">分类列表</a></li>
+                        </ul>
+                    </li>
+                     <li>
+                        <a href="#"><i class="icon-list"></i> 商品管理</a>
+                        <ul>
+                            <li><a href="/admin/goods/create">添加商品</a></li>
+                            <li><a href="/admin/goods">浏览商品</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> 商城轮播图管理</a>
+                        <ul>
+                            <li><a href="/img/create">添加轮播商品</a></li>
+                            <li><a href="/img/index">浏览轮播商品</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> 订单管理</a>
+                        <ul>
+                            <li><a href="/admin/orders">浏览订单</a></li>
+                           
                         </ul>
                     </li>
                 </ul>
@@ -194,14 +233,26 @@
         
         <!-- Main Container Start -->
         <div id="mws-container" class="clearfix">
+
+                @if(session('msg'))
+                <div class="mws-form-message success">
+                    <ul class="list-unstyled">
+                        <li sytle='font-size:20px'>{{session('msg')}}</li>
+                       
+                    </ul>
+                </div>
+                @endif
+        
+            <!-- Inner Container Start -->
             <div class="container">
             @section('content')
 
             @show
-            </div>     
+            </div> 
+            <!-- Inner Container End -->    
             <!-- Footer -->
             <div id="mws-footer">
-                Copyright Your Website 2012. All Rights Reserved.
+                Copyright Your Website 2018. All Rights Reserved.
             </div>
             
         </div>
@@ -216,9 +267,9 @@
     <script src="/admins/custom-plugins/fileinput.js"></script>
     
     <!-- jQuery-UI Dependent Scripts -->
-    <script src="/admins/jui/js/jquery-ui-1.9.2.min.js"></script>
+    <!-- <script src="/admins/jui/js/jquery-ui-1.9.2.min.js"></script>
     <script src="/admins/jui/jquery-ui.custom.min.js"></script>
-    <script src="/admins/jui/js/jquery.ui.touch-punch.js"></script>
+    <script src="/admins/jui/js/jquery.ui.touch-punch.js"></script> -->
 
     <!-- Plugin Scripts -->
     <script src="/admins/plugins/colorpicker/colorpicker-min.js"></script>
