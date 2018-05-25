@@ -179,6 +179,17 @@
                     </li>
                 </ul>
             </div>
+
+            <div id="mws-navigation">
+                <ul>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> 维修管理</a>
+                        <ul>
+                            <li><a href="/admin/ServerIndex">维修列表</a></li> 
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         
         <!-- Main Container Start -->

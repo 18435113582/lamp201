@@ -25,9 +25,36 @@ class StoreController extends Controller
     public function stajax(Request $req)
     {
 
-    	// $res = $req->get('city');
 
-    	// var_dump($res);
+
+    	$ct = $req->get('city');
+    	$ae = $req->get('area');
+    	$tp = $req->get('type');
+
+
+    	// var_dump($ct);
+    	// var_dump($ae);
+    	// var_dump($tp);
+    	if($tp == 0){
+    		$data = DB::table('op_store')
+    		->where('city',$ct)
+    		->where('area',$ae)
+    		->get();
+    	} else {
+			$data = DB::table('op_store')
+			->where('city',$ct)
+			->where('area',$ae)
+			->where('StoreType',$tp)
+			->get();
+    	}
+
+    	if(count($data) > 0){
+
+			return $data;
+    	} else {
+
+    		echo 0;
+    	}
 
     }
 }

@@ -12,7 +12,7 @@
         <meta name="baidu-site-verification" content="e2wIIvjSch" />
         <meta name="monitor" content="AI智能拍照，让美更自然" />
         <link media="all" type="text/css" rel="stylesheet" href="/css/common.css">
-        <!-- <link rel="stylesheet" type="text/css" href="/layui/css/layui.css"  media="screen"> -->
+        <link rel="stylesheet" type="text/css" href="/layui/css/layui.css"  media="screen">
         <!-- <link media="all" type="text/css" rel="stylesheet" href="/css/products.css"> -->
         <link rel="stylesheet" href="/bs/css/bootstrap.min.css">
         <link rel="stylesheet" href="/bs/css/bootstrap-theme.min.css">
@@ -234,7 +234,7 @@
 @show
 
 
-        <footer id="oc-footer" class="oc-footer miniprogram-hide">
+        <footer id="oc-footer" style="background-color:#f5f5f5;" class="oc-footer miniprogram-hide">
 
         <section class="of-nav">
                         <nav class="of-directory">
@@ -334,157 +334,12 @@
         
       </div>
 
-      
-<section class="oc-model terms-model mask-index-top hasTitle bottom-layout" data-model="terms-model">
-
-    <i class="close-btn" data-trigger="model@close"></i>
-
-    <section class="model-title ">
-        <h3>《OPPO 保障服务协议》</h3>
-    </section>
-
-    <section class="model-content">
-    	<article class="model-text">
-    <p>在您计划购买OPPO保障服务产品之前，请您全面仔细阅读本条款中的内容，保障服务产品内容已经明确了您享受的权益，您的付费购买行为，将被视为您已经了解并接受了本条款中的内容。本保障服务产品由东莞市永盛通信科技有限公司（以下简称本公司）提供，并由中国人民财产保险股份有限公司承保。</p>
-    <h4>第一条 OPPO保障服务产品内容</h4>
-    <h4>OPPO “屏碎保”</h4>
-    <p>OPPO屏碎保服务的有效期是一年，以手机发货次日零时起开始计算。（全新机绑定购买的用户，考虑到手机物流时间，因此屏碎保有效时间为用户增加7个自然日。例如:用户在2016年1月1日下单购买R7手机及对应的屏碎保服务产品，公司于2016年1月2日发货，则屏碎保服务产品于2016年1月3日零时生效，2017年1月9日24时责任终止。）OPPO手机屏碎保需与新机绑定购买，在屏碎保保障服务期限内，因意外造成的屏幕破碎、产生裂纹，本公司负责给您免费更换一次同类同质屏幕组件。</p>
-    <p>具体如下：</p>
-    <p>（1）手机在正常使用过程中由于意外坠落、挤压、碰撞，造成手机屏幕组件破碎、产生裂纹，有效期内本公司负责给您更换一次同类同质屏幕组件，维修费用由本公司承担。</p>
-    <p>（2）若手机造成非屏幕组件相关的其它功能性损坏，则由用户自行承担功能性修复的相关费用。</p>
-    <p>（3）更换后的损坏零部件或产品归本公司所有。</p>
-    <p>（4）屏碎保服务期内不针对除屏幕以外的部件及赠品进行承保。</p>
-    <p>（5）本公司为您免费更换手机屏幕，鉴于此，您同意委托本公司向保险公司索赔，并同意保险公司将赔款支付给本公司。</p>
-    <h4>OPPO “意外保”</h4>
-    <p>OPPO意外保服务的有效期是一年，以手机发货次日零时起开始计算。（考虑到手机物流时间，因此意外保有效时间为用户增加7个自然日。例如:用户在2016年1月1日下单购买R7手机及对应的意外保服务产品，公司于2016年1月2日发货，则意外保服务产品于2016年1月3日零时生效，2017年1月9日24时责任终止。）OPPO手机意外保需与新机绑定购买，在意外保保障服务期限内，因意外造成的手机主机损坏，本公司负责给您免费维修一次，或者经官方客户服务中心鉴定无法修复时支付399元获得一次主机换新服务；</p>
-    <p>具体如下：</p>
-    <p>（1）手机在正常使用过程中由于意外坠落、碰撞、挤压、进液造成的损坏，有效期内可获得一次免费维修服务，或者经官方客户服务中心鉴定无法修复时支付399元获得一次主机换新服务。</p>
-    <p>（2）更换后的损坏零部件或产品归本公司所有。</p>
-    <p>（3）意外保服务期内不针对手机外观、可拆卸电池、充电器、数据线、耳机等附件及赠品进行承保。</p>
-    <p>（4）本公司为您免费维修，鉴于此，您同意委托本公司向保险公司索赔，并同意保险公司将赔款支付给本公司。</p>
-    <h4>OPPO“延长保”</h4>
-    <p>OPPO手机延长保产品分为半年期和一年期两类。OPPO手机延长保需与新机绑定购买，以线上购买签收次日零时起开始计算，在国家“三包”规定一年联保外，延长半年或一年的主机保修时间。</p>
-    <p>具体如下：</p>
-    <p>（1）在国家“三包”规定一年联保外，延长半年或一年的主机保修时间。延保期内仅对主机提供免费保修服务。</p>
-    <p>（2）更换后的损坏零部件或产品归本公司所有。</p>
-    <p>（3）延长保修服务期内不承担退换货责任。</p>
-    <p>（4）延长保修服务期内不针对外壳、充电器、数据线、耳机、可拆卸电池等附件及赠品进行承保。</p>
-    <h4>第二条 不属于OPPO保障服务产品范围的内容</h4>
-    <p>下列原因造成的损失、费用，本公司不负责赔偿：</p>
-    <p>（1）因战争、敌对行为、军事行为、武装冲突、罢工、骚乱、暴动、恐怖活动及自然灾害的不可抗力，包括：台风、洪水、地震、火山爆发以及海啸、核反应、核放射等。</p>
-    <p>（2）手机在外观上的瑕疵，如：脱漆、刮痕、褪色等。但与手机同时受损的情况不在此限。</p>
-    <p>（3）不影响手机基本使用功能的附件或耗材，包括但不限于耳机、存储卡、充电设备、数据线、书写笔等的磨损、损坏或丢失。</p>
-    <p>（4）手机设备的正常磨损、腐蚀、氧化、锈垢、耗损等或因积灰、冷凝、受冷、受热等渐变性原因导致的损失。</p>
-    <p>（5）属于“三包范围”内的置换、损失或费用。</p>
-    <p>（6）原装基础上添加的存储数据或商品部件的丢失。</p>
-    <p>（7）因手机意外受损导致的任何间接损失或附带损失（包括但不限于人身损害、无法使用、利润损失、数据损失、故障时间损失及误工费等）不承担任何责任。</p>
-    <p>（8）被保险人故意行为导致的手机损坏，或因保管不当导致的盗窃、遗失。</p>
-    <p>（9）交予非OPPO客户服务中心维修点进行拆机、维修。</p>
-    <p>（10）由于软件中毒导致的系统、软件问题，造成的产品功能故障。</p>
-    <p>（11）手机型号、IMEI号等与购买本保障服务产品时记载的不符、涂改、缺失或无法辨识的。</p>
-    <p>如发现用户通过故意损坏产品来达到欺诈、骗保的目的，则与该产品对应的OPPO保障服务内容自动终止。本公司不退还任何费用，同时保留追究该用户法律责任的权利。</p>
-    <h4>第三条 OPPO保障服务产品其他责任免除</h4>
-    <p>由于下列原因造成的损失或者费用，本公司不承担赔偿责任：
-    <p>（1）首年符合国家质检总局、国家工商总局、信息产业部颁布的《移动电话机商品修理更换退货责任规定》范围之内的故障的。</p>
-    <p>（2）无有效销售凭证的。</p>
-    <p>（3）消费者提出维修要求时不在保障期内的。</p>
-    <p>（4）消费者故意人为制造损坏结果，或者故意放大损坏结果的发生。</p>
-    <p>（5）消费者明知使用方式和使用环境可能造成手机的损坏，而未采取任何防范措施，或因轻信损害结果可以避免，导致损害结果的发生。</p>
-    <p>（6）不可抗力，自然灾害，相关人或任何机构、人员的故意行为造成的损失或者费用。</p>
-    <p>（7）消费者私自拆装手机或将手机送到非OPPO客户服务中心进行拆机、维修。</p>
-    <p>（8）产品型号、产品身份标识、顾客信息等在服务管理系统中记载的产品相关信息与实际修理的产品不符或者涂改的。</p>
-    <p>（9）参保商品造成的使用者或他人的人身伤害和财产损失，其他各种间接损失或者费用。</p>
-    <p>（10）非所销售产品对应保障责任范围内的其他保障责任、费用、损失。</p>
-    <h4>第四条 OPPO保障服务产品的退换货说明</h4>
-    <p>OPPO保障服务除“三包”退机外不可申请退出、撤销或终止，同时OPPO手机保障服务产品需与用户购买的手机绑定，不得以任何方式予以转让。</p>
-    <p>手机发生“三包”换货，屏碎保和意外保服务转移至用户更换的新手机上，屏碎保和意外保服务时间按生效之日起剩余时间计算。延长保服务转移至用户更换的新手机上，延长保服务时间按照用户签收最新更换的手机之日起重新计算。</p>
-    <p>手机发生“三包”退货，将为用户退还保费，同时保障服务责任终止。</p>
-    <h4>第五条 OPPO保障服务理赔说明</h4>
-    <p>购买保障服务的用户手机需要维修时，用户须携带相关资料（注：屏碎保和意外保用户只需额外提供手机销售发票复印件或官网订单截图打印件即可。延长保用户不需额外提供以上资料）。服务中心根据用户手机IMEI号从服务系统中查询用户手机是否符合使用保障服务产品的条件。符合条件则为用户免费维修。其中，屏碎保和意外保服务仅限使用一次，使用后保障责任终止。</p>
-</article>    </section>
-
-</section>
-
-
-<section class="oc-model message-model mask-index-top  " data-model="message-model">
-
-    <i class="close-btn" data-trigger="model@close"></i>
-
-    <section class="model-title ">
-        <h3></h3>
-    </section>
-
-    <section class="model-content">
-    	<section class="message-model-content">
-    <section class="message-wrapper">
-        <p class="message-title">开售前您将收到短信通知</p>
-        <!-- <section class="message-input"> -->
-            <section class="oc-input">
-                <input type="text" class="oc-input-default oc-radius-default oc-input-mobile" data-rule="phone" placeholder="请输入手机号码">
-                <span class="input-warning-text">请输入有效的手机号码。</span>
-            </section>
-        </section>
-        <section class="message-submit">
-            <a class="oc-btn btn-master btn-size-longer" href="" id="btn-notice">提交</a>
-        </section>
-        <a class="oc-btn success-trigger-btn" href="" data-message="success-model"></a>
-    </section>
-</section>
-    </section>
-
-</section>
-
-<section class="oc-model success-model mask-index-top  " data-model="success-model">
-
-    <i class="close-btn" data-trigger="model@close"></i>
-
-    <section class="model-title ">
-        <h3></h3>
-    </section>
-
-    <section class="model-content">
-    	<section class="success-model-content">
-    <section class="success-wrapper">
-        <p class="success-title">提交成功！</p>
-        <section class="success-submit">
-            <a class="oc-btn btn-master btn-size-longer" href="">确定</a>
-        </section>
-    </section>
-</section>
-    </section>
-
-</section>
-
-<section class="oc-model comment-pic-model mask-index-top  " data-model="comment-pic-model">
-
-    <i class="close-btn" data-trigger="model@close"></i>
-
-    <section class="model-title ">
-        <h3></h3>
-    </section>
-
-    <section class="model-content">
-    	<section class="pic-model-content">
-    <section class="pic-switchable">
-        <span class="pic-left-btn" data-trigger="commentPic@left"><i class="oc-icon oc-iconfont-arrow"></i></span>
-        <span class="pic-right-btn" data-trigger="commentPic@right"><i class="oc-icon oc-iconfont-arrow"></i></span>
-    </section>
-    <section class="comment-pic-wrapper">
-        <ul class="pic-list" data-trigger="commentPic@list">
-                    </ul>
-    </section>
-    <section class="pic-number-list">
-        <span class="cur-ind">1</span>/<span class="sum-ind">8</span>
-    </section>
-</section>    </section>
-
-</section>
-
       <script src="/javascript/lib.js"></script>
 
       <script src="/javascript/common.js"></script>
 
-      <!-- <script src="/layui/layui.js"></script> -->
+      <script src="/layui/layui.js"></script>
+      <script src="/layer/mobile/layer.js"></script>
 
 
 @section('js')
