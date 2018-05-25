@@ -62,6 +62,19 @@
                     					<input type="text" class="small" name="price">
                     				</div>
                     			</div>
+                                   <div class="mws-form-row">
+                                        <label class="mws-form-label">赠品名称</label>
+                                        <div class="mws-form-item">
+                                             <input type="text" class="small" name="zname">
+                                        </div>
+                                   </div>
+                                  <div class="mws-form-row">
+                                        <label class="mws-form-label">赠品图片</label>
+                                        <div class="mws-form-item">
+                                             <input type="file" name="zp" multiple="multiple" />
+                                        </div>
+                                   </div>
+
                     			<div class="mws-form-row">
                     				<label class="mws-form-label">商品主图片</label>
                     				<div class="mws-form-item">

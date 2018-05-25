@@ -62,16 +62,26 @@
                     					<input type="text" class="small" name="price" value="{{$res->price}}">
                     				</div>
                     			</div>
+                                   <div class="mws-form-row">
+                                        <label class="mws-form-label">赠品名称</label>
+                                        <div class="mws-form-item">
+                                             <input type="text" class="small" name="zname" value="{{$res->zname}}">
+                                        </div>
+                                   </div>
+                                   <div class="mws-form-row">
+                                        <label class="mws-form-label">赠品图片</label>
+                                        <div class="mws-form-item">
+                                             <input type="file" name="zp" multiple="multiple" />
+                                             <img src="{{$res->zp}}" style="width:100px">
+                                        </div>
+                                   </div>
                     			<div class="mws-form-row">
                     				<label class="mws-form-label">商品主图片</label>
                     				<div class="mws-form-item">
                     					<input type="file" name="gpic" multiple="multiple" />
                                              <img src="{{$res->gpic}}" style="width:200px">
                     				</div>
-                                        
-                                             
-                                        
-                    			</div>
+                                   </div>
 							<div class="mws-form-row">
                     				<label class="mws-form-label">商品四体图片</label>
                     				<div class="mws-form-item">

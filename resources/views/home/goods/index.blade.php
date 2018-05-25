@@ -1,185 +1,15 @@
-<!DOCTYPE html>
-<html lang="zh-CN" class="no-js">
-
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EDGE" />
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-        <title>『OPPO官网商城』OPPO最新款智能手机在线购买_OPPO最新款智能手机快捷支付-OPPO智能手机官网 </title>
-        <meta name="keywords" content="OPPO最新款智能手机在线订购,OPPO最新款智能手机在线购买,OPPO最新款智能手机快捷支付 " />
-        <meta name="description" content="OPPO官网商城首页为您提供OPPO最新款智能手机在线订购,OPPO最新款智能手机在线购买,OPPO最新款智能手机快捷支付等信息,多种OPPO智能手机任您选择与订购,智能手机网上购买尽在OPPO官网。 " />
-        <meta property="qc:admins" content="1257363774670076375" />
-        <meta name="baidu-site-verification" content="e2wIIvjSch" />
-
-        <meta name="monitor" content="AI智能拍照，让美更自然" />
-
-        <link media="all" type="text/css" rel="stylesheet" href="/css/common.css">
+@extends('layout.shop')   
 
 
-            <link media="all" type="text/css" rel="stylesheet" href="/css/shop.css">
-
-
-        <script>
-          window['OPPO_CONFIG_ATTR'] = {};
-
-          OPPO_CONFIG_ATTR['base_url']          = '';
-          OPPO_CONFIG_ATTR['www_url']           = '/';
-          OPPO_CONFIG_ATTR['store_url']         = '';
-          OPPO_CONFIG_ATTR['account_url']       = '//my.oppo.com';
-          OPPO_CONFIG_ATTR['sso_login_url']     = 'https://id.oppo.com/login';
-          OPPO_CONFIG_ATTR['sso_logout_url']    = 'https://id.oppo.com/logout';
-          OPPO_CONFIG_ATTR['sso_register_url']  = 'https://id.oppo.com/register/sms?type=1';
-          OPPO_CONFIG_ATTR['sso_account_url']   = 'https://id.oppo.com/account/profile';
-          OPPO_CONFIG_ATTR['oppo_cdn']          = 'https://shopfs.myoppo.com/shop/';
-          OPPO_CONFIG_ATTR['auth_check']        = OPPO_CONFIG_ATTR['store_url'] + '/auth/check';
-          OPPO_CONFIG_ATTR['domains']           = [];
-          OPPO_CONFIG_ATTR['jsonpDone']         = false;
-          OPPO_CONFIG_ATTR['date']              = '1525957232';
-          OPPO_CONFIG_ATTR['timeout']           = 8000;
-
-                      OPPO_CONFIG_ATTR['jsonpDone'] = true;
-          
-                    NTKF_PARAM = {
-              siteid: "kf_9568",
-              settingid: "kf_9568_1493698078342",
-              settingid2: "kf_9568_1524136866554",              uid:"",
-              uname:"",
-              isvip: "0",
-              userlevel: "1",
-              erpparam: "abc",
-              itemid:"",
-              itemparam:""
-          };
-
-          
-        </script>
-
-    </head>
-
-    <body class="">
-
-      
-      <div id="oc-wrapper" class="main
-">
-        <header id="oc-header" class="oc-header">
-        <span style="display: none;">
-        <svg xmlns="http://www.w3.org/2000/svg"><symbol id="oppo-logo-common"viewBox="0 0 415 67"><path d="M48.9.3C22.1.3.3 11.2.3 24.5s21.8 24.2 48.6 24.2 48.6-10.8 48.6-24.2S75.8.3 48.9.3zm-4.7 41.4c-17.9 0-32.4-7.8-32.4-17.5S26.3 6.7 44.2 6.7s32.4 7.8 32.4 17.5-14.5 17.5-32.4 17.5zM366.1.3c-26.9 0-48.6 10.8-48.6 24.2s21.8 24.2 48.6 24.2 48.6-10.8 48.6-24.2S392.9.3 366.1.3zm-4.8 41.4c-17.9 0-32.4-7.8-32.4-17.5s14.5-17.5 32.4-17.5 32.4 7.8 32.4 17.5-14.4 17.5-32.4 17.5zM156.1.3c-8.3 0-16.7 1-22.7 2.9v6.6c5.8-2.1 11.9-3.1 18-3 17.9 0 32.3 7.8 32.3 17.5s-14.5 17.5-32.4 17.5c-12.6 0-23.9-3.9-28.9-9.6V1.7h-18v65h18V42c9 4.1 20.5 6.7 33.5 6.7 26.8 0 48.7-10.8 48.7-24.2S182.9.3 156.1.3zM262.6.3c-7.8 0-15.6.9-23.2 2.9v6.6c6-2 12.2-3 18.5-3 17.9 0 32.5 7.8 32.5 17.5S276 41.7 258.1 41.7c-12.6 0-23.7-3.9-28.7-9.6V1.7h-18v65h17.8V42.3c8.7 4.1 20.5 6.6 33.6 6.6 26.8 0 48.5-10.9 48.5-24.3S289.4.3 262.6.3z"/></symbol></svg>
-    </span>
-
-        <nav class="oh-nav">
-
-                <section class="oh-nav-menu" data-trigger="open:navList@mobile">
-            <span class="oc-text-inside">wap导航菜单</span>
-            <a class="nav-menu">
-                <b>
-                    <em></em>
-                </b>
-            </a>
-        </section>
-
-                <section class="oh-nav-logo">
-            <a href="" class="nav-logo oppo-tj" data-tj="www|a|logo|home">
-                <h1>
-                    <span class="oc-text-inside">oppo官网</span>
-                    <svg viewBox="0 0 415 67">
-                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#oppo-logo-common"></use>
-                    </svg>
-                </h1>
-            </a>
-        </section>
-
-                <section class="oh-navlist-wrapper">
-            <ul class="oh-nav-list">
-                <li class="oh-nav-item oh-item-products">
-                    <a class="oh-navitem-link">手机</a>
-
-                                        <!--@产品菜单-->
-<!--@import  "header_popup_proudcts"-->
-<b class="oh-navitem-link-arrow oc-icon oc-iconfont-arrow"></b>
-<aside id="oh-navpopup-products" class="oh-navpopup-9">
-    <section class="oh-navpro-content">
-        <section class="oh-navpro-wrapper">
-            <figure class="oh-navpro-cover _queue ocover-theme-white">
-                <a href="" target="_blank">
-
-                    <picture class="img">
-                        <!--[if IE 9]><video style="display: none"><![endif]-->
-                        <source data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@2x.jpg?20180322105534 2x, https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@1x.jpg?20180322105534 1x" media="xs" />
-                        <!--[if IE 9]></video><![endif]-->
-                        <img data-src="/htmlimg/R15-np-hero2@2x.jpg" data-srcset="/htmlimg/R15-np-hero2@2x.jpg" class="lazyload" alt="" />
-                    </picture>
-
-
-                    <section class="oh-navcover-title">
-                        <picture>
-                            <!--[if IE 9]><video style="display: none"><![endif]-->
-                            <source data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@2x.png?20180322105534 2x, https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@1x.png?20180322105534 1x" media="xs" />
-                            <!--[if IE 9]></video><![endif]-->
-                            <img data-src="/htmlimg/R15-np-hero-title2@2x.png" data-srcset="/htmlimg/R15-np-hero-title2@2x.png" class="lazyload" alt="" />
-                        </picture>
-                    </section>
-                </a>
-            </figure>
-
-            <section class="oh-navpro-list">
-                <ul class="oc-row">
-                    <li class="_queue col-3 col-xs-12">
-                        <a href="" target="_blank" data-ant="bottom-top">
-                            <figure>
-                                <img data-src="/htmlimg/R11s-1.jpg" class="lazyload _img1" alt="">
-                                <i class="_img2"><img data-src="/htmlimg/R11s-2.png" class="lazyload" alt=""></i>
-                            </figure>
-                            <h3>R11s</h3>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </section>
-    </section>
-</aside>
-
-                </li>
-                <li class="oh-nav-item"><a href="" class="oh-navitem-link">品牌</a></li>
-                <li class="oh-nav-item"><a href="" class="oh-navitem-link">商城</a></li>
-                <li class="oh-nav-item"><a href="" class="oh-navitem-link">体验店</a></li>
-                <li class="oh-nav-item"><a href="" class="oh-navitem-link">服务</a></li>
-                <li class="oh-nav-item miniprogram-hide"><a href="" target="_blank" class="oh-navitem-link">社区</a></li>
-                <li class="oh-nav-item miniprogram-hide"><a href="" target="_blank" class="oh-navitem-link">ColorOS</a></li>
-                <li class="oh-nav-item miniprogram-hide"><a href="" target="_blank" class="oh-navitem-link">云服务</a></li>
-            </ul>
-        </section>
-
-
-                <!--导航功能链接-->
-<section class="oh-nav-link">
-    <a href="" class="oh-navlink-bag oc-icon oc-iconfont-bag oc-iconfont-bag-bold oppo-tj" data-tj="www|a|bag|icon"><span class="oc-text-inside">购物车</span></a>
-    <em class="oh-bag-arrow"></em>
-</section>
-
-<!--@商城菜单-->
-<aside id="oh-navpopup-bag">
-    <section class="oh-navbag-wrapper">
-        <ul>
-            <li><a href="" target="_blank" id="oh-navbag-cart" class="oppo-tj" data-tj="www|a|bag|cart"><b class="oc-icon oc-iconfont-cart oc-iconfont-cart-bold"></b><span>购物车</span></a></li>
-            <li><a href="" target="_blank" class="oppo-tj" data-tj="www|a|bag|order"><b class="oc-icon oc-iconfont-order oc-iconfont-order-bold"></b><span>我的订单</span></a></li>
-            <li><a href="" target="_blank" class="oppo-tj" data-tj="www|a|bag|account"><b class="oc-icon oc-iconfont-account oc-iconfont-account-bold"></b><span>个人中心</span></a></li>
-            <li><a id="oh-navbag-login"><b class="oc-icon oc-iconfont-user oc-iconfont-user-bold"></b><span>登录</span></a></li>
-        </ul>
-    </section>
-</aside>
-
-    </nav>
-
-</header>
-                                            
-            
+@section('content')           
 <section id="oc-container">
 
     <section class="oc-high ohigh-theme-white">
     <section class="ohigh-wrapper">
 
     <ul class="ohw-banner-list">
-                            <!--banner-1-->
+
+    @foreach($Img as $k=>$v)                   
         <li class="banner-item" data-theme="white" data-layout="right">
             <a class="mobile-banner-link" href=""  target="_blank"></a>
             <!--背景-->
@@ -187,8 +17,9 @@
                         <picture>
                     <!--[if IE 9]><video style="display: none"><![endif]-->
                     
+                    <source data-srcset="{{$v->gpic}}" media="xl" />
                     <!--[if IE 9]></video><![endif]-->
-                    <img data-src="/htmlimg/201805041005575aebbf8d598b3.jpg"  class="lazyload" alt=""" />
+                    <img data-src="{{$v->gpic}}" data-srcset="{{$v->gpic}}" class="lazyload" alt=""" />
                 </picture>
                     </i>
 
@@ -196,31 +27,20 @@
             <section class="banner-title-wrapper">
                 <section class="banner-title _title">
                     <section>
-                        <h2>初夏出游换新机</h2>
-                        <h3>选它们，怎么拍都美！</h3>
+                        <h2>{{$v->hone}}</h2>
+                        <h3>{{$v->htwo}}</h3>
                     </section>
                     <div class="banner-link">
-                        <a class="ban-btn" data-btn="white" href="" target="_blank">立即购买</a>
+                        <a class="ban-btn" data-btn="white" href="/home/read/{{$v->gid}}" target="_blank">立即购买</a>
                     </div>
                 </section>
             </section>
 
 
-            <!--产品图-->
-            
+    <!--产品图-->
+    
         </li>
-
-
-<!--banner-1-->
-
-
-
-
-
-<!--banner-1-->
-
-
-
+    @endforeach
     </ul>
 
 </section>
@@ -235,17 +55,18 @@
     <section class="shop-content-wrapper">
 
         <!--旗舰产品层-->
-@foreach($res as $k=>$v)        
-<section class="shop-product-floor oc-row flagship-floor">
-     <section class="col-12 product-data">
        
+<section class="shop-product-floor oc-row flagship-floor">
+     @foreach($res as $k=>$v)
+     <section class="col-12 product-data">
+     
         <section class="pro-views-box">
-             
+               
             <ul class="product-model-views">
                 @foreach($v->info as $kk=>$vv)
                 <li class="product-view">
                     
-                        <img data-src="{{$vv->gpic}}"  class="lazyload" alt=""" />
+                        <img data-src="{{$vv->gpic}}"  class="lazyload" alt="" />
                     
                 </li>
                                 
@@ -274,7 +95,7 @@
                        
                         <ul class="color-list">
                             @foreach($v->info as $kk=>$vv)
-                            <li class="color-item" data-color="#2B196D" data-title-color="gray" data-view-bg="#FFFFFF" data-price="{{$vv->price}}" data-link="/home/read/{{$vv->gid}}"><i class="color-block"></i><i class="color-circle"></i></li>
+                            <li class="color-item" data-color="#2B196D" data-title-color="gray" data-view-bg="#FFFFFF" data-price="{{Intval($vv->price)}}" data-link="/home/read/{{$vv->gid}}"><i class="color-block"></i><i class="color-circle"></i></li>
                             @endforeach
                         </ul>
                         
@@ -285,83 +106,87 @@
             </section>
 
         </section>
-        
+    
     </section>
-        
+    @endforeach     
 </section> 
-@endforeach       
+       
         <!--次推产品层-->
 <section class="shop-product-floor oc-row main-floor">
+    @foreach($res_two as $k=>$v)
      <section class="col-6 col-xs-12 product-data">
         <section class="pro-views-box ">
             <a class="pro-link pro-swiper-container" href="" target="_blank">
                 <ul class="product-model-views swiper-wrapper">
+                    @foreach($v->info as $kk=>$vv)
                     <li class="product-view swiper-slide">
                         <picture>
-                            <img data-src="/htmlimg/201804230504565adda80c8a287.jpg" data-srcset="https://dsfs.oppo.com/archives/201804/201804230504335adda83138933.jpg 2x,/htmlimg/201804230504565adda80c8a287.jpg 1x" class="lazyload" alt=""" />
+                            <img data-src="{{$vv->gpic}}"  class="lazyload" alt="" />
                         </picture>
                     </li>
-                                       
+                    @endforeach                    
                 </ul>
                 <section class="pro-model-title">
                     <section class="title-box">
                         <section class="color-switchable">
                             <ul class="color-list">
-                                <li class="color-item" data-color="#c43e38" data-price="2099" data-link="https://www.opposhop.cn/products/478.html" data-model-name="A3" data-model-des="下单立减100元"><i class="color-block"></i><i class="color-circle"></i></li>
+                                @foreach($v->info as $kk=>$vv)
+                                <li class="color-item" data-color="#c43e38" data-price="{{Intval($vv->price)}}" data-link="/home/read/{{$vv->gid}}" data-model-name="{{$vv->gname}}" data-model-des="{{$vv->descr}}"><i class="color-block"></i><i class="color-circle"></i></li>
+                                @endforeach
                             </ul>
                         </section>
-                        <h3 class="pro-model-name">A3</h3>
-                        <h4 class="pro-model-des">下单立减100元</h4>
+                        <h3 class="pro-model-name"></h3>
+                        <h4 class="pro-model-des"></h4>
                         <h5 class="pro-price">¥<i></i></h5>
                     </section>
                 </section>
             </a>
         </section>
     </section>
-        
+    @endforeach   
 </section>        
         <!--配件层-->
 <section class="shop-product-floor oc-row secondary-floor">
-        
+        @foreach($parts as $k=>$v)
         <section class="col-6 col-xs-12 product-data nice-pro">
         <section class="pro-views-box">
-            <a href="" target="_blank">
+            <a href="/home/read/{{$v->gid}}" target="_blank">
                 <section class="pro-model-title">
                     <section class="title-box">
-                        <h4>入耳式耳机 MH130</h4>
-                                                <h5>¥59</h5>
+                        <h4>{{$v->gname}}</h4>
+                                                <h5>¥{{Intval($v->price)}}</h5>
                                             </section>
                 </section>
                 <section class="product-model-views">
                     <picture>
-                        <img data-src="/htmlimg/201712041012145a2561964ae78.jpg" class="lazyload" alt="" />
+                        <img data-src="{{$v->gpic}}" class="lazyload" alt="" />
                     </picture>
                 </section>
             </a>
         </section>
     </section>
-
+    @endforeach
     
     
-    
+    @foreach($parts_two as $k=>$v)
     <section class="col-3 col-xs-6 product-data">
         <section class="pro-views-box">
-            <a href="" target="_blank">
+            <a href="/home/read/{{$v->gid}}" target="_blank">
                 <section class="product-model-views">
                     <picture>
-                        <img data-src="/htmlimg/201801171101035a5ebf3f50542.png" class="lazyload" alt="" />
+                        <img data-src="{{$v->gpic}}" class="lazyload" alt="" />
                     </picture>
                 </section>
                 <section class="pro-model-title">
                     <section class="title-box">
-                        <h4>入耳式耳机 MH133</h4>
-                                                <h5>¥39</h5>
+                        <h4>{{$v->gname}}</h4>
+                                                <h5>¥{{Intval($v->price)}}</h5>
                                             </section>
                 </section>
             </a>
         </section>
     </section>
-
+    @endforeach
     
     
     
@@ -541,11 +366,11 @@
 
 
         <script src="/javascript/shop.js"></script>
-
+        
 
       <script type="text/javascript">
     var xnscript = document.createElement("script");
-    xnscript.src = "https://xiaoneng.oppo.com:9091/js/xn6/ntkfstat.js?siteid=kf_9568";
+    xnscript.src = "/js/ntkfstat.js";
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(xnscript, s);
 </script>
@@ -586,7 +411,7 @@ var _optj = _optj || [];
 
 (function() {
   var op = document.createElement("script");
-  op.src = "//shopfs.myoppo.com/hd/static/js/optj-1.1.0.min.js";
+  op.src = "/js/optj-1.1.0.min.js";
   var s = document.getElementsByTagName("script")[0];
   s.parentNode.insertBefore(op, s);
 })();
@@ -604,12 +429,12 @@ _utaq.push(["setTrackerUrl", utu+"site/unids.gif"]);
 _utaq.push(["setSiteId", "1351"]);
 if(/mobile|android|iphone|ipad|phone/i.test(navigator.userAgent.toLowerCase())) _utaq.push(["setSiteId", "1352"]);
 var utd=document, ut=utd.createElement("script"), s=utd.getElementsByTagName("script")[0]; ut.type="text/javascript";
-ut.defer=true; ut.async=true; ut.src="//shopfs.myoppo.com/hd/static/js/uta.js"; s.parentNode.insertBefore(ut,s);
+ut.defer=true; ut.async=true; ut.src="/javascript/uta.js"; s.parentNode.insertBefore(ut,s);
 })();
 </script>
 
 <!--听云监测-->
-<script src="./javascript/tingyun-rum.js"></script>
+<script src="/javascript/tingyun-rum.js"></script>
 
 <script type="text/javascript">
 $(function(){
@@ -627,3 +452,6 @@ $(function(){
 
 </html>
 <!-- cached at 2018-05-10 21:00:32 -->
+
+
+@endsection

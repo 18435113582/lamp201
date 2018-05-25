@@ -331,6 +331,23 @@ Route::group([],function(){
 	Route::get('cart/index','home\CartController@index');
 	Route::get('cart/delete','home\CartController@delete');
 	Route::get('cart/cnt','home\CartController@cnt');
+	Route::get('order/create','home\OrdersController@create');
+	Route::post('order/save','home\OrdersController@save');
+	Route::get('order/index','home\OrdersController@index');
+	Route::get('order/det/{id}','home\OrdersController@det');
+	Route::get('img/create','admin\ImgController@create');
+	Route::post('img/save','admin\ImgController@save');
+	Route::get('img/index','admin\ImgController@index');
+	Route::get('img/edit/{id}','admin\ImgController@edit');
+	Route::post('img/update/{id}','admin\ImgController@update');
+	Route::post('img/delete/{id}','admin\ImgController@delete');
+	Route::get('admin/orders','admin\OrdersController@index');
+	Route::get('admin/orders/det/{id}','admin\OrdersController@det');
+	Route::get('admin/orders/edit/{id}','admin\OrdersController@edit');
+	Route::post('admin/orders/update/{id}','admin\OrdersController@update');
+	Route::get('/admin/orders/go','admin\OrdersController@go');
+	Route::get('/goods/down','admin\GoodsController@down');
+	Route::get('/goods/up','admin\GoodsController@up');
 
 });
 

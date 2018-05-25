@@ -78,6 +78,19 @@ class GoodsController extends Controller
             $res['gpic'] = '/uploads/'.$name.'.'.$suffix;
 
         }
+        if($request->hasFile('zp')){
+
+            $gimg = $request->file('zp');
+
+            $name = rand(1111,9999).time();
+            
+            $suffix = $gimg->getClientOriginalExtension();
+
+            $gimg->move('./uploads',$name.'.'.$suffix);
+
+            $res['zp'] = '/uploads/'.$name.'.'.$suffix;
+
+        }
 
         $res['gtime'] = time();
         $gid = DB::table('shop_goods')->insertGetId($res);
@@ -229,6 +242,27 @@ class GoodsController extends Controller
             $res['gpic'] = '/uploads/'.$name.'.'.$suffix;
 
         }
+        if($request->hasFile('zp')){
+
+            $info = DB::table('shop_goods')->where('gid',$id)->first();
+            if($info->gpic){
+
+                unlink('.'.$info->gpic);
+            }
+            
+
+            $gimg = $request->file('zp');
+
+            $name = rand(1111,9999).time();
+            
+            $suffix = $gimg->getClientOriginalExtension();
+
+            $gimg->move('./uploads',$name.'.'.$suffix);
+
+            $res['zp'] = '/uploads/'.$name.'.'.$suffix;
+
+        }
+        
         
         $res['gtime'] = time();
         
@@ -328,16 +362,23 @@ class GoodsController extends Controller
     {
 
         $info = DB::table('shop_goods')->where('gid',$id)->first();
-        $gpic = $info->gpic;
+       
+        if($info->gpic){
+
+            unlink('.'.$info->gpic);
+        }
+        if($info->zp){
+
+            
+            $data = unlink('.'.$info->zp);
+        }
 
         $del = DB::table('shop_goods')->where('gid',$id)->delete();
 
-        if($del){
-
-            $data = unlink('.'.$gpic);
-        }
         
-        if($data){
+        
+        
+        if($del){
             $show = DB::table('goods_show')->where('gid',$id)->get();
             foreach ($show as $k => $v) {
                 unlink('.'.$v->gpic);
@@ -356,4 +397,33 @@ class GoodsController extends Controller
             return back();
         }
     }
+
+
+
+    public function down(Request $request) 
+    {
+
+        $gid = $request->input('gid');
+        
+        $status['status'] = 2;
+        $data = DB::table('shop_goods')->where('gid',$gid)->update($status);
+        if($data){
+
+            echo 1;
+        }
+    }
+
+    public function up(Request $request)
+    {
+
+        $gid = $request->input('gid');
+        
+        $status['status'] = 1;
+        $data = DB::table('shop_goods')->where('gid',$gid)->update($status);
+        if($data){
+
+            echo 1;
+        }
+    }
+
 }

@@ -61,7 +61,7 @@
                     </th>
                     <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
                     rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
-                    style="width: 248px;">
+                    style="width: 150px;">
                         商品名称
                     </th>
                      <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
@@ -71,11 +71,11 @@
                     </th>
                     <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
                     rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending"
-                    style="width: 227px;">
+                    style="width: 100px;">
                         颜色
                     <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
                     rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending"
-                    style="width: 163px;">
+                    style="width: 100px;">
                         配置
                     </th>
                     <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
@@ -110,7 +110,7 @@
                     </th>
                     <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
                     rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                    style="width: 123px;">
+                    style="width: 500px;">
                       操作
                     </th>
                 </tr>
@@ -147,7 +147,7 @@
                          {{$v->cid}}
                     </td>
                     <td class=" ">
-                         {{$v->status}}
+                         {{goodsstatus($v->status)}}
                     </td>
                     <td class=" ">
                          {{$v->stock}}
@@ -156,15 +156,21 @@
                          {{$v->price}}
                     </td>
                     <td class=" ">
-                       	{{date('Y-m_d H:i:s',$v->gtime)}} 
+                       	{{date('Y-m-d H:i:s',$v->gtime)}} 
                     </td>
                     <td class=" ">
                        	<a href="/admin/goods/{{$v->gid}}/edit"><button>修改</button></a>
-						<form action="/admin/goods/{{$v->gid}}" method="post" class='remove'>
+						<form action="/admin/goods/{{$v->gid}}" method="post" style=" display:inline;" >
 							{{csrf_field()}}
 							{{method_field('DELETE')}}
-                       		<a href="/admin/goods"><button>删除</button></a>
+                       		<button class='sc'>删除</button>
 						</form>
+                        @if($v->status == 0 || $v->status == 1)
+                            <button class="down">下架</button>
+                        @endif
+                        @if($v->status == 2)
+                            <button class="up">上架</button>
+                        @endif
                     </td>
                 </tr>
                 @endforeach
@@ -227,19 +233,60 @@
         </div>
     </div>
 </div>
-                </div>
+</div>
+
 @endsection
 
 @section('js')
 	
     <script>
-        $('.remove').click(function(){
 
-            var res = confirm('你确定删除吗??');
+        $('.sc').click(function(){
 
-            if(!res) return;
-        }
+            var remove = confirm('你确定删除吗??');
+
+            if(!remove) return;
+        })
+
+
+        $('.down').click(function(){
+            var gid = $(this).parents('tr').find('td').eq(0).text();
+            var status = $(this).parents('tr').find('td').eq(7);
+            var down = $(this);
+ 
+            $.get('/goods/down',{gid:gid},function(data){
+               
+               if(data == '1'){
+
+                    status.text('下架');
+                    
+                    down.html('<button class="up">上架</button>');
+
+               }
+
+            })
+
+        })
            
+
+        $('.up').click(function(){
+            var gid = $(this).parents('tr').find('td').eq(0).text();
+            var status = $(this).parents('tr').find('td').eq(7);
+            var up = $(this);
+ 
+            $.get('/goods/up',{gid:gid},function(data){
+               
+               if(data == '1'){
+
+                    status.text('上架');
+
+                    up.html('<button class="down">下架</button>');
+
+               }
+
+            })
+        })
+            
     </script>
 
 @endsection

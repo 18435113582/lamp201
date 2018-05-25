@@ -1,454 +1,16 @@
-<!DOCTYPE html>
-<html class="js svg svgasimg inlinesvg video canvas no-touchevents csstransforms supports csstransforms3d csstransitions cssmask hd firefox win"
-lang="zh-CN">
+@extends('layout.shop')   
+
+
+@section('content') 
     
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=EDGE">
-        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-        <title>
-            购物车-OPPO智能手机官网
-        </title>
-        <meta name="keywords" content="购物车,OPPO智能手机官网 ">
-        <meta name="description" content="OPPO手机购物车为您提供OPPO手机购物车流程,想知道更多的购物车信息，就在OPPO智能手机官网。 ">
-        <meta property="qc:admins" content="1257363774670076375">
-        <meta name="baidu-site-verification" content="e2wIIvjSch">
-        <meta name="monitor" content="AI智能拍照，让美更自然">
-        <link media="all" type="text/css" rel="stylesheet" href="/css/common.css">
-        <link media="all" type="text/css" rel="stylesheet" href="/css/shopping.css">
-        <script charset="utf-8" src="/javascript/v.html">
-        </script>
-        <script type="text/javascript" defer="defer" async="" src="/javascript/uta.js">
-        </script>
-        <script src="/javascript/optj-1.js">
-        </script>
-        <script async="" src="/javascript/analytics.js">
-        </script>
-        <script src="/javascript/hm.js">
-        </script>
-        <script src="/javascript/ntkfstat.js">
-        </script>
-        <script>
-            window['OPPO_CONFIG_ATTR'] = {};
 
-            OPPO_CONFIG_ATTR['base_url'] = '//www.opposhop.cn';
-            OPPO_CONFIG_ATTR['www_url'] = '//www.oppo.com/cn/';
-            OPPO_CONFIG_ATTR['store_url'] = '//www.opposhop.cn';
-            OPPO_CONFIG_ATTR['account_url'] = '//my.oppo.com';
-            OPPO_CONFIG_ATTR['sso_login_url'] = 'https://id.oppo.com/login';
-            OPPO_CONFIG_ATTR['sso_logout_url'] = 'https://id.oppo.com/logout';
-            OPPO_CONFIG_ATTR['sso_register_url'] = 'https://id.oppo.com/register/sms?type=1';
-            OPPO_CONFIG_ATTR['sso_account_url'] = 'https://id.oppo.com/account/profile';
-            OPPO_CONFIG_ATTR['oppo_cdn'] = 'https://shopfs.myoppo.com/shop/';
-            OPPO_CONFIG_ATTR['auth_check'] = OPPO_CONFIG_ATTR['store_url'] + '/auth/check';
-            OPPO_CONFIG_ATTR['domains'] = [];
-            OPPO_CONFIG_ATTR['jsonpDone'] = false;
-            OPPO_CONFIG_ATTR['date'] = '1526807203';
-            OPPO_CONFIG_ATTR['timeout'] = 8000;
-
-            OPPO_CONFIG_ATTR['jsonpDone'] = true;
-
-            NTKF_PARAM = {
-                siteid: "kf_9568",
-                settingid: "kf_9568_1493698078342",
-                settingid2: "kf_9568_1524136866554",
-                uid: "",
-                uname: "",
-                isvip: "0",
-                userlevel: "1",
-                erpparam: "abc",
-                itemid: "",
-                itemparam: ""
-            };
-
-            NTKF_PARAM.ntalkerparam = {
-                cartprice: "3499.00",
-                items: [{
-                    "id": 469,
-                    "count": "1"
-                }]
-            };
-        </script>
-        <script type="text/javascript" async="async" charset="utf-8" src="/javascript/userinfo.php">
-        </script>
-        <script type="text/javascript" async="async" charset="utf-8" src="/javascript/zh_cn.js"
-        data-requiremodule="lang">
-        </script>
-        <script type="text/javascript" async="async" charset="utf-8" src="/javascript/chat.js"
-        data-requiremodule="chatManage">
-        </script>
-        <script type="text/javascript" async="async" charset="utf-8" src="/javascript/mqtt31.js"
-        data-requiremodule="MQTT">
-        </script>
-        <script type="text/javascript" async="async" charset="utf-8" src="/javascript/mqtt.js"
-        data-requiremodule="Connection">
-        </script>
-    </head>
     
     <body class="">
-        <div id="nTalk_post_hiddenElement" style="left: -10px; top: -10px; visibility: hidden; display: none; width: 1px; height: 1px;">
-            <form name="POST_FORM_21683885A9DD3B83" accept-charset="utf-8" enctype="application/x-www-form-urlencoded"
-            method="POST" style="display: none;" target="POST_IFRAME_0" action="https://xiaoneng.oppo.com:9105/trail/trail/userinfo.php?action=save&amp;url=https%3A%2F%2Fwww.opposhop.cn%2Fcart&amp;siteid=kf_9568&amp;uid=kf_9568_ISME9754_Qk9kTTkzS0QwbDNVak9qM1VpaG9BUT09&amp;uname=%E7%94%A8%E6%88%B7261770283&amp;device=PC&amp;isvip=0&amp;userlevel=1&amp;cid=guest3C780DAC-91CD-485F-5A51-4A51401AC5AA&amp;sid=1526807202384281&amp;log=1&amp;pageid=1526807202378&amp;etype=update&amp;edata=&amp;lan=zh-CN&amp;scr=1536*864&amp;cookie=1&amp;flash=0.0.0.0&amp;sellerid=&amp;ttl=%E8%B4%AD%E7%89%A9%E8%BD%A6-OPPO%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA%E5%AE%98%E7%BD%91">
-                <input name="ntalkerparam" value="%7B%22cartprice%22%3A%223499.00%22%2C%22items%22%3A%5B%7B%22id%22%3A469%2C%22count%22%3A%221%22%7D%5D%7D"
-                type="hidden">
-                <input name="ref" value="https%3A%2F%2Fid.oppo.com%2Flogin%3Fcallback%3Dhttps%3A%2F%2Fwww.opposhop.cn%2Fcart"
-                type="hidden">
-            </form>
-        </div>
-        <div id="nTalk_post_hiddenElement" style="left: -10px; top: -10px; visibility: hidden; display: none; width: 1px; height: 1px;">
-        </div>
-        <nav id="oc-mobile-header">
-            <a href="https://www.opposhop.cn/" class="mb-header-return">
-                <b>
-                </b>
-            </a>
-            <section class="mb-header-wrapper">
-                <h2>
-                    购物车
-                </h2>
-                <h3>
-                </h3>
-            </section>
-        </nav>
+        
+        
         <div id="oc-wrapper" class="shopping-cart-wrapper
         ">
-            <header id="oc-header" class="oc-header">
-                <span style="display: none;">
-                    <svg xmlns="http://www.w3.org/2000/svg">
-                        <symbol id="oppo-logo-common" viewBox="0 0 415 67">
-                            <path d="M48.9.3C22.1.3.3 11.2.3 24.5s21.8 24.2 48.6 24.2 48.6-10.8 48.6-24.2S75.8.3 48.9.3zm-4.7 41.4c-17.9 0-32.4-7.8-32.4-17.5S26.3 6.7 44.2 6.7s32.4 7.8 32.4 17.5-14.5 17.5-32.4 17.5zM366.1.3c-26.9 0-48.6 10.8-48.6 24.2s21.8 24.2 48.6 24.2 48.6-10.8 48.6-24.2S392.9.3 366.1.3zm-4.8 41.4c-17.9 0-32.4-7.8-32.4-17.5s14.5-17.5 32.4-17.5 32.4 7.8 32.4 17.5-14.4 17.5-32.4 17.5zM156.1.3c-8.3 0-16.7 1-22.7 2.9v6.6c5.8-2.1 11.9-3.1 18-3 17.9 0 32.3 7.8 32.3 17.5s-14.5 17.5-32.4 17.5c-12.6 0-23.9-3.9-28.9-9.6V1.7h-18v65h18V42c9 4.1 20.5 6.7 33.5 6.7 26.8 0 48.7-10.8 48.7-24.2S182.9.3 156.1.3zM262.6.3c-7.8 0-15.6.9-23.2 2.9v6.6c6-2 12.2-3 18.5-3 17.9 0 32.5 7.8 32.5 17.5S276 41.7 258.1 41.7c-12.6 0-23.7-3.9-28.7-9.6V1.7h-18v65h17.8V42.3c8.7 4.1 20.5 6.6 33.6 6.6 26.8 0 48.5-10.9 48.5-24.3S289.4.3 262.6.3z">
-                            </path>
-                        </symbol>
-                    </svg>
-                </span>
-                <nav class="oh-nav">
-                    <section class="oh-nav-menu" data-trigger="open:navList@mobile">
-                        <span class="oc-text-inside">
-                            wap导航菜单
-                        </span>
-                        <a class="nav-menu">
-                            <b>
-                                <em>
-                                </em>
-                            </b>
-                        </a>
-                    </section>
-                    <section class="oh-nav-logo">
-                        <a href="https://www.oppo.com/cn/" class="nav-logo oppo-tj" data-tj="www|a|logo|home">
-                            <h1>
-                                <span class="oc-text-inside">
-                                    oppo官网
-                                </span>
-                                <svg viewBox="0 0 415 67">
-                                    <use xlink="http://www.w3.org/1999/xlink" xlink:href="#oppo-logo-common">
-                                    </use>
-                                </svg>
-                            </h1>
-                        </a>
-                    </section>
-                    <section class="oh-navlist-wrapper">
-                        <ul class="oh-nav-list">
-                            <li class="oh-nav-item oh-item-products">
-                                <a class="oh-navitem-link oppo-tj" data-tj="www|nav|link|products">
-                                    手机
-                                </a>
-                                <!--@产品菜单-->
-                                <!--@import "header_popup_proudcts"-->
-                                <b class="oh-navitem-link-arrow oc-icon oc-iconfont-arrow">
-                                </b>
-                                <aside id="oh-navpopup-products" class="oh-navpopup-9" style="visibility: hidden; opacity: 0;">
-                                    <section class="oh-navpro-content">
-                                        <section class="oh-navpro-wrapper">
-                                            <figure class="oh-navpro-cover _queue ocover-theme-white" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 13);">
-                                                <a href="https://www.oppo.com/cn/product/r15/index.html" target="_blank"
-                                                class="oppo-tj" data-tj="www|nav|products|0">
-                                                    <picture class="img">
-                                                        <!--[if IE 9]>
-                                                            <video style="display: none">
-                                                            <![endif]-->
-                                                            <source data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@2x.jpg?20180322105534 2x, https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@1x.jpg?20180322105534 1x"
-                                                            media="(max-width: 768px)" srcset="https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@2x.jpg?20180322105534 2x, https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@1x.jpg?20180322105534 1x">
-                                                                <!--[if IE 9]>
-                                                            </video>
-                                                        <![endif]-->
-                                                        <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/R15-np-hero2@2x.jpg"
-                                                        data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/R15-np-hero2@2x.jpg"
-                                                        class=" lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/R15-np-hero2@2x.jpg"
-                                                        src="/javascript/R15-np-hero22x.jpg">
-                                                    </picture>
-                                                    <section class="oh-navcover-title">
-                                                        <picture>
-                                                            <!--[if IE 9]>
-                                                                <video style="display: none">
-                                                                <![endif]-->
-                                                                <source data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@2x.png?20180322105534 2x, https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@1x.png?20180322105534 1x"
-                                                                media="(max-width: 768px)" srcset="https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@2x.png?20180322105534 2x, https://shopfs.myoppo.com/shop/dist/common/images/np-hero-xs@1x.png?20180322105534 1x">
-                                                                    <!--[if IE 9]>
-                                                                </video>
-                                                            <![endif]-->
-                                                            <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/R15-np-hero-title2@2x.png"
-                                                            data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/R15-np-hero-title2@2x.png"
-                                                            class=" lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/R15-np-hero-title2@2x.png"
-                                                            src="/javascript/R15-np-hero-title22x.png">
-                                                        </picture>
-                                                    </section>
-                                                </a>
-                                            </figure>
-                                            <section class="oh-navpro-list">
-                                                <ul class="oc-row">
-                                                    <li class="_queue col-3 col-xs-12" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 13);">
-                                                        <a href="https://www.opposhop.cn/products/450.html" target="_blank" data-ant="bottom-top"
-                                                        class="oppo-tj" data-tj="www|nav|products|1" style="height: 172px;">
-                                                            <figure>
-                                                                <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/R11s-1.jpg"
-                                                                data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/R11s-1@2x.jpg 2x, https://shopfs.myoppo.com/shop/dist/common/images/R11s-1.jpg 1x"
-                                                                class="_img1 lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/R11s-1@2x.jpg 2x, https://shopfs.myoppo.com/shop/dist/common/images/R11s-1.jpg 1x"
-                                                                src="/javascript/R11s-1.jpg">
-                                                                <i class="_img2">
-                                                                    <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/R11s-2.png"
-                                                                    data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/R11s-2@2x.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/R11s-2.png 1x"
-                                                                    class=" lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/R11s-2@2x.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/R11s-2.png 1x"
-                                                                    src="/javascript/R11s-2.png">
-                                                                </i>
-                                                            </figure>
-                                                            <h3>
-                                                                R11s
-                                                            </h3>
-                                                        </a>
-                                                    </li>
-                                                    <li class="_queue col-3 col-xs-12" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 13);">
-                                                        <a href="https://www.oppo.com/cn/product/a3/index.html" target="_blank"
-                                                        data-ant="bottom-top" class="oppo-tj" data-tj="www|nav|products|2" style="height: 172px;">
-                                                            <figure>
-                                                                <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/A3.jpg"
-                                                                data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/A3.jpg"
-                                                                class="_img1 lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/A3.jpg"
-                                                                src="/javascript/A3.jpg">
-                                                                <i class="_img2">
-                                                                    <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/A3.png"
-                                                                    data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/A3.png"
-                                                                    class=" lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/A3.png"
-                                                                    src="/javascript/A3.png">
-                                                                </i>
-                                                            </figure>
-                                                            <h3>
-                                                                A3
-                                                            </h3>
-                                                        </a>
-                                                    </li>
-                                                    <li class="_queue col-3 col-xs-12" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 13);">
-                                                        <a href="https://www.oppo.com/cn/product/a1/index.html" target="_blank"
-                                                        data-ant="bottom-top" class="oppo-tj" data-tj="www|nav|products|3" style="height: 172px;">
-                                                            <figure>
-                                                                <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/A1-1.png"
-                                                                data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/A1-1@2x.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/A1-1.png 1x"
-                                                                class="_img1 lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/A1-1@2x.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/A1-1.png 1x"
-                                                                src="/javascript/A1-1.png">
-                                                                <i class="_img2">
-                                                                    <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/A1-2.png"
-                                                                    data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/A1-2@2x.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/A1-2.png 1x"
-                                                                    class=" lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/A1-2@2x.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/A1-2.png 1x"
-                                                                    src="/javascript/A1-2.png">
-                                                                </i>
-                                                            </figure>
-                                                            <h3>
-                                                                A1
-                                                            </h3>
-                                                        </a>
-                                                    </li>
-                                                    <li class="_queue col-3 col-xs-12" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 13);">
-                                                        <a href="https://www.oppo.com/cn/product/a79/index.html" target="_blank"
-                                                        data-ant="bottom-top" class="oppo-tj" data-tj="www|nav|products|4" style="height: 172px;">
-                                                            <figure>
-                                                                <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/a79-2.jpg"
-                                                                data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/a79-2@2x.jpg 2x, https://shopfs.myoppo.com/shop/dist/common/images/a79-2.jpg 1x"
-                                                                class="_img1 lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/a79-2@2x.jpg 2x, https://shopfs.myoppo.com/shop/dist/common/images/a79-2.jpg 1x"
-                                                                src="/javascript/a79-2.jpg">
-                                                                <i class="_img2">
-                                                                    <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/a79-2.png"
-                                                                    data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/a79-2@2x.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/a79-2.png 1x"
-                                                                    class=" lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/a79-2@2x.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/a79-2.png 1x"
-                                                                    src="/javascript/a79-2.png">
-                                                                </i>
-                                                            </figure>
-                                                            <h3>
-                                                                A79
-                                                            </h3>
-                                                        </a>
-                                                    </li>
-                                                    <li class="_queue col-3 col-xs-12" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 13);">
-                                                        <a href="https://www.oppo.com/cn/product/a73/index.html" target="_blank"
-                                                        data-ant="bottom-top" class="oppo-tj" data-tj="www|nav|products|5" style="height: 172px;">
-                                                            <figure>
-                                                                <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/a73-1.jpg"
-                                                                data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/a73-1@2.jpg 2x, https://shopfs.myoppo.com/shop/dist/common/images/a73-1.jpg 1x"
-                                                                class="_img1 lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/a73-1@2.jpg 2x, https://shopfs.myoppo.com/shop/dist/common/images/a73-1.jpg 1x"
-                                                                src="/javascript/a73-1.jpg">
-                                                                <i class="_img2">
-                                                                    <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/a73-2.png"
-                                                                    data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/a73-2@2.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/a73-2.png 1x"
-                                                                    class=" lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/a73-2@2.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/a73-2.png 1x"
-                                                                    src="/javascript/a73-2.png">
-                                                                </i>
-                                                            </figure>
-                                                            <h3>
-                                                                A73
-                                                            </h3>
-                                                        </a>
-                                                    </li>
-                                                    <li class="_queue col-3 col-xs-12" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 13);">
-                                                        <a href="https://www.oppo.com/cn/product/a83/index.html" target="_blank"
-                                                        data-ant="bottom-top" class="oppo-tj" data-tj="www|nav|products|6" style="height: 172px;">
-                                                            <figure>
-                                                                <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/a83.jpg"
-                                                                data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/a83@2x.jpg 2x, https://shopfs.myoppo.com/shop/dist/common/images/a83.jpg 1x"
-                                                                class="_img1 lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/a83@2x.jpg 2x, https://shopfs.myoppo.com/shop/dist/common/images/a83.jpg 1x"
-                                                                src="/javascript/a83.jpg">
-                                                                <i class="_img2">
-                                                                    <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/a83.png"
-                                                                    data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/a83@2x.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/a83.png 1x"
-                                                                    class=" lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/a83@2x.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/a83.png 1x"
-                                                                    src="/javascript/a83.png">
-                                                                </i>
-                                                            </figure>
-                                                            <h3>
-                                                                A83
-                                                            </h3>
-                                                        </a>
-                                                    </li>
-                                                    <li class="_queue col-3 col-xs-12" style="visibility: hidden; opacity: 0; transform: matrix(1, 0, 0, 1, 0, 13);">
-                                                        <a href="https://www.oppo.com/cn/product/m/a57/index.html" target="_blank"
-                                                        data-ant="bottom-top" class="oppo-tj" data-tj="www|nav|products|7" style="height: 172px;">
-                                                            <figure>
-                                                                <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/a57-1.jpg"
-                                                                data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/a57-1@2.jpg 2x, https://shopfs.myoppo.com/shop/dist/common/images/a57-1.jpg 1x"
-                                                                class="_img1 lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/a57-1@2.jpg 2x, https://shopfs.myoppo.com/shop/dist/common/images/a57-1.jpg 1x"
-                                                                src="/javascript/a57-1.jpg">
-                                                                <i class="_img2">
-                                                                    <img data-src="https://shopfs.myoppo.com/shop/dist/common/images/a57-2.png"
-                                                                    data-srcset="https://shopfs.myoppo.com/shop/dist/common/images/a57-2@2.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/a57-2.png 1x"
-                                                                    class=" lazyloaded" alt="" srcset="https://shopfs.myoppo.com/shop/dist/common/images/a57-2@2.png 2x, https://shopfs.myoppo.com/shop/dist/common/images/a57-2.png 1x"
-                                                                    src="/javascript/a57-2.png">
-                                                                </i>
-                                                            </figure>
-                                                            <h3>
-                                                                A57
-                                                            </h3>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </section>
-                                        </section>
-                                    </section>
-                                </aside>
-                            </li>
-                            <li class="oh-nav-item">
-                                <a href="https://www.oppo.com/cn/brand" class="oh-navitem-link oppo-tj"
-                                data-tj="www|nav|link|brand">
-                                    品牌
-                                </a>
-                            </li>
-                            <li class="oh-nav-item">
-                                <a href="https://www.opposhop.cn/" class="oh-navitem-link oppo-tj" data-tj="www|nav|link|store">
-                                    商城
-                                </a>
-                            </li>
-                            <li class="oh-nav-item">
-                                <a href="https://www.oppo.com/cn/shops" class="oh-navitem-link oppo-tj"
-                                data-tj="www|nav|link|shops">
-                                    体验店
-                                </a>
-                            </li>
-                            <li class="oh-nav-item">
-                                <a href="https://www.oppo.com/cn/service.html" class="oh-navitem-link oppo-tj"
-                                data-tj="www|nav|link|service">
-                                    服务
-                                </a>
-                            </li>
-                            <li class="oh-nav-item miniprogram-hide">
-                                <a href="https://www.oppo.cn/" target="_blank" class="oh-navitem-link oppo-tj"
-                                data-tj="www|nav|link|shequ">
-                                    社区
-                                </a>
-                            </li>
-                            <li class="oh-nav-item miniprogram-hide">
-                                <a href="http://www.coloros.com/" target="_blank" class="oh-navitem-link oppo-tj"
-                                data-tj="www|nav|link|ColorOS">
-                                    ColorOS
-                                </a>
-                            </li>
-                            <li class="oh-nav-item miniprogram-hide">
-                                <a href="https://cloud.oppo.com/login.html" target="_blank" class="oh-navitem-link oppo-tj"
-                                data-tj="www|nav|link|cloud">
-                                    云服务
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-                    <!--导航功能链接-->
-                    <section class="oh-nav-link">
-                        <a href="#" class="oh-navlink-bag oc-icon oc-iconfont-bag oc-iconfont-bag-bold">
-                            <span class="oc-text-inside">
-                                购物车
-                            </span>
-                        </a>
-                        <em class="oh-bag-tip hide" id="oh-bag-tip">
-                        </em>
-                        <em class="oh-bag-arrow">
-                        </em>
-                    </section>
-                    <!--@商城菜单-->
-                    <aside id="oh-navpopup-bag">
-                        <section class="oh-navbag-wrapper">
-                            <ul>
-                                <li>
-                                    <a href="https://www.opposhop.cn/cart" target="_blank" id="oh-navbag-cart"
-                                    class="oppo-tj" data-tj="www|a|bag|cart">
-                                        <b class="oc-icon oc-iconfont-cart oc-iconfont-cart-bold">
-                                        </b>
-                                        <span>
-                                            购物车
-                                            <em>
-                                                (2)
-                                            </em>
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.opposhop.cn/orders" target="_blank" id="oh-navbag-order"
-                                    class="oppo-tj" data-tj="www|a|bag|order">
-                                        <b class="oc-icon oc-iconfont-order oc-iconfont-order-bold">
-                                        </b>
-                                        <span>
-                                            我的订单
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://id.oppo.com/account/profile" target="_blank" class="oppo-tj"
-                                    data-tj="www|a|bag|account">
-                                        <b class="oc-icon oc-iconfont-account oc-iconfont-account-bold">
-                                        </b>
-                                        <span>
-                                            个人中心
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a id="oh-navbag-login">
-                                        <b class="oc-icon oc-iconfont-user oc-iconfont-user-bold">
-                                        </b>
-                                        <span>
-                                            注销
-                                        </span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </section>
-                    </aside>
-                </nav>
-            </header>
+            
             <i id="oc-mask">
             </i>
             <section id="oc-container">
@@ -589,13 +151,14 @@ lang="zh-CN">
                                                         </em>
                                                     </label>
                                                     <figure>
-                                                        <img src="/javascript/thumbnail_201712041012545a255c969220b.png"
-                                                        alt="蓝牙音箱M11">
+                                                        <img src="{{$v->zp}}"
+                                                        alt="">
                                                     </figure>
-                                                    <a href="https://www.opposhop.cn/products/440.html">
-                                                        蓝牙音箱M11
-                                                    </a>
+                                                    
+                                                       <a href="">{{$v->zname}}</a> 
+                                                    
                                                 </li>
+
                                             </ul>
                                         </section>
                                         
@@ -632,7 +195,7 @@ lang="zh-CN">
                                         </strong>
                                     </section>
                                     <section class="cartbar-tota-btn">
-                                        <a class="oc-btn oc-radius-default btn-master btn-size-master" id="List_Go_Checkout">
+                                        <a href="/order/create" class="oc-btn oc-radius-default btn-master btn-size-master" id="List_Go_Checkout">
                                             去结算
                                         </a>
                                     </section>
@@ -935,8 +498,8 @@ lang="zh-CN">
                     
                     var cnt = $(this).parents('ul').find('.input-num').val();
                     
-                    
-                    $('.amounts').text(num +=pr*cnt);
+                    num +=pr*cnt;
+                    $('.amounts').text(num+'.00');
 
                 })
 
@@ -1099,3 +662,4 @@ lang="zh-CN">
     </body>
 
 </html>
+@endsection

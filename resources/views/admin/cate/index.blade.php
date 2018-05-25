@@ -30,14 +30,14 @@
                                     <td>{{$v->cid}}</td>
                                     <td>{{$v->cname}}</td>
                                     <td>{{$v->pid}}</td>
-                                    <td>
-                                    	<a href="/admin/cate/{{$v->cid}}/edit"><button class='btn btn-primary'>修改</button></a>
+                                    <td  align="center">
+                                    	<a href="/admin/cate/{{$v->cid}}/edit"><button>修改</button></a>
                                     	<form action="/admin/cate/{{$v->cid}}" method='post' style='display:inline'>
 											{{csrf_field()}}
 
 											{{method_field('DELETE')}}
 
-											<button class='btn btn-danger'>删除</button>
+											<button>删除</button>
 
 										</form>
                                     	
@@ -58,7 +58,17 @@
 @endsection
 
 @section('js')
-	
+	<script>
+     
+         $('.remove').click(function(){
+
+            var remove = confirm('你确定删除吗??');
+
+            if(!remove) return;
+        })
+
+
+    </script>
 
 
 	
