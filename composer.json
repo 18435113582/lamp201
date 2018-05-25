@@ -29,7 +29,8 @@
             "App\\": "app/"
         },
         "files":[
-            "app/function/status.php"
+            "app/function/status.php",
+            "app/function/users.php"
         ]
     },
     "autoload-dev": {
