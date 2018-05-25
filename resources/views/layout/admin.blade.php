@@ -33,6 +33,7 @@
 <link rel="stylesheet" type="text/css" href="/admins/css/themer.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/admins/css/admins.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/layui/css/layui.css"  media="screen">
+<script type="text/javascript" src="/bs/js/jquery.js"></script>
 <title>@yield('title')</title>
 
 </head>
@@ -165,6 +166,34 @@
                             <li><a href="#">用户列表</a></li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> 商品类别管理</a>
+                        <ul>
+                            <li><a href="/admin/cate/create">添加分类</a></li>
+                            <li><a href="/admin/cate">分类列表</a></li>
+                        </ul>
+                    </li>
+                     <li>
+                        <a href="#"><i class="icon-list"></i> 商品管理</a>
+                        <ul>
+                            <li><a href="/admin/goods/create">添加商品</a></li>
+                            <li><a href="/admin/goods">浏览商品</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> 商城轮播图管理</a>
+                        <ul>
+                            <li><a href="/img/create">添加轮播商品</a></li>
+                            <li><a href="/img/index">浏览轮播商品</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> 订单管理</a>
+                        <ul>
+                            <li><a href="/admin/orders">浏览订单</a></li>
+                           
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
@@ -216,9 +245,9 @@
     <script src="/admins/custom-plugins/fileinput.js"></script>
     
     <!-- jQuery-UI Dependent Scripts -->
-    <script src="/admins/jui/js/jquery-ui-1.9.2.min.js"></script>
+    <!-- <script src="/admins/jui/js/jquery-ui-1.9.2.min.js"></script>
     <script src="/admins/jui/jquery-ui.custom.min.js"></script>
-    <script src="/admins/jui/js/jquery.ui.touch-punch.js"></script>
+    <script src="/admins/jui/js/jquery.ui.touch-punch.js"></script> -->
 
     <!-- Plugin Scripts -->
     <script src="/admins/plugins/colorpicker/colorpicker-min.js"></script>
