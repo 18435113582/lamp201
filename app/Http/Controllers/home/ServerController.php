@@ -155,4 +155,11 @@ class ServerController extends Controller
 
     }
 
+    public function price()
+    {
+    
+        return view('home.PriceIndex.price',['title'=>'维修价格查询']);
+
+    }
+
 }

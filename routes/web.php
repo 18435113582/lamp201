@@ -134,6 +134,9 @@ Route::group([],function(){
 	//验证码
 	Route::get('home/verifx','home\VerifyController@captcha');
 
+	// 配件价格
+	Route::get('home/price','home\ServerController@price');
+
 });
 
 
