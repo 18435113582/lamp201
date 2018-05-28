@@ -139,6 +139,7 @@
                                            
                                         </script> -->
                                     </section>
+                                    @if($res->config)
                                     <section class="product-config">
                                         <p class="config-name">
                                             网络
@@ -154,6 +155,8 @@
                                             </section>
                                         </section>
                                     </section>
+                                    @endif
+                                    @if($res->config)
                                     <section class="product-config">
                                         <p class="config-name">
                                             配置
@@ -169,7 +172,8 @@
                                             
                                         </section>
                                     </section>
-                           
+                                    @endif
+                                    @if($res->zname)
                                     <section class="product-config">
                                         <p class="config-name">
                                             赠品
@@ -188,7 +192,7 @@
                                             </section>
                                         </section>
                                     </section>
-
+                                    @endif
                                     <section class="product-config">
                                         <p class="config-name">
                                             选择数量

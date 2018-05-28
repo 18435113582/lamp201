@@ -323,6 +323,7 @@ Route::group([],function(){
 
 Route::group([],function(){
 
+	Route::get('/','home\GoodsController@first');
 	Route::resource('admin/cate','admin\CateController');
 	Route::resource('admin/goods','admin\GoodsController');
 	Route::get('home/shop','home\GoodsController@index');
@@ -346,8 +347,10 @@ Route::group([],function(){
 	Route::get('admin/orders/edit/{id}','admin\OrdersController@edit');
 	Route::post('admin/orders/update/{id}','admin\OrdersController@update');
 	Route::get('/admin/orders/go','admin\OrdersController@go');
-	Route::get('/goods/down','admin\GoodsController@down');
-	Route::get('/goods/up','admin\GoodsController@up');
+	Route::get('/goods/down/{id}','admin\GoodsController@down');
+	Route::get('/goods/up/{id}','admin\GoodsController@up');
+	Route::get('/order/status','home\OrdersController@qrsh');
+	Route::get('/order/cancel','home\OrdersController@qxdd');
 
 });
 

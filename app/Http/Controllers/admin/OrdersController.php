@@ -57,15 +57,18 @@ class OrdersController extends Controller
 
     	if ($data){
 
-    		return redirect('admin/orders');
-    	}
+    		return redirect('admin/orders')->with('msg','订单修改成功');
+    	}else {
+
+            return back();
+        }
     }
 
     public function go(Request $request)
     {
 
     	$oid = $request->input('oid');
-    	$status['status'] = 1;
+    	$status['status'] = 2;
     	$data = DB::table('shop_orders')->where('oid',$oid)->update($status);
     	if($data){
 

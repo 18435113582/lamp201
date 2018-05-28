@@ -155,7 +155,7 @@ class GoodsController extends Controller
         
         if($gid){
 
-            return redirect('admin/goods');
+            return redirect('admin/goods')->with('msg','商品添加成功');
         } else {
 
             return back();
@@ -270,6 +270,15 @@ class GoodsController extends Controller
         //  
         if($request->hasFile('showpic')){
 
+            $show = DB::table('goods_show')->where('gid',$id)->get();
+            foreach ($show as $k => $v) {
+                if($v->gpic){
+
+                unlink('.'.$v->gpic);
+                }
+            }
+            DB::table('goods_show')->where('gid',$id)->delete();
+
             $gimg = $request->file('showpic');
 
 
@@ -292,20 +301,23 @@ class GoodsController extends Controller
                 $imgs[] = $gm;
 
             }
-            $show = DB::table('goods_show')->where('gid',$id)->get();
-            foreach ($show as $k => $v) {
-                if($info->gpic){
-
-                unlink('.'.$info->gpic);
-                }
-            }
-            DB::table('goods_show')->where('gid',$id)->delete();
+           
             DB::table('goods_show')->insert($imgs);
         }
 
        
         //
         if($request->hasFile('detpic')){
+
+
+            $det = DB::table('goods_det')->where('gid',$id)->get();
+            foreach ($det as $k => $v) {
+               if($v->gpic){
+
+                    unlink('.'.$v->gpic);
+                }
+            }
+            DB::table('goods_det')->where('gid',$id)->delete();
 
             $gimg = $request->file('detpic');
 
@@ -329,14 +341,7 @@ class GoodsController extends Controller
                 $imgs[] = $gm;
 
             }
-            $det = DB::table('goods_det')->where('gid',$id)->get();
-            foreach ($det as $k => $v) {
-               if($info->gpic){
-
-                    unlink('.'.$info->gpic);
-                }
-            }
-            DB::table('goods_det')->where('gid',$id)->delete();
+           
             DB::table('goods_det')->insert($imgs);
         }
 
@@ -345,7 +350,7 @@ class GoodsController extends Controller
         $data = DB::table('shop_goods')->where('gid',$id)->update($res);
         if($data){
 
-            return redirect('admin/goods');
+            return redirect('admin/goods')->with('msg','商品修改成功');
         } else {
 
             return back();
@@ -391,7 +396,7 @@ class GoodsController extends Controller
                 }
             DB::table('goods_det')->where('gid',$id)->delete();
 
-            return redirect('admin/goods');
+            return redirect('admin/goods')->with('msg','删除成功');
         }else{
 
             return back();
@@ -400,29 +405,25 @@ class GoodsController extends Controller
 
 
 
-    public function down(Request $request) 
+    public function down($id) 
     {
 
-        $gid = $request->input('gid');
         
         $status['status'] = 2;
-        $data = DB::table('shop_goods')->where('gid',$gid)->update($status);
+        $data = DB::table('shop_goods')->where('gid',$id)->update($status);
         if($data){
 
-            echo 1;
+            return redirect('/admin/goods');
         }
     }
 
-    public function up(Request $request)
+    public function up($id)
     {
-
-        $gid = $request->input('gid');
-        
         $status['status'] = 1;
-        $data = DB::table('shop_goods')->where('gid',$gid)->update($status);
+        $data = DB::table('shop_goods')->where('gid',$id)->update($status);
         if($data){
 
-            echo 1;
+           return redirect('/admin/goods');
         }
     }
 

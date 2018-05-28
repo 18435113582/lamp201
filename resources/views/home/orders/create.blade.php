@@ -67,6 +67,7 @@
                                                 </li>
                                             </ul>
                                             <!--子行-->
+                                            @if($v->zname)
                                             <section class="oc-shp-item shp-item-sub">
                                                 <ul class="shp-row">
                                                     <li class="shp-col subtitle standard-width">
@@ -79,11 +80,13 @@
                                                     </li>
                                                 </ul>
                                             </section>
+                                            @endif
                                         </section>
                                         @endforeach
                                     </section>
                                 </section>
                             </section>
+
                            
                             <section class="shp-chout-row shp-chout-address-choose hide ">
                                 <label class="shp-chout-col1">
@@ -95,6 +98,15 @@
                                     收货人信息
                                 </label>
                                 <section class="shp-chout-col2">
+                                     @if (count($errors) > 0)
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li style="color:red">*{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
                                     <ul class="shp-chout-list">
                                         <li class="shp-chout-item shp-chout-gutter">
                                             <div class="oc-input shp-chout-gutter size-small color-gray" data-field-name="receiver">
@@ -189,7 +201,7 @@
                                                 商品数量
                                             </label>
                                             <span>
-                                                2
+                                            {{$cnt}}
                                             </span>
                                         </li>
                                         <li>
@@ -577,6 +589,9 @@
         <script src="/javascript/common.js">
         </script>
         <script src="/javascript/shopping.js">
+        </script>
+        <script>
+            $('.alert').delay(3000).slideUp(1000);
         </script>
         <script type="text/javascript">
             var xnscript = document.createElement("script");

@@ -212,6 +212,14 @@
         
         <!-- Main Container Start -->
         <div id="mws-container" class="clearfix">
+            @if(session('msg'))
+                <div class="mws-form-message success">
+                    <ul class="list-unstyled" style="list-style:none;">
+                        <li sytle='font-size:20px;'>{{session('msg')}}</li>
+                       
+                    </ul>
+                </div>
+            @endif
             <div class="container">
             @section('content')
 
@@ -254,6 +262,9 @@
             $.fn.tabs && $('.mws-tabs').tabs();
         });
     </script>
+    <script>
+            $('.success').delay(3000).slideUp(1000);
+        </script>
 
     <script src="/layui/layui.js"></script>
 
