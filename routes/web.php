@@ -21,11 +21,9 @@ Route::post('admin/dologin','admin\LoginController@dologin');
 Route::get('admin/loginout','admin\LoginController@loginout');
 
 //后台控制
+
+Route::get('admin/index','admin\IndexController@index');
 Route::group(['middleware'=>'login'],function(){
-
-	Route::get('admin/index','admin\IndexController@index');
-
-
 	
 	Route::get('admin/pass','admin\LoginController@pass');
 	Route::post('admin/changepass','admin\LoginController@changePass');
@@ -126,7 +124,7 @@ Route::group([],function(){
 
 
 
-
+Route::group(['middleware'=>'login'],function(){
 
 
 
@@ -139,6 +137,16 @@ Route::group([],function(){
 	Route::get('admin/ServerEditt/{id}','admin\ServerController@edit2');
 	Route::get('admin/ServerEdittt/{id}','admin\ServerController@edit3');
 	Route::get('admin/ServerEditttt/{id}','admin\ServerController@edit4');
+
+	//价格管理
+	Route::get('admin/priceIndex','admin\ServerController@priceIndex');
+	//添加价格
+	Route::get('admin/priceAdd','admin\ServerController@priceAdd');
+	Route::post('admin/addPrice','admin\ModelController@oneAdd');
+	Route::get('admin/priceEdit/{id}','admin\ModelController@priceEdit');
+	Route::post('admin/priceUpdate/{id}','admin\ModelController@priceUpdate');
+	Route::get('admin/priceDelete/{id}','admin\ModelController@priceDelete');
+
 	
 });
 
@@ -365,14 +373,17 @@ Route::group([],function(){
 
 Route::group([],function(){
 
+	//服务首页
+	Route::get('home/server','home\ServerController@server');
+
 	//寄修服务
-	Route::get('home/ServerIndex','home\ServerController@index');
+	Route::get('home/ServerIndex','home\ServerController@index')->middleware('homeLogin');;
 	Route::get('home/breakdown','home\ServerController@breakdown');
 	Route::post('home/breakajax','home\ServerController@breakajax');
 	Route::post('home/create','home\ServerController@create');
 
 	//体验店查询
-	Route::get('home/index','home\StoreController@index');
+	Route::get('home/stIndex','home\StoreController@index');
 	Route::get('home/StoreIndex','home\StoreController@store');
 	Route::get('home/StoreAjax','home\StoreController@stajax');
 
@@ -405,7 +416,6 @@ Route::group([],function(){
 
 	//lipeng end
 
-
 	//维修进度查询
 	Route::get('home/repair','home\ServerController@repair');
 	Route::get('home/query','home\ServerController@query');
@@ -416,6 +426,7 @@ Route::group([],function(){
 
 	// 配件价格
 	Route::get('home/price','home\ServerController@price');
+	Route::get('home/priceAjax','admin\ModelController@priceAjax');
 
 });
 

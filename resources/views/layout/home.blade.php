@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="zh-CN" class="no-js">
 
     <head>
@@ -19,11 +18,7 @@
 
         <link media="all" type="text/css" rel="stylesheet" href="/css/shop.css">
         <link media="all" type="text/css" rel="stylesheet" href="/css/store.css">
-            <link media="all" type="text/css" rel="stylesheet" href="/css/products.css">
-
-
-
-
+        <link media="all" type="text/css" rel="stylesheet" href="/css/products.css">
         <link rel="stylesheet" href="/bs/css/bootstrap.min.css">
         <link rel="stylesheet" href="/bs/css/bootstrap-theme.min.css">
         <script type="text/javascript" src="/bs/js/jquery.js"></script>

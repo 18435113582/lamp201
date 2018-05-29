@@ -5,9 +5,9 @@
 @section('content')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<link media="all" type="text/css" rel="stylesheet" href="/css/ui.css">
+<link media="all" type="text/css" rel="stylesheet" href="/css/break/ui.css">
 
-<link media="all" type="text/css" rel="stylesheet" href="/css/repair.css">
+<link media="all" type="text/css" rel="stylesheet" href="/css/break/repair.css">
 
 <section id="oc-container">
 	<div class="repair repair-fill-address">

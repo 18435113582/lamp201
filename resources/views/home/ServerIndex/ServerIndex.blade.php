@@ -11,11 +11,14 @@
 
 </style>
 
-<link media="all" type="text/css" rel="stylesheet" href="/css/common.css">
+<link media="all" type="text/css" rel="stylesheet" href="/css/server/ui.css">
 
-<link media="all" type="text/css" rel="stylesheet" href="/css/ui.css">
+<link media="all" type="text/css" rel="stylesheet" href="/css/server/repair.css">
 
-<link media="all" type="text/css" rel="stylesheet" href="/css/repair.css">
+
+<link media="all" type="text/css" rel="stylesheet" href="/css/server/default.css">
+
+<link media="all" type="text/css" rel="stylesheet" href="/css/server/default.date.css">
 
 <section id="oc-container">
 	<div class="repair repair-fill-fault">

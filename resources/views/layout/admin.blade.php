@@ -171,35 +171,35 @@
                 <ul>
                     <li>
                         <a href="#"><i class="icon-users"></i> 用户管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/user/create">添加用户</a></li>
                             <li><a href="/admin/user">用户列表</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="icon-list"></i> 商品类别管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/cate/create">添加分类</a></li>
                             <li><a href="/admin/cate">分类列表</a></li>
                         </ul>
                     </li>
                      <li>
                         <a href="#"><i class="icon-list"></i> 商品管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/goods/create">添加商品</a></li>
                             <li><a href="/admin/goods">浏览商品</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="icon-list"></i> 商城轮播图管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/img/create">添加轮播商品</a></li>
                             <li><a href="/img/index">浏览轮播商品</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="icon-list"></i> 订单管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/orders">浏览订单</a></li>
                            
                         </ul>
@@ -211,7 +211,7 @@
                 <ul>
                     <li>
                         <a href="#"><i class="icon-list"></i> 店铺管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/StoreIndex/create">添加店铺</a></li>
                             <li><a href="/admin/StoreIndex">店铺列表</a></li>
                         </ul>
@@ -223,8 +223,20 @@
                 <ul>
                     <li>
                         <a href="#"><i class="icon-list"></i> 维修管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/ServerIndex">维修列表</a></li> 
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="mws-navigation">
+                <ul>
+                    <li>
+                        <a href="#"><i class="icon-list"></i> 价格管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/priceIndex">价格列表</a></li> 
+                            <li><a href="/admin/priceAdd">添加价格</a></li> 
                         </ul>
                     </li>
                 </ul>

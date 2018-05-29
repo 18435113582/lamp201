@@ -54,6 +54,19 @@ class ServerController extends Controller
 
 	}
 
-	
+	public function priceIndex()
+	{
+		$prr = DB::table('accessories')
+		->join('price_name','accessories.aid','price_name.pid')
+		->get();
+
+		return view('admin.priceContent.price',['title'=>'配件价格管理','prr'=>$prr]);
+	}
+
+	public function priceAdd()
+	{
+		return view('admin.priceContent.priceAdd',['title'=>'添加价格']);
+	}
+
 	
 }

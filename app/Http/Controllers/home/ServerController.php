@@ -18,6 +18,12 @@ class ServerController extends Controller
 
     }
 
+    public function server()
+    {
+
+        return view('home.serverIndex.server',['title'=>'oppo手机服务']);
+    }
+
     public function breakdown(Request $req)
     {
 
@@ -143,23 +149,36 @@ class ServerController extends Controller
             return back()->with('cod','验证码不正确');
         }
 
-        $hrr = DB::table('breakdown')->where('bphone',$both['rphone'])->get();
+        if( count($both['rphone']) == 11){
+
+            $hrr = DB::table('breakdown')->where('bphone',$both['rphone'])->first();
+
+            if(!$hrr){
+
+                return redirect('/home/query');
+            } else {
+
+                return view('home.repairIndex.repairFind',['hrr'=>$hrr,'title'=>'维修进度查询']);
+            }
+
+        }
+
+        
 
         // dd($hrr);
 
-        if($hrr){
-            return view('home.repairIndex.repairFind',['hrr'=>$hrr,'title'=>'维修进度查询']);
-        } else {
-            return redirect('/home/query');
-        }
+        
 
     }
 
     public function price()
     {
+        $prr = DB::table('price_name')->get();
     
-        return view('home.PriceIndex.price',['title'=>'维修价格查询']);
+        return view('home.PriceIndex.price',['title'=>'维修价格查询','prr'=>$prr]);
 
     }
+
+
 
 }
