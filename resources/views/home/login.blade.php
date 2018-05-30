@@ -16,10 +16,12 @@
 
 			<div class="acctitle"><i class="acc-closed icon-lock3"></i>用户的登录页面</div>
 			<div class="acc_content clearfix">
-				@if(session('err'))
-                    <li style='color:red;font-size:17px;list-style:none'>{{session('err')}}</li>
+				<div class="error">
+					@if(session('err'))
+	                    <li style='color:red;font-size:17px;list-style:none'>{{session('err')}}</li>
 
-                @endif
+	                @endif
+	            </div>    
 				<form id="login-form" name="login-form" class="nobottommargin" action="/home/dologin" method="post">
 					<div class="col_full">
 						<label for="login-form-username">账号:</label>
@@ -70,7 +72,7 @@
 					<div class="col_full nobottommargin">
 						{{csrf_field()}}
 						<button class="button button-3d button-bottle green nomargin" id="login-form-submit" name="login-form-submit" value="login">登录</button>
-						<a href="/home/dologin" class="fright">忘记密码</a>
+						<!-- <a href="/home/dologin" class="fright">忘记密码</a> -->
 					</div>
 				</form>
 			</div>
@@ -115,6 +117,13 @@
 		    });
 		});
 	
+
+
+	setTimeout(function(){
+     
+		$('.error').slideUp(1000);
+
+	},2000)
 
 	
 

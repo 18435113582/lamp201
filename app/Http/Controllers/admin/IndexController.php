@@ -22,19 +22,20 @@ class IndexController extends Controller
 
     public function userAjax(Request $request)
     {
-    	$id = $request->input('id');
+        $id = $request->input('id');
 
-    	$username['username'] = $request->input('username');
+        $username['username'] = $request->input('username');
 
-    	$res = DB::table('user')->where('id',$id)->update($username);
+        $res = DB::table('user')->where('id',$id)->update($username);
+        
+        if($res){
 
-    	if($res){
+            echo 1;
+        } else {
 
-    		echo 1;
-    	} else {
+            echo 0;
+        }
 
-    		echo 0;
-    	}
 
 
 

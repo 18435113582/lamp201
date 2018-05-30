@@ -19,8 +19,11 @@ class LoginMiddleware
              return $next($request);
 
         }else{
-            return redirect('admin/index');
+            return redirect('admin/login');
         }
        
     }
+
+
+    
 }

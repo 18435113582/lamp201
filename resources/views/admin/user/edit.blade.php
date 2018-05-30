@@ -81,13 +81,13 @@
 
 @section('js')
 <script>
-	/*setTimeout(function(){
+	setTimeout(function(){
 
 		$('.mws-form-message').slideUp(1000);
 
-	},3000)
-*/
-	$('.mws-form-message').delay(3000).slideUp(1000);
+	},2000)
+
+	// $('.mws-form-message').delay(3000).slideUp(1000);
 
 </script>
 
