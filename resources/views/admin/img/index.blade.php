@@ -41,7 +41,7 @@
 											{{csrf_field()}}
 
 											
-											<button class='btn btn-danger'>删除</button>
+											<button class='btn btn-danger remove'>删除</button>
 
 										</form>
                                     	
@@ -63,7 +63,16 @@
 
 @section('js')
 	
+    <script>
+        
+        $('.remove').click(function(){
 
+            var remove = confirm('你确定删除吗??');
+
+            if(!remove) return false;
+        })
+
+    </script>
 
 	
 @endsection

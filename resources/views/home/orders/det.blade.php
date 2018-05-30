@@ -158,6 +158,7 @@
                                                             </span>
                                                         </li>
                                                     </ul>
+                                                     @if($v->zname)
                                                     <section class="oc-shp-item shp-item-sub">
                                                         <ul class="shp-row">
                                                             <li class="shp-col title subtitle">
@@ -180,6 +181,7 @@
                                                             </li>
                                                         </ul>
                                                     </section>
+                                                    @endif
                                                 </section>
 												@endforeach
                                             </section>

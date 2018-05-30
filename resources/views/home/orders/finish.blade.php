@@ -256,12 +256,13 @@
                                     <section class="shp-pmsuccess-short"><span>{{$v->gname}} {{$v->color}}</span></section>
                                     <section class="shp-pmsuccess-long">x{{$v->cnt}}</section>
                                 </li>
+                                 @if($v->zname)
                                 <li class="shp-pmsuccess-item">
                                     <label class="shp-pmsuccess-title"></label>
                                     <section class="shp-pmsuccess-short"><span>{{$v->zname}}</span></section>
                                     <section class="shp-pmsuccess-long">x1</section>
                                 </li>
-                                
+                                @endif
                                 @endforeach
                             </ul>
                         </section>

@@ -16,7 +16,25 @@
             <section id="oc-container">
                 <section class="shopping">
                     <section class="shopping-wrapper">
-                        
+
+                        @if(!$cart)
+                        <section class="shopping-content shopping-empty">
+
+                            <section class="shp-empty-wrapper">
+                                <figure><img src="/htmlimg/shp-empty.png"></figure>
+                                <p>你的购物车还是空的，快去逛逛吧 。</p>
+                                <section class="shp-goshop-link">
+                                    <a class="oc-btn oc-radius-default btn-master btn-size-master" href="/home/shop">带我去商城</a>
+                                </section>
+                            </section>
+
+                        </section>
+
+
+
+                        @endif
+
+                        @if($cart)
                         <section class="shopping-content shopping-cart">
                             <h2 class="shp-cart-title">
                                 购物车
@@ -142,6 +160,7 @@
                                             </li>
                                         </ul>
                                         <!--子行-->
+                                        @if($v->zname)
                                         <section class="oc-shp-item shp-item-sub">
                                             <ul class="shp-row">
                                                 <li class="shp-col title subtitle">
@@ -161,7 +180,7 @@
 
                                             </ul>
                                         </section>
-                                        
+                                        @endif
                                     </section>
                                  
                                 @endforeach
@@ -202,6 +221,8 @@
                                 </section>
                             </section>
                         </section>
+
+                        @endif
                     </section>
                 </section>
             </section>

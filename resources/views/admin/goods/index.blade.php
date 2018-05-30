@@ -166,10 +166,10 @@
                        		<button class='sc'>删除</button>
 						</form>
                         @if($v->status == 0 || $v->status == 1)
-                            <button class="down">下架</button>
+                           <a href="/goods/down/{{$v->gid}}"><button>下架</button></a> 
                         @endif
                         @if($v->status == 2)
-                            <button class="up">上架</button>
+                            <a href="/goods/up/{{$v->gid}}"><button>上架</button></a>
                         @endif
                     </td>
                 </tr>
@@ -245,47 +245,10 @@
 
             var remove = confirm('你确定删除吗??');
 
-            if(!remove) return;
+            if(!remove) return false;
         })
 
 
-        $('.down').click(function(){
-            var gid = $(this).parents('tr').find('td').eq(0).text();
-            var status = $(this).parents('tr').find('td').eq(7);
-            var down = $(this);
- 
-            $.get('/goods/down',{gid:gid},function(data){
-               
-               if(data == '1'){
-
-                    status.text('下架');
-                    
-                    down.html('<button class="up">上架</button>');
-
-               }
-
-            })
-
-        })
-           
-
-        $('.up').click(function(){
-            var gid = $(this).parents('tr').find('td').eq(0).text();
-            var status = $(this).parents('tr').find('td').eq(7);
-            var up = $(this);
- 
-            $.get('/goods/up',{gid:gid},function(data){
-               
-               if(data == '1'){
-
-                    status.text('上架');
-
-                    up.html('<button class="down">下架</button>');
-
-               }
-
-            })
-        })
             
     </script>
 
