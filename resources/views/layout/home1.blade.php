@@ -41,8 +41,8 @@
         <div class="header">
             <div class="w960" style="" id="headerlinks">
                  <ul class="menu_sec">
-                    <li><a href="https://www.oppo.com/" translang="oppocom">OPPO官网</a></li>
-                    <li><a href="http://www.oppo.cn/" translang="oppocn">OPPO社区</a></li>
+                    <li><a href="http://www.lamp201.com/" translang="oppocom">OPPO官网</a></li>
+                    <li><a href="http://laravel127.cn/home/arts/index" translang="oppocn">OPPO社区</a></li>
  
                 </ul>
                 

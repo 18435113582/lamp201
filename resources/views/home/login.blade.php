@@ -24,8 +24,8 @@
 	            </div>    
 				<form id="login-form" name="login-form" class="nobottommargin" action="/home/dologin" method="post">
 					<div class="col_full">
-						<label for="login-form-username">账号:</label>
-						<input type="text" id="login-form-username" name="username" value="" class="form-control" placeholder="请输入账号" />
+						<label for="login-form-username">用户名:</label>
+						<input type="text" id="login-form-username" name="username" value="" class="form-control" placeholder="请输入用户名"/>
 					</div>
 
 					<div class="col_full">
@@ -33,11 +33,11 @@
 						<input type="password" id="password" name="password" value="" class="form-control" placeholder="请输入密码"/>
 
 						<li class="a">
-							<!-- <input type="checkbox" id="remember"><label for="remember">记住密码</label> --> 
+							 
 							<input type="checkbox" id="togglePassword"><label for="togglePassword">显示密码</label>
 						</li>
 					</div>
-
+					
 					<!-- <style>
 						.yzm{
 							
@@ -69,11 +69,35 @@
 						<button class='btn btn-info' id='btnsend' style='margin-left:30px'>点击获取验证码</button>
 					</div> -->
 
-					<div class="col_full nobottommargin">
+
+					<!-- <div class="col_full nobottommargin">
 						{{csrf_field()}}
-						<button class="button button-3d button-bottle green nomargin" id="login-form-submit" name="login-form-submit" value="login">登录</button>
-						<!-- <a href="/home/dologin" class="fright">忘记密码</a> -->
+						<button class="button button-3d button-bottle green nomargin" id="b" name="login-form-submit"  value="login">登录</button>
+						<a href="/home/dologin" class="fright">忘记密码</a>
+					</div> -->
+					<div>
+						<center>
+							{{csrf_field()}}
+							<input class="button login_button mt30" id="loginBtn" transvalue="loginbtn" value="登录" onclick="check_login();" style="margin-bottom:15px;" type="submit">
+							{{csrf_field()}}
+		                    <a href="/home/register"><input class="button register_button oppo-tj" id="registerBtn" transvalue="registerbtn" value="注册OPPO帐号" type="button" ></a>
+
+
+						</center>
+						
+
+
+
 					</div>
+					
+
+
+
+					
+					
+					
+
+					
 				</form>
 			</div>
 		</div>
