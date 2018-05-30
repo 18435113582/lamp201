@@ -377,7 +377,7 @@ Route::group([],function(){
 	Route::get('home/server','home\ServerController@server');
 
 	//寄修服务
-	Route::get('home/ServerIndex','home\ServerController@index')->middleware('homeLogin');;
+	Route::get('home/ServerIndex','home\ServerController@index')->middleware('homeLogin');
 	Route::get('home/breakdown','home\ServerController@breakdown');
 	Route::post('home/breakajax','home\ServerController@breakajax');
 	Route::post('home/create','home\ServerController@create');
