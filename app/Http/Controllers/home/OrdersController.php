@@ -37,17 +37,35 @@ class OrdersController extends Controller
     		$carts = [];
     	 }
     	$sum = null;
+        $cnt= null;
     	foreach($carts as $k=>$v)
     	{
-    		$sum +=  intval($v->price)*$v->cnt;
+            $sum +=  intval($v->price)*$v->cnt;
+    		$cnt +=  $v->cnt;
+
 
     	}
     	
-    	return view('home.orders.create',['carts'=>$carts,'sum'=>$sum]);
+    	return view('home.orders.create',['carts'=>$carts,'sum'=>$sum,'cnt'=>$cnt]);
     }
 
     public function save(Request $request)
     {
+
+         $this->validate($request, [
+           'rec' => 'required',
+            'tel'=>'required|regex:/^1[345678]\d{9}$/',
+            'addr'=>'required',
+            
+              
+        ],[
+           'rec.required'=>"收货人不能为空",
+            'rec.regex'=>'收货人格式不正确',
+            'tel.required'=>'收货人电话不能为空',
+            'tel.regex'=>'收货人电话格式不正确',
+            'addr.required'=>'收货人地址不能为空',
+            'fapiao.regex'=>'发票抬头格式不正确'
+        ]);
 
     	$orders = $request->except('_token');
     	$orders['oid'] = date('YmdHis').mt_rand(1000,9999);
@@ -94,5 +112,36 @@ class OrdersController extends Controller
     	$order_det = DB::table('orders_det')->where('oid',$id)->get();
     	
     	return view('home.orders.det',['order'=>$order,'order_det'=>$order_det]);
+    }
+
+    public function qrsh(Request $request)
+    {
+
+        $oid = $request->input('oid');
+
+        $status['status'] = 3;
+
+        $data = DB::table('shop_orders')->where('oid',$oid)->update($status);
+
+        if($data){
+
+            echo 1;
+        }
+
+    }
+        public function qxdd(Request $request)
+    {
+
+        $oid = $request->input('oid');
+
+        $status['status'] = 4;
+
+        $data = DB::table('shop_orders')->where('oid',$oid)->update($status);
+
+        if($data){
+
+            echo 1;
+        }
+
     }
 }

@@ -84,6 +84,7 @@
                                                             </span>
                                                         </li>
                                                     </ul>
+                                                    @if($vv->zname)
                                                     <ul class="shp-row">
                                                         <li class="shp-col image">
                                                             &nbsp;
@@ -99,6 +100,7 @@
                                                             </span>
                                                         </li>
                                                     </ul>
+                                                    @endif
                                                 </section>
                                                 @endforeach
                                             </section>
@@ -118,14 +120,70 @@
                                             </section>
                                         </section>
                                         <section class="acc-col2 acc-orderft-btn">
-                                            <a class="oc-btn btn-lesser btn-size-basic btn-acc-giveuporder" data-message="acc-giveuporder-layer"
+                                            @if($v->status == 2)
+                                            <a class="oc-btn btn-lesser btn-size-basic btn-acc-giveuporder qr" data-message="acc-giveuporder-layer"
+                                            data-order-serial="180510225959920">
+                                                确认收货
+                                            </a>
+                                            @endif
+                                            @if($v->status == 1)
+                                            <a class="oc-btn btn-lesser btn-size-basic btn-acc-giveuporder qx" data-message="acc-giveuporder-layer"
                                             data-order-serial="180510225959920">
                                                 取消订单
                                             </a>
+                                            @endif
+                                            
                                         </section>
+
+                                        
                                     </section>
                                 </section>
                                 @endforeach
+                                <script>
+                                            $('.qr').click(function(){
+
+                                                var qr = confirm('您收到货了吗？');
+
+                                                if(!qr) return false;
+                                                var oid = $(this).parent().parent().parent().find('a').eq(1).text();
+                                                
+                                                
+                                                var status = $(this).parent().parent().parent().find('strong');
+                                                
+                                                var me = this;
+
+                                                $.get('/order/status',{oid:oid},function(data){
+                                                    
+                                                    if(data == 1){
+
+                                                        status.text('交易完成');
+                                                        me.remove();
+                                                    }
+
+                                                });
+                                            });   
+                                             $('.qx').click(function(){
+
+                                                 var qr = confirm('您确定取消订单吗？');
+
+                                                 if(!qr) return false;
+                                                 var oid = $(this).parent().parent().parent().find('a').eq(1).text();
+
+                                                var status =$(this).parent().parent().parent().find('strong');
+                                                var me = this;
+
+                                                $.get('/order/cancel',{oid:oid},function(data){
+
+                                                    if(data == 1){
+
+                                                        status.text('已取消');
+                                                        me.remove();
+                                                    }
+
+                                                });
+                                            });     
+
+                                        </script>
                             </section>
                             
                         </section>
@@ -401,37 +459,7 @@
                 </section>
             </section>
         </section>
-        <section class="oc-model acc-giveuporder-layer mask-index-top oc-poper-notes"
-        data-model="acc-giveuporder-layer">
-            <i class="close-btn" data-trigger="model@close">
-            </i>
-            <section class="model-title">
-                <h3>
-                </h3>
-            </section>
-            <section class="model-content">
-                <section class="oc-poper-content">
-                    <section class="oc-popnotes-title">
-                        <h2>
-                            请确认取消订单?
-                        </h2>
-                    </section>
-                    <section class="oc-popnotes-btn">
-                        <a class="oc-btn btn-master btn-size-alter btn-order-cancle" id="stop">
-                            确定取消
-                        </a>
-                        <a class="oc-btn btn-bottom btn-size-alter btn-order-cancle">
-                            不取消
-                        </a>
-                    </section>
-                    <script>
-                       
-
-                    </script>
-        
-                </section>
-            </section>
-        </section>
+       
         <script src="/javascript/lib.js">
         </script>
         <script src="/javascript/common.js">

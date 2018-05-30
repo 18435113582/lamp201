@@ -17,10 +17,14 @@
         <meta name="monitor" content="AI智能拍照，让美更自然" />
         <link media="all" type="text/css" rel="stylesheet" href="/css/common.css">
         <link media="all" type="text/css" rel="stylesheet" href="/css/products.css">
+         <link media="all" type="text/css" rel="stylesheet" href="/css/home.css">
+         <script src="/javascript/home.js"></script>
         <script type="text/javascript" src="/bs/js/jquery.js">
         </script>
         <link media="all" type="text/css" rel="stylesheet" href="/css/shop.css">
         <link media="all" type="text/css" rel="stylesheet" href="/css/shopping.css">
+        <link rel="stylesheet" type="text/css" href="/layui/css/layui.css"  media="screen">
+         <script src="/layui/layui.js"></script>
         <script type="text/javascript" defer="defer" async="" src="/javascript/uta.js">
         </script>
         <script src="/javascript/optj-1.js">

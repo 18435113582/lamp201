@@ -13,19 +13,19 @@
         <li class="banner-item" data-theme="white" data-layout="right">
             <a class="mobile-banner-link" href=""  target="_blank"></a>
             <!--背景-->
-            <i class="banner-bg" style="background-color: ;">
+            <i class="banner-bg" style="background-color:;">
                         <picture>
                     <!--[if IE 9]><video style="display: none"><![endif]-->
                     
-                    <source data-srcset="{{$v->gpic}}" media="xl" />
+                    <source data-srcset="{{$v->gpic}}" media="xl" style="width:100%"/>
                     <!--[if IE 9]></video><![endif]-->
-                    <img data-src="{{$v->gpic}}" data-srcset="{{$v->gpic}}" class="lazyload" alt=""" />
+                    <img data-src="{{$v->gpic}}" data-srcset="{{$v->gpic}}" class="lazyload" alt=""/>
                 </picture>
                     </i>
 
             <!--标题-->
             <section class="banner-title-wrapper">
-                <section class="banner-title _title">
+                <section class="banner-title _title" >
                     <section>
                         <h2>{{$v->hone}}</h2>
                         <h3>{{$v->htwo}}</h3>
@@ -65,9 +65,9 @@
             <ul class="product-model-views">
                 @foreach($v->info as $kk=>$vv)
                 <li class="product-view">
-                    
+                    <picture>
                         <img data-src="{{$vv->gpic}}"  class="lazyload" alt="" />
-                    
+                    </picture>
                 </li>
                                 
                  @endforeach                
@@ -80,7 +80,13 @@
                 @else
                     left
                 @endif>
-                    <section class="title-box pro-swiper-container">
+                    <section class="title-box pro-swiper-container"
+                           @if($k % 2 !== 1)
+                                style="color:black" 
+                            @else
+                                style="color:white"
+                            @endif
+                    >
                         
                     <ul class="product-title-list">
                     @foreach($v->info as $kk=>$vv)                  
@@ -95,7 +101,7 @@
                        
                         <ul class="color-list">
                             @foreach($v->info as $kk=>$vv)
-                            <li class="color-item" data-color="#2B196D" data-title-color="gray" data-view-bg="#FFFFFF" data-price="{{Intval($vv->price)}}" data-link="/home/read/{{$vv->gid}}"><i class="color-block"></i><i class="color-circle"></i></li>
+                            <li class="color-item" data-color="#000066" data-title-color="gray" data-view-bg="#FFFFFF" data-price="{{Intval($vv->price)}}" data-link="/home/read/{{$vv->gid}}"><i class="color-block"></i><i class="color-circle"></i></li>
                             @endforeach
                         </ul>
                         

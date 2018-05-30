@@ -73,7 +73,7 @@ class CateController extends Controller
         if($foo){
 
 
-            return redirect('admin/cate');
+            return redirect('admin/cate')->with('msg','添加成功');
         } else {
 
             return back();
@@ -118,7 +118,7 @@ class CateController extends Controller
 
         if($res){
 
-            return redirect('/admin/cate');
+            return redirect('/admin/cate')->with('msg','修改成功');
         }
     }
 
@@ -133,7 +133,7 @@ class CateController extends Controller
         $res = DB::table('shop_cates')->where('cid',$id)->delete();
         if($res){
 
-            return redirect('/admin/cate');
+            return redirect('/admin/cate')->with('msg','删除成功');
         }
     }
 }

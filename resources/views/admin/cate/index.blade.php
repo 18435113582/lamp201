@@ -32,7 +32,7 @@
                                     <td>{{$v->pid}}</td>
                                     <td  align="center">
                                     	<a href="/admin/cate/{{$v->cid}}/edit"><button>修改</button></a>
-                                    	<form action="/admin/cate/{{$v->cid}}" method='post' style='display:inline'>
+                                    	<form action="/admin/cate/{{$v->cid}}" method='post' style='display:inline' class="remove">
 											{{csrf_field()}}
 
 											{{method_field('DELETE')}}
@@ -64,8 +64,8 @@
 
             var remove = confirm('你确定删除吗??');
 
-            if(!remove) return;
-        })
+            if(!remove) return false;
+        });
 
 
     </script>

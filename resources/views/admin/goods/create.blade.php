@@ -81,7 +81,7 @@
                     					<input type="file" name="gpic" multiple="multiple" />
                     				</div>
                     			</div>
-								<div class="mws-form-row">
+							<div class="mws-form-row">
                     				<label class="mws-form-label">商品四体图片</label>
                     				<div class="mws-form-item">
                     					<input type="file" name="showpic[]" multiple="multiple" />

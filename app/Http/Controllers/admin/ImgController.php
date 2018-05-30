@@ -42,7 +42,7 @@ class ImgController extends Controller
 
         if($data){
 
-            return redirect('/img/index');
+            return redirect('/img/index')->with('msg','轮播图添加成功');
         } else {
 
             return back();
@@ -79,8 +79,12 @@ class ImgController extends Controller
 
         if($data){
 
-            return redirect('/img/index');
-        } 
+            return redirect('/img/index')->with('msg','修改成功');
+        } else {
+
+            return back();
+        }
+
 	}
 
 
@@ -98,7 +102,7 @@ class ImgController extends Controller
         if($del){
 
             unlink('.'.$gpic);
-            return redirect('/img/index');
+            return redirect('/img/index')->with('msg','已删除');
             
         }else{
 

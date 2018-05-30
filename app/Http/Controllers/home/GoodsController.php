@@ -8,6 +8,13 @@ use DB;
 
 class GoodsController extends Controller
 {
+
+    public function first()
+    {
+
+        return view('home.first.index');
+    }
+
     public function index()
     {
 
@@ -26,7 +33,7 @@ class GoodsController extends Controller
             $v->info = $info;
         }
         $parts = DB::table('shop_goods')->where('cid',3)->get();
-    	$parts_two = DB::table('shop_goods')->where('cid',8)->get();
+    	$parts_two = DB::table('shop_goods')->where('cid',4)->get();
         $Img = DB::table('shop_img')->get();
        
     	return view('home.goods.index',[

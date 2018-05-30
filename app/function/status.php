@@ -4,16 +4,16 @@
 	function status($str)
 	{
 
-		if($str == 0){
+		if($str == 1){
 
 			return '未发货';
-		}else if($str == 1){
-
-			return '已发货';
 		}else if($str == 2){
 
-			return '交易完成';
+			return '已发货';
 		}else if($str == 3){
+
+			return '交易完成';
+		}else if($str == 4){
 
 			return '用户取消订单';
 		}
@@ -37,18 +37,30 @@
 	function HomeStatus($str)
 	{
 
-		if($str == 0){
+		if($str == 1){
 
 			return '正在出库';
-		}else if($str == 1){
-
-			return '已完成发货';
 		}else if($str == 2){
 
-			return '交易完成';
+			return '已完成发货';
 		}else if($str == 3){
 
+			return '交易完成';
+		}else if($str == 4){
+
 			return '已取消';
+		}
+	}
+
+	function color($str)
+	{
+
+		if($str%2 ==1){
+
+			return "style='color:green'";
+		}else{
+
+			return "style='color:red'";
 		}
 	}
 

@@ -47,10 +47,10 @@
             订单状态:
              <select name="status" id="">
                 <option value="">全部</option>
-                <option value="0">未发货</option>
-                <option value="1">已发货</option>
-                <option value="2">交易完成</option>
-                <option value="3">用户取消</option>
+                <option value="1">未发货</option>
+                <option value="2">已发货</option>
+                <option value="3">交易完成</option>
+                <option value="4">用户取消</option>
             </select>
             <label>
                 订单号:
@@ -105,7 +105,7 @@
                     </th>
                     <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
                     rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                    style="width: 400px;">
+                    style="width: 500px;">
                        操作
                     </th>
                     
@@ -150,7 +150,7 @@
                        	<a href="/admin/orders/edit/{{$v->oid}}"><button>修改</button></a>
 						
                         <a href="/admin/orders/det/{{$v->oid}}"><button>订单详情</button></a>
-                        @if($v->status == 0)
+                        @if($v->status == 1)
                         <button class="go">发货</button>
                         @endif
                     </td>
@@ -227,7 +227,7 @@
 
             var remove = confirm('你确定删除吗??');
 
-            if(!remove) return;
+            if(!remove) return false;
         })
        
             
@@ -235,7 +235,7 @@
             var oid = $(this).parents('tr').find('td').eq(0).text();
             var status = $(this).parents('tr').find('td').eq(7);
             var go = $(this);
-            console.log(oid);
+            
             $.get('/admin/orders/go',{oid:oid},function(data){
                
                if(data == '1'){
