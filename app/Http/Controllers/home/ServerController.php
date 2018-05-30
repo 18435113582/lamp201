@@ -144,25 +144,54 @@ class ServerController extends Controller
         // dd($both);
         // var_dump(session('coder'));
 
-        if($both['rcode'] != session('code')){
+        
+
+        if( strlen( $both['rphone'] )  == '11'){
+
+            if($both['rcode'] != session('code')){
 
             return back()->with('cod','验证码不正确');
-        }
+            }
 
-        if( count($both['rphone']) == 11){
+            $nrr = DB::table('breakdown')->where('bphone',$both['rphone'])->first();
 
-            $hrr = DB::table('breakdown')->where('bphone',$both['rphone'])->first();
-
-            if(!$hrr){
+            if(!$nrr){
 
                 return redirect('/home/query');
             } else {
 
+                $hrr = DB::table('breakdown')->where('bphone',$both['rphone'])->get();
+
                 return view('home.repairIndex.repairFind',['hrr'=>$hrr,'title'=>'维修进度查询']);
             }
 
+        } else if(strlen( $both['rphone'] ) == '15'){
+
+                if($both['rcode'] != session('code')){
+
+                return back()->with('cod','验证码不正确');
+            }
+
+            $nrr = DB::table('breakdown')->where('IMEI',$both['rphone'])->first();
+
+            if(!$nrr){
+
+                return redirect('/home/query');
+            } else {
+
+                $hrr = DB::table('breakdown')->where('IMEI',$both['rphone'])->get();
+
+                return view('home.repairIndex.repairFind',['hrr'=>$hrr,'title'=>'维修进度查询']);
+            }
+
+        } else {
+
+            return back()->with('rpho','请输入正确的IMEI号或手机号');
         }
 
+
+
+        
         
 
         // dd($hrr);

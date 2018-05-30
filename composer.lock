@@ -330,13 +330,11 @@
             },
             "dist": {
                 "type": "zip",
-<<<<<<< HEAD
-                "url": "https://api.github.com/repos/Gregwar/Captcha/zipball/a96d8dffc80d6213958bd19fbdef1555e8b63ca3",
-=======
+
+               
+
                 "url": "https://files.phpcomposer.com/files/Gregwar/Captcha/a96d8dffc80d6213958bd19fbdef1555e8b63ca3.zip",
->>>>>>> origin/wsm123
-                "reference": "a96d8dffc80d6213958bd19fbdef1555e8b63ca3",
-                "shasum": ""
+
             },
             "require": {
                 "ext-gd": "*",

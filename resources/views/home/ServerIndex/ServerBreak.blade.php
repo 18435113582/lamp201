@@ -37,7 +37,7 @@
 				<p><label>*寄修人手机号码</label></p>
 				<div class="oc-input">
 			        <input type="text" class="oc-input-default oc-radius-default" name="bphone" placeholder="">
-			        <span class="oc-warning">请输入正确的11位数字手机号码</span>
+			        <span class="oc-warning" id="war">请输入正确的11位数字手机号码</span>
 			    </div>
 			    <div class="oc-inputs">
 			    	<div class="oc-row">
@@ -64,7 +64,7 @@
     			    <!-- PC端地址选择器 end -->
 			    <div class="oc-input address-detail">
 			        <input type="text" class="oc-input-default oc-radius-default " name="bAddress" placehoder="请输入详细地址">
-			        <span class="oc-warning">请输入详细地址</span>
+			        <span class="oc-warning" id="oc">请输入详细地址</span>
 			    </div>
 			</div>
 			<div class="repair-form-field repair-service-network-none">
@@ -81,20 +81,6 @@
 			    	<hr color="#d4d4d4">
 			    	<div class="repair-well-subtitle">-</div>
 			    	<div class="repair-well-subtitle">-<a>-</a></div>
-			    </div>
-			</div>
-			<div class="repair-form-field repair-send-way repair-send-way-self">
-				<p><label>寄送方式</label></p>
-			    <div class="repair-well repair-well-short">
-			    	<div class="repair-well-title oc-font-FZYH510">自行邮寄</div>
-			    	<div>温馨提示：您填写的地址不支持顺丰上门取机，如想顺丰上门取机，需修改地址，否则只能自行联系快递公司将手机邮寄到服务中心。自行邮寄时，OPPO承担双向费用，请选择到付。</div>
-			    </div>
-			</div>
-			<div class="repair-form-field  repair-send-way-shunfeng">
-				<!-- <p><label>寄送方式</label></p> -->
-			    <div class="repair-well repair-send-way repair-well-short">
-			    	<div class="repair-well-title oc-font-FZYH510">顺丰取件</div>
-			    	<div>温馨提示：申请成功后，顺丰快递员会第一时间上门取机，请保持手机畅通；</div>
 			    </div>
 			</div>
 			{{csrf_field()}}
@@ -190,29 +176,55 @@
 			$(this).next().hide();
 		}
 	})
-	
-	// $('#addressSubmit').click(function(){
 
-	// 	var bname = $('input[name="bname"]')
-	// 	var bAddress = $('input[name="bAddress"]')
-	// 	var bphone = $('input[name="bphone"]')
+	var BN = false;
+	var BP = false;
+	var BA = false;
 
-	// 	if(!bname){
+	$('#addressSubmit').click(function(){
 
-	// 	$('input[name="bname"]').next().show();
+		var bname = $('input[name="bname"]').val();
+		var bphone = $('input[name="bphone"]').val();
+		var bAddress = $('input[name="bAddress"]').val();
 
-	// 	} else if(!bAddress){
+		if(!bname){
 
-	// 		$('input[name="bAddress"]').next().show();
-	// 	} else if(!bphone){
+			$('#jxr').show();
 
-	// 		$('input[name="bphone"]').next().show();
-	// 	} else {
-	// 		return true;
-	// 	}
+		} else {
+
+			$('#jxr').hide();
+			BN = true;
+		} 
+
+		if(!bphone){
+
+			$('#war').show();
+
+		} else {
+
+			$('#war').hide();
+			BP = true;
+		}
+
+		if(!bAddress){
+
+			$('#oc').show();
+
+		} else {
+
+			$('#oc').hide();
+			BA = true;
+		}
+
+		if(!BN || !BP || !BA){
+
+			return false;
+		}
+
+	})
 
 
-	// })
 
 
 </script>

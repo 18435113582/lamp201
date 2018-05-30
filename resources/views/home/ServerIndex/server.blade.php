@@ -33,7 +33,7 @@
             <p>自助服务</p>
         </seciton>
         <ul class="ssh-type-list oc-row">
-                        <li class="service-type-itme col-3 col-sm-4 col-xs-6">
+                        <li class="service-type-itme col-3 col-sm-4 col-xs-6" style="margin-right:40px;margin-left:60px;">
                 <a href="/home/price" target="_blank" class="oppo-tj" data-tj="www|service|home|part">
                     <seciton class="service-type-view">
                         <seciton class="type-title">
@@ -44,18 +44,7 @@
                     </seciton>
                 </a>
             </li>
-            <li class="service-type-itme col-3 col-sm-4 col-xs-6">
-                <a href="#" target="_blank" class="oppo-tj" data-tj="www|service|home|phonecheck">
-                    <seciton class="service-type-view">
-                        <seciton class="type-title">
-                            <i class="oc-icon oc-iconfont-service6"></i>
-                            <p>真伪查询</p>
-                        </seciton>
-                        <p class="type-text">通过手机 IMEI 号查询对应的产品信息。</p>
-                    </seciton>
-                </a>
-            </li>
-            <li class="service-type-itme col-3 col-sm-4 col-xs-6">
+            <li class="service-type-itme col-3 col-sm-4 col-xs-6" style="margin-right:40px;margin-left:40px;">
                 <a href="/home/ServerIndex" target="_blank" class="oppo-tj" data-tj="www|service|home|repair">
                     <seciton class="service-type-view">
                         <seciton class="type-title">
@@ -66,7 +55,7 @@
                     </seciton>
                 </a>
             </li>
-            <li class="service-type-itme col-3 col-sm-4 col-xs-6">
+            <li class="service-type-itme col-3 col-sm-4 col-xs-6" style="margin-right:40px;margin-left:40px;">
                 <a href="/home/repair" target="_blank" class="oppo-tj" data-tj="www|service|home|repair-query">
                     <seciton class="service-type-view">
                         <seciton class="type-title">

@@ -16,7 +16,7 @@ class HomeLoginMiddleware
     public function handle($request, Closure $next)
     {
 
-        if(session('flag')){
+        if(session('homeFlag')){
              return $next($request);
 
         }else{

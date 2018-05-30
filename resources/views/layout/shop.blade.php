@@ -343,38 +343,23 @@
                                 </aside>
                             </li>
                             <li class="oh-nav-item">
-                                <a href="" class="oh-navitem-link">
-                                    品牌
-                                </a>
-                            </li>
-                            <li class="oh-nav-item">
                                 <a href="/home/shop" class="oh-navitem-link">
                                     商城
                                 </a>
                             </li>
                             <li class="oh-nav-item">
-                                <a href="" class="oh-navitem-link">
+                                <a href="/home/StoreIndex" class="oh-navitem-link">
                                     体验店
                                 </a>
                             </li>
                             <li class="oh-nav-item">
-                                <a href="" class="oh-navitem-link">
+                                <a href="/home/server" class="oh-navitem-link">
                                     服务
                                 </a>
                             </li>
                             <li class="oh-nav-item miniprogram-hide">
                                 <a href="" target="_blank" class="oh-navitem-link">
                                     社区
-                                </a>
-                            </li>
-                            <li class="oh-nav-item miniprogram-hide">
-                                <a href="" target="_blank" class="oh-navitem-link">
-                                    ColorOS
-                                </a>
-                            </li>
-                            <li class="oh-nav-item miniprogram-hide">
-                                <a href="" target="_blank" class="oh-navitem-link">
-                                    云服务
                                 </a>
                             </li>
                         </ul>
@@ -414,7 +399,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="" target="_blank" class="oppo-tj" data-tj="www|a|bag|account">
+                                    <a href="/home/grzx" target="_blank" class="oppo-tj" data-tj="www|a|bag|account">
                                         <b class="oc-icon oc-iconfont-account oc-iconfont-account-bold">
                                         </b>
                                         <span>
@@ -422,15 +407,11 @@
                                         </span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a id="oh-navbag-login">
-                                        <b class="oc-icon oc-iconfont-user oc-iconfont-user-bold">
-                                        </b>
-                                        <span>
-                                            登录
-                                        </span>
-                                    </a>
-                                </li>
+                                @if(session('homeFlag'))
+                                <li><a id="oh-navbag-login" href="/home/loginout"><b class="oc-icon oc-iconfont-user oc-iconfont-user-bold"></b><span>注销</span></a></li>
+                                @else
+                                <li><a id="oh-navbag-login" href="/home/login"><b class="oc-icon oc-iconfont-user oc-iconfont-user-bold"></b><span>登录</span></a></li>
+                                @endif
                             </ul>
                         </section>
                     </aside>

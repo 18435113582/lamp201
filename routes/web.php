@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 //后台登录
 Route::get('admin/login','admin\LoginController@login');
@@ -44,18 +44,19 @@ Route::get('home/code','home\RegisterController@captcha');
 
 Route::post('home/dologin','home\LoginController@dologin');
 Route::post('home/yzm','home\LoginController@yzm');
-Route::get('home/grzx','home\LoginController@grzx');
+//个人中心
+Route::get('home/grzx','home\LoginController@grzx')->middleware('homeLogin');
 Route::get('home/loginout','home\LoginController@loginout');
 Route::get('home/login','home\LoginController@login');
 Route::get('home/phone','home\LoginController@phone');
 Route::get('home/changephone','home\LoginController@changephone');	
 Route::get('home/email','home\LoginController@email');
 Route::post('home/changeemail','home\LoginController@changeemail');
-Route::post('home/ajax','home\LoginController@userAjax');	
+Route::post('home/ajax','home\LoginController@userAjax');
 
 
 //前台控制
-Route::group(['middleware'=>'login'],function(){
+Route::group([],function(){
 
 	Route::get('home/pass','home\LoginController@pass');
 	Route::post('home/changepass','home\LoginController@changePass');	
@@ -133,7 +134,6 @@ Route::group(['middleware'=>'login'],function(){
 
 
 
-	Route::group([],function(){
 	//体验店管理
 	Route::resource('admin/StoreIndex','admin\StoreIndexController');
 	//服务管理
@@ -382,7 +382,7 @@ Route::group([],function(){
 	Route::get('home/server','home\ServerController@server');
 
 	//寄修服务
-	Route::get('home/ServerIndex','home\ServerController@index')->middleware('homeLogin');;
+	Route::get('home/ServerIndex','home\ServerController@index')->middleware('homeLogin');
 	Route::get('home/breakdown','home\ServerController@breakdown');
 	Route::post('home/breakajax','home\ServerController@breakajax');
 	Route::post('home/create','home\ServerController@create');

@@ -20,19 +20,21 @@
 	                    <div class="oc-input input-imei">
 	                        <input type="text" class="oc-input-default oc-radius-default get-imei" name="rphone" placeholder="请输入手机IMEI号或手机号" >
 	                        <span class="input-warning-text">输入的信息有误，请核对后重新输入</span>
+	                        <p class="rpho" style="color:red">{{session('rpho')}}</p>
 	                    </div>
 	                    <div class="phonecheck-captcha">    
 	                        <div class="oc-input input-captcha">
 	                            <input type="text" class="oc-input-default oc-radius-default" name="rcode" placeholder="请输入验证码" style="width:300px;">
 	                            <!-- <span class="input-warning-text">输入的验证码有误</span> -->
-	                            <p style="color:red">{{session('cod')}}</p>
+	                            
 	                        </div> 
 	                        <div class="captcha-pic" style="margin-left:60px;">
 	                            <img src="/home/verifx" id="captcha" onclick='this.src=this.src+"?c="+Math.random()'>
 	                        </div>
+	                    <p class="cod" style="color:red;">{{session('cod')}}</p>
 	                    </div>
 	                    {{csrf_field()}}
-	                    <section class="btn-wrapper">
+	                    <section class="btn-wrapper" >
 	                        <button class="oc-btn btn-master repair-check-btn oppo-tj" type="submit">立即查询</button>
 	                        <div class="error_msg_note"></div>
 	                    </section>
@@ -50,5 +52,25 @@
         </section>
 
 	</section>
+
+@endsection
+
+@section('js')
+
+	<script>
+		
+		setTimeout(function(){
+
+			$('.rpho').fadeOut(1000);
+
+		},4000)
+
+		setTimeout(function(){
+
+			$('.cod').fadeOut(1000);
+
+		},4000)
+
+	</script>
 
 @endsection

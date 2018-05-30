@@ -83,12 +83,16 @@ class RegisterController extends Controller
 
         $res['status'] = 0;
 
+
+
         $res['appkey'] = str_random(60);
         
     	$res['password'] = Hash::make($request->input('password'));
 
-        $data = DB::table('user')->insertGetId($res);
+        $res['sid'] = rand(11111111,99999999);
 
+        $data = DB::table('user')->insertGetId($res);
+        
         if($data){
 
 

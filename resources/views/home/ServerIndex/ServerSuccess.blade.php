@@ -33,7 +33,7 @@
 </section>        
         <section class="store-events">
      
-        <div class="h-gamma search-error" ">恭喜您预约成功.<a href="#">点击</a>返回</div>
+        <div class="h-gamma search-error" ">恭喜您预约成功.<a href="/home/repair">点击</a>查看维修进度</div>
     </section>
 
         <!--服务-->

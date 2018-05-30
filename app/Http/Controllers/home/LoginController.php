@@ -15,9 +15,12 @@ class LoginController extends Controller
 
     public function login()
     {
+
     	return view('home.login',['title'=>'前台的登录页面']);
 
     }
+
+
 
 
     public function dologin(Request $request)
@@ -26,7 +29,11 @@ class LoginController extends Controller
 
     	$data = DB::table('user')->where('username',$res)->first();
 
-        session(['flage'=>'true','info'=>$data]);
+        
+
+        
+
+        session(['homeFlag'=>true,'homeInfo'=>$data]);
 
     	if(!$data){
 
@@ -40,8 +47,14 @@ class LoginController extends Controller
 
     		return back()->with('err','账号或者密码错误!');
     	}
-    	session(['uid'=>$data->id]);
-    	return redirect('/home/index');
+
+        $status = $data->status;
+
+        if($status == '0'){
+            return back()->with('mmg','该账号邮箱未激活');
+        }
+
+    	return redirect('/');
     }
 
 
@@ -80,6 +93,8 @@ class LoginController extends Controller
 
     public function grzx()
     {
+        // dd(session('homeInfo'));
+
         return view('home.grzx',['title'=>'用户个人中心']);
     }
 
@@ -93,8 +108,9 @@ class LoginController extends Controller
     {
 
         $request->session()->forget('uid');
+        session(['homeFlag'=>false]);
 
-        return redirect('home/login');
+        return redirect('/');
     }
 
 
