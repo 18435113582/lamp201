@@ -24,7 +24,10 @@ class LoginController extends Controller
 
 
     public function dologin(Request $request)
-    {
+    {   
+        
+
+
     	$res = $request->input('username');
 
     	$data = DB::table('user')->where('username',$res)->first();

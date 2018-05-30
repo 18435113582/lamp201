@@ -152,7 +152,6 @@ Route::group(['middleware'=>'login'],function(){
 	Route::post('admin/priceUpdate/{id}','admin\ModelController@priceUpdate');
 	Route::get('admin/priceDelete/{id}','admin\ModelController@priceDelete');
 
-	
 });
 
 
@@ -434,10 +433,4 @@ Route::group([],function(){
 	// 配件价格
 	Route::get('home/price','home\ServerController@price');
 	Route::get('home/priceAjax','admin\ModelController@priceAjax');
-
 });
-
-
-
-
-

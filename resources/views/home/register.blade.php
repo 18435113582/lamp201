@@ -21,19 +21,19 @@
 		            @endforeach
 		        </ul>
 		    </div>
-		@endif
+			@endif
 			
 			<div class="acctitle"><i class="acc-closed icon-user4"></i><i class="acc-open icon-ok-sign"></i>用户的注册</div>
 			<div class="acc_content clearfix">
 				<form id="register-form" name="register-form" class="nobottommargin" action="/home/zhuce" method="post">
 					<div class="col_full">
 						<label for="register-form-name">用户名:</label>
-						<input type="text" id="register-form-name" name="username" value="" class="form-control" placeholder="请输入用户名"/>
+						<input type="text" id="register-form-name" name="username" value="" class="form-control" placeholder="请输入用户名6-12位"/>
 					</div>
 
 					<div class="col_full">
 						<label for="register-form-password">密码:</label>
-						<input type="password" id="register-form-password" name="password" value="" class="form-control" placeholder="请输入密码"/>
+						<input type="password" id="register-form-password" name="password" value="" class="form-control" placeholder="请输入密码8-16位"/>
 					</div>
 
 					<div class="col_full">
@@ -65,10 +65,16 @@
 					</div>
 					
 					<div class="col_full nobottommargin">
-						{{csrf_field()}}
-						<button class="button button-3d button-green" id="register-form-submit" value="register">注册</button>
+						<center>
+							{{csrf_field()}}
+							<button class="button button-3d button-green" id="register-form-submit" value="register">注册</button>
 
-						<!-- <button class="button button-3d button-black nomargin" id="register-form-submit" value="register">登录</button> -->
+							<!-- <button class="button button-3d button-black nomargin" id="register-form-submit" value="register">登录</button> -->
+
+
+
+						</center>
+						
 					</div>
 				</form>
 			</div>
