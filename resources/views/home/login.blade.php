@@ -23,6 +23,7 @@
 	                @endif
 	            </div>    
 				<form id="login-form" name="login-form" class="nobottommargin" action="/home/dologin" method="post">
+					<p class="mmg" style="color:red;">{{session('mmg')}}</p>
 					<div class="col_full">
 						<label for="login-form-username">账号:</label>
 						<input type="text" id="login-form-username" name="username" value="" class="form-control" placeholder="请输入账号" />
@@ -68,7 +69,7 @@
 						<input type="text" id="" name="" value="" class="yzm" style='width:250px'/>
 						<button class='btn btn-info' id='btnsend' style='margin-left:30px'>点击获取验证码</button>
 					</div> -->
-
+					
 					<div class="col_full nobottommargin">
 						{{csrf_field()}}
 						<button class="button button-3d button-bottle green nomargin" id="login-form-submit" name="login-form-submit" value="login">登录</button>
@@ -121,7 +122,13 @@
 
 	setTimeout(function(){
      
-		$('.error').slideUp(1000);
+		$('.error').slideUp(2000);
+
+	},2000)
+
+	setTimeout(function(){
+     
+		$('.mmg').slideUp(2000);
 
 	},2000)
 

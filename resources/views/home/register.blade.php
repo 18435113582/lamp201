@@ -59,11 +59,11 @@
 						
 
 						<img src="/home/code" alt="验证码" title='验证码' onclick='this.src=this.src+="?1"'>
-
+	
 					
 						
 					</div>
-
+					
 					<div class="col_full nobottommargin">
 						{{csrf_field()}}
 						<button class="button button-3d button-green" id="register-form-submit" value="register">注册</button>

@@ -545,7 +545,8 @@
           closeBtn: 0, //不显示关闭按钮
           anim: 2,
           shadeClose: true, //开启遮罩关闭
-          content:`<form class="layui-form" action="">
+          content:
+          `<form class="layui-form" action="">
   <div class="layui-form-item" style="width:350px;>
     <div class="layui-input-inline">
       <input id="phone" type="text" required   autocomplete="off" name="phoneNumber" style="width:250px;margin-left:50px;margin-top:30px;" placeholder="请输入手机号" class="layui-input">
@@ -555,12 +556,13 @@
   <div class="layui-form-item">
     <label class="layui-form-label" style="width:20px"></label>
     <div class="layui-input-inline" style="width:260px;">
-      <input type="text" required   name="password" autocomplete="off" placeholder="请输入验证码" class="layui-input" style="width:130px;margin-left:20px;padding-right:0px;"><button class="yanzheng" style="width:88px;display:inline;float:right;line-height:32px;margin-top:-38px;-left:-100px;">获取验证码</button>
+      <input type="text" required   name="password" autocomplete="off" placeholder="请输入验证码" class="layui-input" style="width:130px;margin-left:20px;padding-right:0px;">
+      <button class="yanzheng" style="width:88px;display:inline;float:right;line-height:32px;margin-top:-38px;-left:-100px;">获取验证码</button>
     </div>
   </div>
   <div class="layui-form-item">
     <div class="layui-input-block">
-      <button class="layui-btn" lay-submit lay-filter="formDemo">立即发送</button>
+      <button class="layui-btn"  lay-filter="formDemo">立即发送</button>
     </div>
   </div>
 </form>`
@@ -586,6 +588,15 @@ layui.use('form', function(){
     // console.log(reg);
   });
 });
+
+
+$('.yanzheng').click(function(){
+
+   var ph =  $('#phone').val();
+
+   console.log(ph);
+
+})
 
 
 // layer.open({

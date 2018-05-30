@@ -35,11 +35,11 @@
         <div class="main_content">
             <!--帐号信息-->
             <ul class="account_info" usercountrycode="CN">
-                <li><label>OPPO帐号：</label>
-                    <span>152******36</span>
-                </li>
                 <li><label>用户名：</label>
-                    <span class="uname">用户261591203</span>
+                    <span>{{session('homeInfo')->username}}</span>
+                </li>
+                <li><label>用户名id：</label>
+                    <span class="uname">{{session('homeInfo')->sid}}</span>
                     
                     
                 </li>

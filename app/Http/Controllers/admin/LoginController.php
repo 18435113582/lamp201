@@ -45,6 +45,7 @@ class LoginController extends Controller
 
 
     	session(['uid'=>$data->id]);
+        session(['adminFlag'=>true,'adminInfo'=>$data]);
 
     	return redirect('admin/index');
     }
