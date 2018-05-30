@@ -48,7 +48,7 @@
         
             <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
             <div id="mws-logo-wrap">
-                <span style="color:white;font-size:20px;">lamp201</span>
+                <span style="color:yellow;font-size:30px;">鸿鹄组</span>
             </div>
         </div>
         
@@ -56,63 +56,63 @@
         <div id="mws-user-tools" class="clearfix">
         
             <!-- Notifications -->
-            <div id="mws-user-notif" class="mws-dropdown-menu">
-                <a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-exclamation-sign"></i></a>
-                
-                <!-- Unread notification count -->
-                <span class="mws-dropdown-notif">35</span>
-                
-                <!-- Notifications dropdown -->
-                <div class="mws-dropdown-box">
-                    <div class="mws-dropdown-content">
-                        <ul class="mws-notifications">
-                            <li class="read">
-                                <a href="#">
-                                    <span class="message">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                    </span>
-                                    <span class="time">
-                                        January 21, 2012
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="mws-dropdown-viewall">
-                            <a href="#">View All Notifications</a>
-                        </div>
-                    </div>
-                </div>
+<!--             <div id="mws-user-notif" class="mws-dropdown-menu">
+    <a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-exclamation-sign"></i></a>
+    
+    Unread notification count
+    <span class="mws-dropdown-notif">35</span>
+    
+    Notifications dropdown
+    <div class="mws-dropdown-box">
+        <div class="mws-dropdown-content">
+            <ul class="mws-notifications">
+                <li class="read">
+                    <a href="#">
+                        <span class="message">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                        </span>
+                        <span class="time">
+                            January 21, 2012
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="mws-dropdown-viewall">
+                <a href="#">View All Notifications</a>
             </div>
-            
-            <!-- Messages -->
-            <div id="mws-user-message" class="mws-dropdown-menu">
-                <a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-envelope"></i></a>
-                
-                <!-- Unred messages count -->
-                <span class="mws-dropdown-notif">35</span>
-                
-                <!-- Messages dropdown -->
-                <div class="mws-dropdown-box">
-                    <div class="mws-dropdown-content">
-                        <ul class="mws-messages">
-                            <li class="read">
-                                <a href="#">
-                                    <span class="sender">John Doe</span>
-                                    <span class="message">
-                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
-                                    </span>
-                                    <span class="time">
-                                        January 21, 2012
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="mws-dropdown-viewall">
-                            <a href="#">View All Messages</a>
-                        </div>
-                    </div>
-                </div>
+        </div>
+    </div>
+</div>
+
+Messages
+<div id="mws-user-message" class="mws-dropdown-menu">
+    <a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-envelope"></i></a>
+    
+    Unred messages count
+    <span class="mws-dropdown-notif">35</span>
+    
+    Messages dropdown
+    <div class="mws-dropdown-box">
+        <div class="mws-dropdown-content">
+            <ul class="mws-messages">
+                <li class="read">
+                    <a href="#">
+                        <span class="sender">John Doe</span>
+                        <span class="message">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                        </span>
+                        <span class="time">
+                            January 21, 2012
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <div class="mws-dropdown-viewall">
+                <a href="#">View All Messages</a>
             </div>
+        </div>
+    </div>
+</div> -->
 
 
 
@@ -138,7 +138,7 @@
                         您好! {{$res->username}}
                     </div>
                     <ul>
-                        <li><a href="/admin/profile">修改头像</a></li>
+                        
                         <li><a href="/admin/pass">修改密码</a></li>
                         <li><a href="/admin/loginout">退出</a></li>
                     </ul>
@@ -171,35 +171,35 @@
                 <ul>
                     <li>
                         <a href="#"><i class="icon-users"></i> 用户管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/user/create">添加用户</a></li>
                             <li><a href="/admin/user">用户列表</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="icon-list"></i> 商品类别管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/cate/create">添加分类</a></li>
                             <li><a href="/admin/cate">分类列表</a></li>
                         </ul>
                     </li>
                      <li>
                         <a href="#"><i class="icon-list"></i> 商品管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/goods/create">添加商品</a></li>
                             <li><a href="/admin/goods">浏览商品</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="icon-list"></i> 商城轮播图管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/img/create">添加轮播商品</a></li>
                             <li><a href="/img/index">浏览轮播商品</a></li>
                         </ul>
                     </li>
                     <li>
                         <a href="#"><i class="icon-list"></i> 订单管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/orders">浏览订单</a></li>
                            
                         </ul>
@@ -211,7 +211,7 @@
                 <ul>
                     <li>
                         <a href="#"><i class="icon-list"></i> 店铺管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/StoreIndex/create">添加店铺</a></li>
                             <li><a href="/admin/StoreIndex">店铺列表</a></li>
                         </ul>
@@ -223,7 +223,7 @@
                 <ul>
                     <li>
                         <a href="#"><i class="icon-list"></i> 维修管理</a>
-                        <ul>
+                        <ul class="closed">
                             <li><a href="/admin/ServerIndex">维修列表</a></li> 
                         </ul>
                     </li>

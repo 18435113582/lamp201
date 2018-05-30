@@ -24,15 +24,11 @@ Route::get('admin/loginout','admin\LoginController@loginout');
 Route::group(['middleware'=>'login'],function(){
 
 	Route::get('admin/index','admin\IndexController@index');
-
-
-	
 	Route::get('admin/pass','admin\LoginController@pass');
 	Route::post('admin/changepass','admin\LoginController@changePass');
 	Route::post('admin/ajax','admin\IndexController@userAjax');
 	Route::resource('admin/user','admin\UserController');
 	Route::get('admin/captcha','admin\IndexController@captcha');
-
 });
 
 
@@ -47,12 +43,15 @@ Route::post('home/yzm','home\LoginController@yzm');
 Route::get('home/grzx','home\LoginController@grzx');
 Route::get('home/loginout','home\LoginController@loginout');
 Route::get('home/login','home\LoginController@login');
-
-
+Route::get('home/phone','home\LoginController@phone');
+Route::get('home/changephone','home\LoginController@changephone');	
+Route::get('home/email','home\LoginController@email');
+Route::post('home/changeemail','home\LoginController@changeemail');
+Route::post('home/ajax','home\LoginController@userAjax');	
 
 
 //前台控制
-Route::group([],function(){
+Route::group(['middleware'=>'login'],function(){
 
 	Route::get('home/pass','home\LoginController@pass');
 	Route::post('home/changepass','home\LoginController@changePass');	
@@ -130,7 +129,7 @@ Route::group([],function(){
 
 
 
-
+	Route::group([],function(){
 	//体验店管理
 	Route::resource('admin/StoreIndex','admin\StoreIndexController');
 	//服务管理

@@ -44,7 +44,7 @@ class FormUpdate extends FormRequest
         return [
             'username.required'=>"用户名不能为空",
             'username.regex'=>'用户名格式不正确',
-            
+            'username.unique'=>'用户名已存在',
             'email.email'=>'邮箱格式不正确',
             'phone.required'=>'手机号不能为空',
             'phone.regex'=>'手机号码格式不正确'

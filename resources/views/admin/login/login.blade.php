@@ -31,10 +31,12 @@
 
                 </div>
 
-                 @if(session('err'))
-                    <li style='color:white;font-size:17px;list-style:none'>{{session('err')}}</li>
+                <div class="error">
+                     @if(session('err'))
+                        <li style='color:white;font-size:17px;list-style:none'>{{session('err')}}</li>
 
-                @endif
+                    @endif
+                </div>    
 
                 <form action='/admin/dologin' method='post' class="am-form tpl-form-line-form">
                     <div class="am-form-group">
@@ -76,6 +78,13 @@
                 el: '#togglePassword'
             });
         });
+
+
+        setTimeout(function(){
+     
+            $('.error').slideUp(1000);
+
+        },2000)
     
 
     

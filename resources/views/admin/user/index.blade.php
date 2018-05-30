@@ -1,5 +1,5 @@
 @extends('layout.admin')
-
+<meta name="csrf-token" content="{{ csrf_token() }}">
 @section('title',$title)
 
 
@@ -107,7 +107,7 @@
 
 
                     </td>
-                    <td class=" ">
+                    <td class="">
                     	<a href="/admin/user/{{$v->id}}/edit" class='btn btn-primary'>修改</a>
 
                     	<form action="/admin/user/{{$v->id}}" method='post' style='display: inline'>
@@ -233,8 +233,10 @@
 			//获取id
 			var id = $(this).parents('tr').find('td').eq(0).text();
 
+
 			//获取输入的值
 			var username = ipn.val();
+			
 			
 
 			//发送ajax

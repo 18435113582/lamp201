@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Ucpaas;
 use DB;
 use Hash;
+// use App\Http\Requests\FormUpdate;
 
 class LoginController extends Controller
 {
@@ -27,7 +28,7 @@ class LoginController extends Controller
 
     	if(!$data){
 
-    		 return back()->with('err','用户名或者密码错误!');
+    		 return back()->with('err','账号或者密码错误!');
     	}
 
     	$pass = $request->input('password');
@@ -35,7 +36,7 @@ class LoginController extends Controller
     	//哈希加密进行检测
     	if(!Hash::check($pass,$data->password)){
 
-    		return back()->with('err','用户名或者密码错误!');
+    		return back()->with('err','账号或者密码错误!');
     	}
     	session(['uid'=>$data->id]);
     	return redirect('/home/index');
@@ -95,7 +96,7 @@ class LoginController extends Controller
     }
 
 
-
+    //修改密码
      public function pass()
     {
         return view('home.login.pass',['title'=>'修改密码']);
@@ -113,7 +114,7 @@ class LoginController extends Controller
         //哈希
         if(!Hash::check($pass,$res->password)){
 
-            return back()->with('msg','输入的旧密码错误');
+            return back()->with('msg','输入的旧密码错误!');
         }
 
         $foo['password'] = Hash::make($request->input('password'));
@@ -127,7 +128,94 @@ class LoginController extends Controller
 
     }
 
+
+
+    //修改手机号
+    public function phone()
+    {
+        return view('home.phone',['title'=>'修改手机号']);
+    }
+
+
+
+     public function changephone(Request $request)
+    {
+
+        //获取旧手机号
+        $phone = $request->input('oldphone');
+
+        $res = DB::table('user')->where('id',session('uid'))->first();
+
+        
+        if($phone!=($res->phone)){
+
+            return back()->with('msg','输入的旧手机号错误!');
+        }
+
+        $foo['phone'] = ($request->input('phone'));
+
+        $data = DB::table('user')->where('id',session('uid'))->update($foo);
+
+        if($data){
+
+            return redirect('home/login');
+        }
+    }
+
+
+
+    //修改邮箱
+     public function email()
+    {
+        return view('home.email.email',['title'=>'修改邮箱']);
+    }
+
+
+
+
+
+    public function changeemail(Request $request)
+    {
+
+        //获取旧邮箱
+        $mail = $request->input('oldemail');
+
+        $res = DB::table('user')->where('id',session('uid'))->first();
+
+        
+        if($mail!=($res->email)){
+
+            return back()->with('msg','输入的旧邮箱错误!');
+        }
+
+        $foo['email'] = ($request->input('email'));
+
+        $data = DB::table('user')->where('id',session('uid'))->update($foo);
+
+        if($data){
+
+            return redirect('home/login');
+        }
+
+    }
+
    
 
+    public function userAjax(Request $request)
+    {
+        $id = $request->input('id');
+
+        $username['username'] = $request->input('username');
+
+        $res = DB::table('user')->where('id',$id)->update($username);
+
+        if($res){
+
+            echo 1;
+        } else {
+
+            echo 0;
+        }
+    }    
 
  }  

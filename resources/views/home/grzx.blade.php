@@ -3,11 +3,16 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     
     <meta http-equiv="X-UA-Compatible" content="IE=8">
     <title>『OPPO帐号』-个人信息</title>  
 
     <link rel="stylesheet" href="/homes/css/commons.css">
+    <script src="/admins/js/libs/jquery-1.8.3.min.js"></script>
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
    
     <div class="wrapper">
         <!--头部-->
@@ -34,12 +39,13 @@
                     <span>152******36</span>
                 </li>
                 <li><label>用户名：</label>
-                    <input type="text" name="name" value="用户261591203">
-                    <span class="gray_tip"><em class="ico_edit"></em></span>
+                    <span class="uname">用户261591203</span>
+                    
+                    
                 </li>
             </ul>   
             <ul class="account_detail_area">
-                <li id="changepwd" class="account_row ">
+                <li id="changepwd" class="account_row ">    
                     <div class="row_left"></div>
                     <div class="row_middle">
                         <h3>修改密码</h3>
@@ -51,10 +57,10 @@
                 <li id="changemobile" class="account_row  ">
                     <div class="row_left"></div>
                     <div class="row_middle">
-                        <h3>安全手机&nbsp;&nbsp;&nbsp;&nbsp;<em class="phoneNum">152******36</em></h3>
+                        <h3>安全手机&nbsp;&nbsp;&nbsp;&nbsp;<em class="phoneNum"></em></h3>
                         <p class="small_info">安全手机可用于登录OPPO帐号，重置密码或其他安全验证<span>，<em class="orange_tip">建议立即绑定</em></span></p>
                     </div>
-                    <a class="row_right modify_btn" link="reBindMobile">修改</a>
+                    <a href="/home/phone" class="row_right modify_btn" link="reBindMobile">修改</a>
                 </li>
 
                 <li id="changeemail" class="account_row  unset">
@@ -63,7 +69,7 @@
                         <h3>安全邮箱</h3>
                         <p class="small_info">安全邮箱可用于登录OPPO帐号，重置密码或其他安全验证</p>
                         </div>
-                    <a class="row_right set_btn" link="bindEmail">绑定</a>
+                    <a href="/home/email" class="row_right set_btn" link="bindEmail">修改</a>
                 </li>
 
                
@@ -84,9 +90,59 @@
 
 
 
-@section('js')
+
 <script>
-   
+
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
+
+
+   $('.uname').dblclick(function(){
+
+        //获取中间的文本
+        var um = $(this).text().trim();
+            
+
+        //创建input
+        var ipn = $('<input type="text" />');
+
+        $(this).empty();
+        $(this).append(ipn);
+
+        ipn.val(um);
+        ipn.focus();
+        ipn.select();
+        var td = $(this);
+
+        ipn.blur(function(){
+
+            //获取id
+            var id = $(this).parents('tr').find('td').eq(0).text();
+
+            //获取输入的值
+            var username = ipn.val();
+
+            $.post('/home/ajax',{id:id,username:username},function(data){
+
+                if(data == '1'){
+
+                    //把td 中间的文本换成输入的值
+                    
+                    td.text(username);
+                } else {
+
+                    td.text(um);
+                }
+            })
+        })
+
+
+        
+   })
 
 </script>
-@endsection   
+  

@@ -12,9 +12,9 @@
 		
 		@if (count($errors) > 0)
     		<div class="mws-form-message error">
-		        <ul>
+		        <ul style="list-style:none">
 		            @foreach ($errors->all() as $error)
-		                <li style='color:blue;font-size:17px;list-style:none'>{{ $error }}</li>
+		                <li style='color:blue;font-size:17px;'>{{ $error }}</li>
 		            @endforeach
 		        </ul>
 		    </div>
