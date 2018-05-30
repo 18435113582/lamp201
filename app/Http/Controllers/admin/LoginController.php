@@ -25,7 +25,7 @@ class LoginController extends Controller
 
     	if(!$data){
 
-    		return back()->with('err','用户名或者密码错误!');
+    		return back()->with('err','账号或者密码错误!');
     	}
 
     	$pass = $request->input('password');
@@ -33,7 +33,7 @@ class LoginController extends Controller
     	//哈希加密进行检测
     	if(!Hash::check($pass,$data->password)){
 
-    		return back()->with('err','用户名或者密码错误!');
+    		return back()->with('err','账号或者密码错误!');
     	}
 
     	//密码解答
@@ -89,6 +89,28 @@ class LoginController extends Controller
 
     		return redirect('admin/login');
     	}
+
+
+    }
+
+
+    public function userAjax(Request $request)
+    {
+        echo 123;
+        $id = $request->input('id');
+
+        $username['username'] = $request->input('username');
+
+        $res = DB::table('user')->where('id',$id)->update($username);
+
+        if($res){
+
+            echo 1;
+        } else {
+
+            echo 0;
+        }
+
 
 
     }

@@ -224,7 +224,7 @@
         <ul>
             <li><a href="" target="_blank" id="oh-navbag-cart" class="oppo-tj" data-tj="www|a|bag|cart"><b class="oc-icon oc-iconfont-cart oc-iconfont-cart-bold"></b><span>购物车</span></a></li>
             <li><a href="" target="_blank" class="oppo-tj" data-tj="www|a|bag|order"><b class="oc-icon oc-iconfont-order oc-iconfont-order-bold"></b><span>我的订单</span></a></li>
-            <li><a href="" target="_blank" class="oppo-tj" data-tj="www|a|bag|account"><b class="oc-icon oc-iconfont-account oc-iconfont-account-bold"></b><span>个人中心</span></a></li>
+            <li><a href="/home/grzx" target="_blank" class="oppo-tj" data-tj="www|a|bag|account"><b class="oc-icon oc-iconfont-account oc-iconfont-account-bold"></b><span>个人中心</span></a></li>
             <li><a id="oh-navbag-login"><b class="oc-icon oc-iconfont-user oc-iconfont-user-bold"></b><span>登录</span></a></li>
         </ul>
     </section>

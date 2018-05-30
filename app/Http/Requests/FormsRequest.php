@@ -46,6 +46,7 @@ class FormsRequest extends FormRequest
         return [
             'username.required'=>"用户名不能为空",
             'username.regex'=>'用户名格式不正确',
+            'username.unique'=>'用户名已存在',
             'password.required'=>'密码不能为空',
             'password.regex'=>'密码格式不正确',
             'repass.same'=>'两次密码不一致',
