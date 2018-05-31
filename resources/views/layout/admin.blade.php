@@ -32,8 +32,13 @@
 <link rel="stylesheet" type="text/css" href="/admins/css/mws-theme.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/admins/css/themer.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/admins/css/admins.css" media="screen">
+
+
+
+
 <link rel="stylesheet" type="text/css" href="/layui/css/layui.css"  media="screen">
 <script type="text/javascript" src="/bs/js/jquery.js"></script>
+
 <title>@yield('title')</title>
 
 </head>
@@ -48,7 +53,11 @@
         
             <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
             <div id="mws-logo-wrap">
+
+                <span style="color:white;font-size:20px;">lamp201</span>
+
                 <span style="color:yellow;font-size:30px;">鸿鹄组</span>
+
             </div>
         </div>
         
@@ -56,6 +65,64 @@
         <div id="mws-user-tools" class="clearfix">
         
             <!-- Notifications -->
+            <div id="mws-user-notif" class="mws-dropdown-menu">
+                <a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-exclamation-sign"></i></a>
+                
+                <!-- Unread notification count -->
+                <span class="mws-dropdown-notif">35</span>
+                
+                <!-- Notifications dropdown -->
+                <div class="mws-dropdown-box">
+                    <div class="mws-dropdown-content">
+                        <ul class="mws-notifications">
+                            <li class="read">
+                                <a href="#">
+                                    <span class="message">
+                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                    </span>
+                                    <span class="time">
+                                        January 21, 2012
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mws-dropdown-viewall">
+                            <a href="#">View All Notifications</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Messages -->
+            <div id="mws-user-message" class="mws-dropdown-menu">
+                <a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-envelope"></i></a>
+                
+                <!-- Unred messages count -->
+                <span class="mws-dropdown-notif">35</span>
+                
+                <!-- Messages dropdown -->
+                <div class="mws-dropdown-box">
+                    <div class="mws-dropdown-content">
+                        <ul class="mws-messages">
+                            <li class="read">
+                                <a href="#">
+                                    <span class="sender">John Doe</span>
+                                    <span class="message">
+                                        Lorem ipsum dolor sit amet consectetur adipiscing elit, et al commore
+                                    </span>
+                                    <span class="time">
+                                        January 21, 2012
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mws-dropdown-viewall">
+                            <a href="#">View All Messages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 <!--             <div id="mws-user-notif" class="mws-dropdown-menu">
     <a href="#" data-toggle="dropdown" class="mws-dropdown-trigger"><i class="icon-exclamation-sign"></i></a>
     
@@ -126,8 +193,13 @@ Messages
             
                 <!-- User Photo -->
                 <div id="mws-user-photo">
+
+                    <img src="/admins/example/profile.jpg" alt="User Photo">
+                </div>
+
                     <img src="{{$res->profile}}" alt="User Photo">
                 </div>
+
 
 
 
@@ -135,12 +207,21 @@ Messages
                 <!-- Username and Functions -->
                 <div id="mws-user-functions">
                     <div id="mws-username">
+
+                        Hello, John Doe
+                    </div>
+                    <ul>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Change Password</a></li>
+                        <li><a href="index.html">Logout</a></li>
+
                         您好! {{$res->username}}
                     </div>
                     <ul>
                         
                         <li><a href="/admin/pass">修改密码</a></li>
                         <li><a href="/admin/loginout">退出</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -166,10 +247,20 @@ Messages
             
             <!-- Searchbox -->
             
+
+            
+
+
             <!-- Main Navigation -->
             <div id="mws-navigation">
                 <ul>
                     <li>
+
+                        <a href="#"><i class="icon-list"></i> 用户管理</a>
+                        <ul>
+                            <li><a href="#">添加用户</a></li>
+                            <li><a href="#">用户列表</a></li>
+
                         <a href="#"><i class="icon-users"></i> 用户管理</a>
                         <ul class="closed">
                             <li><a href="/admin/user/create">添加用户</a></li>
@@ -237,6 +328,7 @@ Messages
                         <ul class="closed">
                             <li><a href="/admin/priceIndex">价格列表</a></li> 
                             <li><a href="/admin/priceAdd">添加价格</a></li> 
+
                         </ul>
                     </li>
                 </ul>
@@ -245,6 +337,8 @@ Messages
         
         <!-- Main Container Start -->
         <div id="mws-container" class="clearfix">
+
+
 
                 @if(session('msg'))
                 <div class="mws-form-message success">
@@ -264,15 +358,23 @@ Messages
                     </ul>
                 </div>
             @endif -->
+
             <div class="container">
             @section('content')
 
             @show
+
+            </div>     
+            <!-- Footer -->
+            <div id="mws-footer">
+                Copyright Your Website 2012. All Rights Reserved.
+
             </div> 
             <!-- Inner Container End -->    
             <!-- Footer -->
             <div id="mws-footer">
                 Copyright Your Website 2018. All Rights Reserved.
+
             </div>
             
         </div>
@@ -287,9 +389,15 @@ Messages
     <script src="/admins/custom-plugins/fileinput.js"></script>
     
     <!-- jQuery-UI Dependent Scripts -->
+
+    <script src="/admins/jui/js/jquery-ui-1.9.2.min.js"></script>
+    <script src="/admins/jui/jquery-ui.custom.min.js"></script>
+    <script src="/admins/jui/js/jquery.ui.touch-punch.js"></script>
+
     <!-- <script src="/admins/jui/js/jquery-ui-1.9.2.min.js"></script>
     <script src="/admins/jui/jquery-ui.custom.min.js"></script>
     <script src="/admins/jui/js/jquery.ui.touch-punch.js"></script> -->
+
 
     <!-- Plugin Scripts -->
     <script src="/admins/plugins/colorpicker/colorpicker-min.js"></script>
@@ -307,11 +415,14 @@ Messages
             $.fn.tabs && $('.mws-tabs').tabs();
         });
     </script>
+
+
     <script>
             $('.success').delay(3000).slideUp(1000);
         </script>
 
     <script src="/layui/layui.js"></script>
+
 
     @section('js')
 

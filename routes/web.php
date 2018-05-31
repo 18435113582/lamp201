@@ -425,6 +425,7 @@ Route::group([],function(){
 	Route::get('/goods/up/{id}','admin\GoodsController@up')->middleware('login');
 	Route::get('/order/status','home\OrdersController@qrsh');
 	Route::get('/order/cancel','home\OrdersController@qxdd');
+	//lipeng end
 
 
 	//维修进度查询

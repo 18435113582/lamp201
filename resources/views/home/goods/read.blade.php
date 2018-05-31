@@ -334,7 +334,7 @@
                                                $.get('/cart/create',{cnt:count,gid:gid},function(data){
 
                                                    
-                                                   window.location.href="http://201la.com/cart/index";
+                                                   window.location.href="http://www.hhz201.com/cart/index";
                                                     
                                                 })
                                                 

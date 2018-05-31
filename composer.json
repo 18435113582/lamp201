@@ -7,10 +7,15 @@
     "require": {
         "php": ">=7.0.0",
         "fideloper/proxy": "~3.3",
+
+        "laravel/framework": "5.5.*",
+        "laravel/tinker": "~1.0"
+
         "gregwar/captcha": "^1.1",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
         "mews/captcha": "^2.2"
+
     },
     "require-dev": {
         "filp/whoops": "~2.0",
@@ -23,6 +28,13 @@
         "classmap": [
             "database/seeds",
             "database/factories",
+
+            "app/helper.php"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+
             "app/lib/Ucpaas.php"
         ],
         "psr-4": {
@@ -32,12 +44,16 @@
             "app/function/status.php",
             "app/function/users.php"
         ]
+
     },
     "autoload-dev": {
         "psr-4": {
             "Tests\\": "tests/"
         }
+
+
         
+
     },
     "extra": {
         "laravel": {
