@@ -159,9 +159,7 @@
                 <li class="oh-nav-item"><a href="" class="oh-navitem-link">商城</a></li>
                 <li class="oh-nav-item"><a href="" class="oh-navitem-link">体验店</a></li>
                 <li class="oh-nav-item"><a href="" class="oh-navitem-link">服务</a></li>
-                <li class="oh-nav-item miniprogram-hide"><a href="" target="_blank" class="oh-navitem-link">社区</a></li>
-                <li class="oh-nav-item miniprogram-hide"><a href="" target="_blank" class="oh-navitem-link">ColorOS</a></li>
-                <li class="oh-nav-item miniprogram-hide"><a href="" target="_blank" class="oh-navitem-link">云服务</a></li>
+                <li class="oh-nav-item miniprogram-hide"><a href="/home/arts/index"" target="_blank" class="oh-navitem-link">社区</a></li>
             </ul>
         </section>
 

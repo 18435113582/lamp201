@@ -19,8 +19,8 @@
         <div class="header">
             <div class="w960">
                 <ul class="menu_sec" style="" id="headerlinks">
-                    <li><a href="http://www.oppo.com/">OPPO官网</a></li>
-                    <li><a href="http://www.oppo.cn/">OPPO社区</a></li>
+                    <li><a href="/">OPPO官网</a></li>
+                    <li><a href="/home/arts/index">OPPO社区</a></li>
                    
                     <div class="clear"></div>
                 </ul>

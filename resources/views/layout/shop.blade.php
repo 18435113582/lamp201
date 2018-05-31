@@ -358,7 +358,7 @@
                                 </a>
                             </li>
                             <li class="oh-nav-item miniprogram-hide">
-                                <a href="" target="_blank" class="oh-navitem-link">
+                                <a href="/home/arts/index"" target="_blank" class="oh-navitem-link">
                                     社区
                                 </a>
                             </li>

@@ -224,17 +224,12 @@
 
     $('#city').change(function(){
 
-        // var ct = this.value;
-
         var ct = $(this).val();
         var ae = $(this).next().val();
         var tp = $(this).next().next().val();
         if(tp == null){
             tp = 0;
         }
-
-        // console.log(ae);
-
 
         $.get('/home/StoreAjax',{city:ct,area:ae,type:tp},function(data){
 
@@ -251,8 +246,6 @@
                 $('#searchCount').text(data.length);
 
                 for(var i = 0; i < data.length; i++){
-                    // console.log(data[i].StoreName);
-
                     
                     $('.active').eq(0).append(`<li class="map-address-item  col-6 col-xs-12  store-level-20">
                                 <section class="map-address-view">
@@ -318,17 +311,12 @@
 
     $('#area').change(function(){
 
-        // var ct = this.value;
-
         var ae = $(this).val();
         var tp = $(this).next().val();
         var ct = $(this).prev().val();
         if(tp == null){
             tp = 0;
         }
-
-        // console.log(ae);
-
 
         $.get('/home/StoreAjax',{city:ct,area:ae,type:tp},function(data){
 
@@ -512,15 +500,12 @@
                         });
 
                     })
-                // }
 
             }
 
         })
 
     })
-
-
 
     $('.chakanditu').click(function(){
         var dt = $('.chakanditu').attr('dt');
@@ -570,12 +555,6 @@
 
     });
 
-// $('.yanzheng').click(function(){
-
-//     alert('safasf');
-// })
-
-
 
 //Demo
 layui.use('form', function(){
@@ -597,16 +576,6 @@ $('.yanzheng').click(function(){
    console.log(ph);
 
 })
-
-
-// layer.open({
-//   type: 1,
-//   skin: 'layui-layer-rim', //加上边框
-//   area: ['420px', '240px'], //宽高
-//   content: 'html内容'
-// });
-
-
 
 </script> 
 

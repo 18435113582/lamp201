@@ -31,8 +31,13 @@
                     
 
                     <div class="col_full nobottommargin">
-                        {{csrf_field()}}
-                        <button class="button button-3d button-bottle green nomargin" id="submit" name="submit" value="login">登录</button>
+                        <center>
+                            {{csrf_field()}}
+                            <button class="button button-3d button-bottle green nomargin" id="submit" name="submit" value="login">登录</button>
+
+
+                        </center>
+                        
                        
                     </div>
                 </form>

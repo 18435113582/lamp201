@@ -87,7 +87,7 @@
       	@if($v->fixStatus == '1') <a style="color:red;" href="/admin/ServerEdit/{{$v->bid}}">派快递员取货</a> @endif
         @if($v->fixStatus == '2') <a style="color:red;" href="/admin/ServerEditt/{{$v->bid}}">返厂维修中</a> @endif
       	@if($v->fixStatus == '3') <a style="color:red;" href="/admin/ServerEdittt/{{$v->bid}}">维修完毕,快递寄回</a> @endif
-      	@if($v->fixStatus == '4') <a style="color:red;" href="/admin/ServerEditttt/{{$v->bid}}">添加历史</a> @endif
+      	@if($v->fixStatus == '4') <a style="color:red;" href="/admin/ServerEditttt/{{$v->bid}}">完成维修</a> @endif
   	  </td>
     </tr>
     @endif
