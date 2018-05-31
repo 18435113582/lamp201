@@ -126,7 +126,8 @@ class LoginController extends Controller
         //获取旧密码
         $pass = $request->input('oldpass');
 
-        $res = DB::table('user')->where('id',session('uid'))->first();
+        $res = DB::table('user')->where('id',session('homeInfo')->id)->first();
+
 
         //哈希
         if(!Hash::check($pass,$res->password)){
@@ -136,11 +137,13 @@ class LoginController extends Controller
 
         $foo['password'] = Hash::make($request->input('password'));
 
-        $data = DB::table('user')->where('id',session('uid'))->update($foo);
+        $data = DB::table('user')->where('id',session('homeInfo')->id)->update($foo);
 
         if($data){
 
             return redirect('home/login');
+        } else {
+            return back();
         }
 
     }
@@ -161,7 +164,7 @@ class LoginController extends Controller
         //获取旧手机号
         $phone = $request->input('oldphone');
 
-        $res = DB::table('user')->where('id',session('uid'))->first();
+        $res = DB::table('user')->where('id',session('homeInfo')->id)->first();
 
         
         if($phone!=($res->phone)){
@@ -171,11 +174,13 @@ class LoginController extends Controller
 
         $foo['phone'] = ($request->input('phone'));
 
-        $data = DB::table('user')->where('id',session('uid'))->update($foo);
+        $data = DB::table('user')->where('id',session('homeInfo')->id)->update($foo);
 
         if($data){
 
             return redirect('home/login');
+        } else {
+            return back();
         }
     }
 
@@ -197,7 +202,7 @@ class LoginController extends Controller
         //获取旧邮箱
         $mail = $request->input('oldemail');
 
-        $res = DB::table('user')->where('id',session('uid'))->first();
+        $res = DB::table('user')->where('id',session('homeInfo')->id)->first();
 
         
         if($mail!=($res->email)){
@@ -207,11 +212,13 @@ class LoginController extends Controller
 
         $foo['email'] = ($request->input('email'));
 
-        $data = DB::table('user')->where('id',session('uid'))->update($foo);
+        $data = DB::table('user')->where('id',session('homeInfo')->id)->update($foo);
 
         if($data){
 
             return redirect('home/login');
+        } else {
+            return back();
         }
 
     }

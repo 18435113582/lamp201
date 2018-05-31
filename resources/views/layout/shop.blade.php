@@ -366,7 +366,7 @@
                     </section>
                     <!--导航功能链接-->
                     <section class="oh-nav-link">
-                        <a href="" class="oh-navlink-bag oc-icon oc-iconfont-bag oc-iconfont-bag-bold oppo-tj"
+                        <a href="/cart/index" class="oh-navlink-bag oc-icon oc-iconfont-bag oc-iconfont-bag-bold oppo-tj"
                         data-tj="www|a|bag|icon">
                             <span class="oc-text-inside">
                                 购物车

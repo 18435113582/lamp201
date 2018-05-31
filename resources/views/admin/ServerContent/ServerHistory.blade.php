@@ -11,7 +11,7 @@
     <div class="mws-panel-body no-padding">
         <div role="grid" class="dataTables_wrapper" id="DataTables_Table_1_wrapper">
 
-		<form action="/admin/StoreIndex" method='get'>
+		<form action="/admin/ServerHistory" method='get'>
         	<div id="DataTables_Table_1_length" class="dataTables_length">
         		<label>显示
         			
@@ -67,7 +67,7 @@
   </thead>
   <tbody>
   	@foreach($data as $k=>$v)
-  	@if($v->fixStatus != '5')
+  	@if($v->fixStatus == '5')
     <tr>
       <td>{{$v->bid}}</td>
       <td>{{$v->bname}}</td>
@@ -80,16 +80,10 @@
       <td>{{date('Y-m-d H:i:s',$v->bbtime)}}</td>
       <td>{{$v->bphone}}</td>
       <td style="color:orange;">
-      	@if($v->fixStatus == '1') 待处理 @endif
-      	@if($v->fixStatus == '2') 快递员取货中 @endif
-      	@if($v->fixStatus == '3') 返厂维修中 @endif
-      	@if($v->fixStatus == '4') 维修完毕,快递送回 @endif
+      	完成
       </td>
       <td>
-      	@if($v->fixStatus == '1') <a style="color:red;" href="/admin/ServerEdit/{{$v->bid}}">派快递员取货</a> @endif
-        @if($v->fixStatus == '2') <a style="color:red;" href="/admin/ServerEditt/{{$v->bid}}">返厂维修中</a> @endif
-      	@if($v->fixStatus == '3') <a style="color:red;" href="/admin/ServerEdittt/{{$v->bid}}">维修完毕,快递寄回</a> @endif
-      	@if($v->fixStatus == '4') <a style="color:red;" href="/admin/ServerEditttt/{{$v->bid}}">完成维修</a> @endif
+        <a style="color:red;" href="/admin/ServerDelete/{{$v->bid}}">删除</a>
   	  </td>
     </tr>
     @endif

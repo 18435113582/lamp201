@@ -102,6 +102,7 @@ class ServerController extends Controller
     	$arr['btime'] = $value['btime'];
     	$arr['bstatus'] = $value['bstatus'];
     	$arr['bdescription'] = implode($value['inp'],'##');
+        $arr['uname'] = session('homeInfo')->username;
     	//预约时间
     	$arr['bbtime'] = time();
     	// dd($arr);

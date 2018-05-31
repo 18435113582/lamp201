@@ -211,7 +211,7 @@
 
                 <!--导航功能链接-->
 <section class="oh-nav-link">
-    <a href="" class="oh-navlink-bag oc-icon oc-iconfont-bag oc-iconfont-bag-bold oppo-tj" data-tj="www|a|bag|icon"><span class="oc-text-inside">购物车</span></a>
+    <a href="/cart/index" class="oh-navlink-bag oc-icon oc-iconfont-bag oc-iconfont-bag-bold oppo-tj" data-tj="www|a|bag|icon"><span class="oc-text-inside">购物车</span></a>
     <em class="oh-bag-arrow"></em>
 </section>
 
@@ -219,7 +219,7 @@
 <aside id="oh-navpopup-bag">
     <section class="oh-navbag-wrapper">
         <ul>
-            <li><a href="" target="_blank" id="oh-navbag-cart" class="oppo-tj" data-tj="www|a|bag|cart"><b class="oc-icon oc-iconfont-cart oc-iconfont-cart-bold"></b><span>购物车</span></a></li>
+            <li><a href="/cart/index" target="_blank" id="oh-navbag-cart" class="oppo-tj" data-tj="www|a|bag|cart"><b class="oc-icon oc-iconfont-cart oc-iconfont-cart-bold"></b><span>购物车</span></a></li>
             <li><a href="/order/index" target="_blank" class="oppo-tj" data-tj="www|a|bag|order"><b class="oc-icon oc-iconfont-order oc-iconfont-order-bold"></b><span>我的订单</span></a></li>
             <li><a href="/home/grzx" target="_blank" class="oppo-tj" data-tj="www|a|bag|account"><b class="oc-icon oc-iconfont-account oc-iconfont-account-bold"></b><span>个人中心</span></a></li>
             @if(session('homeFlag'))

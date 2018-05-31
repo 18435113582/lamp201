@@ -173,7 +173,7 @@
 <aside id="oh-navpopup-bag">
     <section class="oh-navbag-wrapper">
         <ul>
-            <li><a href="" target="_blank" id="oh-navbag-cart" class="oppo-tj" data-tj="www|a|bag|cart"><b class="oc-icon oc-iconfont-cart oc-iconfont-cart-bold"></b><span>购物车</span></a></li>
+            <li><a href="/cart/index" target="_blank" id="oh-navbag-cart" class="oppo-tj" data-tj="www|a|bag|cart"><b class="oc-icon oc-iconfont-cart oc-iconfont-cart-bold"></b><span>购物车</span></a></li>
             <li><a href="/order/index" target="_blank" class="oppo-tj" data-tj="www|a|bag|order"><b class="oc-icon oc-iconfont-order oc-iconfont-order-bold"></b><span>我的订单</span></a></li>
             <li><a href="/home/grzx" target="_blank" class="oppo-tj" data-tj="www|a|bag|account"><b class="oc-icon oc-iconfont-account oc-iconfont-account-bold"></b><span>个人中心</span></a>
             </li>

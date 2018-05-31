@@ -235,14 +235,14 @@
 
             if(data == '0'){
 
-                $('.h-gamma').eq(0).show();
+                $('.h-gamma').eq(0).fadeIn(2000);
                 $('.active').eq(0).empty();
                 $('#searchCount').text(0);
 
             } else {
 
                 $('.active').eq(0).empty();
-                $('.h-gamma').eq(0).hide();
+                $('.h-gamma').eq(0).fadeOut(1000);
                 $('#searchCount').text(data.length);
 
                 for(var i = 0; i < data.length; i++){
@@ -285,7 +285,7 @@
                         <a class="oc-btn btn-master show-route" href=""></a>
                     </div>
                 </section>
-            </li>`).show();
+            </li>`).fadeIn(2000);
 
                 }
                 $('.chakanditu').click(function(){
@@ -323,14 +323,14 @@
 
             if(data == '0'){
 
-                $('.h-gamma').eq(0).show();
+                $('.h-gamma').eq(0).fadeIn(2000);
                 $('.active').eq(0).empty();
                 $('#searchCount').text(0);
 
             } else {
 
                 $('.active').eq(0).empty();
-                $('.h-gamma').eq(0).hide();
+                $('.h-gamma').eq(0).fadeOut(1000);
                 $('#searchCount').text(data.length);
 
                 for(var i = 0; i < data.length; i++){
@@ -375,7 +375,7 @@
                         <a class="oc-btn btn-master show-route" href=""></a>
                     </div>
                 </section>
-            </li>`).show();
+            </li>`).fadeIn(2000);
 
                 }
 
@@ -429,14 +429,14 @@
             
             if(data == '0'){
 
-                $('.h-gamma').eq(0).show();
+                $('.h-gamma').eq(0).fadeIn(2000);
                 $('.active').eq(0).empty();
                 $('#searchCount').text(0);
 
             } else {
 
                 $('.active').eq(0).empty();
-                $('.h-gamma').eq(0).hide();
+                $('.h-gamma').eq(0).fadeOut(1000);
                 $('#searchCount').text(data.length);
 
                 for(var i = 0; i < data.length; i++){
@@ -481,7 +481,7 @@
                         <a class="oc-btn btn-master show-route" href=""></a>
                     </div>
                 </section>
-            </li>`).show();
+            </li>`).fadeIn(2000);
 
                 }
 

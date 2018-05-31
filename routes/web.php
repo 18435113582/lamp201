@@ -147,14 +147,17 @@ Route::group(['middleware'=>'login'],function(){
 	//体验店管理
 	Route::resource('admin/StoreIndex','admin\StoreIndexController');
 	//服务管理
-	Route::get('admin/ServerIndex','admin\ServerController@index');
+	Route::get('admin/ServerIndex','admin\ServerController@index')->middleware('login');
 	Route::get('admin/ServerEdit/{id}','admin\ServerController@edit1');
 	Route::get('admin/ServerEditt/{id}','admin\ServerController@edit2');
 	Route::get('admin/ServerEdittt/{id}','admin\ServerController@edit3');
 	Route::get('admin/ServerEditttt/{id}','admin\ServerController@edit4');
+	Route::get('admin/ServerHistory','admin\ServerController@history');
+	Route::get('admin/ServerDelete/{id}','admin\ServerController@delete');
 
 	//价格管理
 	Route::get('admin/priceIndex','admin\ServerController@priceIndex');
+	
 	//添加价格
 	Route::get('admin/priceAdd','admin\ServerController@priceAdd');
 	Route::post('admin/addPrice','admin\ModelController@oneAdd');

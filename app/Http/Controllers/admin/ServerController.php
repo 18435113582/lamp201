@@ -68,5 +68,42 @@ class ServerController extends Controller
 		return view('admin.priceContent.priceAdd',['title'=>'添加价格']);
 	}
 
+	public function history(Request $request)
+	{	
+		// $data = DB::table('breakdown')->get();
+
+		// return view('admin.ServerContent.ServerHistory',['title'=>'维修历史','data'=>$data]);
+
+		$res = DB::table('breakdown')->where('uname','like','%'.$request->search.'%')->
+        orderBy('bbtime','asc')->
+        paginate($request->input('num',10));
+
+        
+        $search = $request->search;
+        $num = $request->num;
+
+
+        return view('admin.ServerContent.ServerHistory',[
+            'title'=>'维修历史',
+            'data'=>$res,
+            'search'=>$search,
+            'num'=>$num
+        ]);
+	}
+
+	public function delete($id)
+	{
+
+		dd($id);
+		$del = DB::table('breakdown')->where('bid',$id)->delete();
+
+		if($del){
+
+			return redirect('/admin/ServerHistory');
+		}
+
+		
+	}
+
 	
 }
