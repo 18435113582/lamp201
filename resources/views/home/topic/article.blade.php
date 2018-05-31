@@ -53,7 +53,7 @@
   {{csrf_field()}}
     <div class="Editor p1">
       用户：
-      <input name="username" id="username" value="" >
+    <input type="hidden" name="username" id="username" value="" >
       <br>
       评论：
       <textarea name="content" id="content" value="" style="display: block;"></textarea>
