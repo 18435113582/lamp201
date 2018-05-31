@@ -461,15 +461,15 @@ Route::group([],function(){
 	Route::get('home/shop','home\GoodsController@index');
 	Route::get('home/read/{id}','home\GoodsController@read');
 
-	Route::get('cart/create','home\CartController@create');
-	Route::get('cart/index','home\CartController@index');
-	Route::get('cart/delete','home\CartController@delete');
-	Route::get('cart/cnt','home\CartController@cnt');
+	Route::get('cart/create','home\CartController@create')->middleware('homeLogin');
+	Route::get('cart/index','home\CartController@index')->middleware('homeLogin');
+	Route::get('cart/delete','home\CartController@delete')->middleware('homeLogin');
+	Route::get('cart/cnt','home\CartController@cnt')->middleware('homeLogin');
 
-	Route::get('order/create','home\OrdersController@create');
-	Route::post('order/save','home\OrdersController@save');
-	Route::get('order/index','home\OrdersController@index');
-	Route::get('order/det/{id}','home\OrdersController@det');
+	Route::get('order/create','home\OrdersController@create')->middleware('homeLogin');
+	Route::post('order/save','home\OrdersController@save')->middleware('homeLogin');
+	Route::get('order/index','home\OrdersController@index')->middleware('homeLogin');
+	Route::get('order/det/{id}','home\OrdersController@det')->middleware('homeLogin');
 
 	Route::get('img/create','admin\ImgController@create')->middleware('login');
 	Route::post('img/save','admin\ImgController@save')->middleware('login');
@@ -486,9 +486,10 @@ Route::group([],function(){
 	
 	Route::get('/goods/down/{id}','admin\GoodsController@down')->middleware('login');
 	Route::get('/goods/up/{id}','admin\GoodsController@up')->middleware('login');
-	Route::get('/order/status','home\OrdersController@qrsh');
-	Route::get('/order/cancel','home\OrdersController@qxdd');
-	//lipeng end
+
+	Route::get('/order/status','home\OrdersController@qrsh')->middleware('homeLogin');
+	Route::get('/order/cancel','home\OrdersController@qxdd')->middleware('homeLogin');
+
 
 
 	//维修进度查询

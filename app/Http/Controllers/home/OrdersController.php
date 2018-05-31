@@ -10,7 +10,8 @@ class OrdersController extends Controller
 
 	public function index()
 	{
-		$orders = DB::table('shop_orders') ->orderBy('otime', 'desc')->get();
+
+		$orders = DB::table('shop_orders')->where('uid',session('homeInfo')->id)->orderBy('otime', 'desc')->get();
 		$sum = null;
 		foreach($orders as $k=>$v)
 		{
@@ -32,7 +33,7 @@ class OrdersController extends Controller
     public function create()
     {
     	$carts = session('cart');
-    	// 
+    	 
     	if(!$carts){ 
     		$carts = [];
     	 }
@@ -68,6 +69,8 @@ class OrdersController extends Controller
         ]);
 
     	$orders = $request->except('_token');
+        
+        $orders['uid'] = session('homeInfo')->id;
     	$orders['oid'] = date('YmdHis').mt_rand(1000,9999);
     	$orders['otime'] = time();
     	$orders['sum'] = null;
@@ -96,7 +99,7 @@ class OrdersController extends Controller
     		DB::table('orders_det')->insert($orders_det);
     	}
     	DB::table('shop_orders')->insert($orders);
-    	session()->flush();
+    	session()->forget('cart');
     	$orders_det = DB::table('orders_det')->where('oid',$orders['oid'])->get();
     	
     	
