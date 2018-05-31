@@ -3,6 +3,8 @@
 @section('title',$title)
 
 @section('content')	
+
+
 <div class="container">
     <div class="thread-detail panel mv1">
       <div class="dropdown">
@@ -18,7 +20,8 @@
        </a> -->
         <div class="info">
           <div class="nickname">
-            <a href="#">session(用户名)</a>
+            
+            <a href="#" onclick="return false">{{$user}}</a>
           </div>
           <div class="aid-text">
             <!-- <span><i class="op-icon icon-td-date"></i>05-08 23:37</span><span class="pc-style"><i class="op-icon icon-td-look"></i>170306</span><span class="pc-style"><i class="op-icon icon-td-reply"></i>1417</span> -->
@@ -49,12 +52,16 @@
 
     <!-- 动态 -->
         <div  id="comment" style="display:none;">
-  <form class="Comment Cb form "  id="" action="##" method="POST">
+  <form class="Comment Cb form "  id="" action="#" method="POST">
   {{csrf_field()}}
     <div class="Editor p1">
-      用户：
-    <input type="hidden" name="username" id="username" value="" >
+     <!--  用户： -->
+    <input type="hidden" name="user_id" id="user_id" value="{{session('homeInfo')->id}}" >
+    <input type="hidden" name="username" id="" value="{{session('homeInfo')->username}}" >
+    <input type="hidden" name="art_title" id="" value="{{$article->title}}" >
+    <input type="hidden" name="art_id" id="" value="{{$article->id}}" >
       <br>
+
       评论：
       <textarea name="content" id="content" value="" style="display: block;"></textarea>
       <input type="text" id="xhe0_fixffcursor" style="position:absolute;display:none;">
@@ -82,7 +89,7 @@
          
           <div class="info-wrap">
             <div class="nickname">
-              <a href="#" onclick="return false;">$user</a><span name="like" class="" aj-param="{&quot;type&quot;:1,&quot;tid&quot;:269189916,&quot;pid&quot;:418390840,&quot;author_uid&quot;:8152652}"><i class="op-icon icon-th-like mobile-style"></i></span>
+              <a href="#" onclick="return false;">{{$user}}</a><span name="like" class="" aj-param="{&quot;type&quot;:1,&quot;tid&quot;:269189916,&quot;pid&quot;:418390840,&quot;author_uid&quot;:8152652}"><i class="op-icon icon-th-like mobile-style"></i></span>
             </div>
           
             <div class="dropdown">
@@ -150,10 +157,11 @@
                 data: $("form").serialize(),
                 success: function (data) {
                   //提交成功的提示词或者其他反馈代码
-                    var result=document.getElementById("success");
-                    result.innerHTML="成功!";
-                    console.log(data);
-                    // location.reload();
+                    if(data == '1'){
+                      var result=document.getElementById("success");
+                      result.innerHTML="成功!";
+                      location.reload();
+                    }
                 },
                 error : function() {
                   //提交失败的提示词或者其他反馈代码
@@ -163,11 +171,11 @@
                 async:true
             });
     }
-    $.get(
-          "{{route('dollarget')}}",function(data.status){
-              alert("数据:" + data　+ status);
-          }
-    );
+    // $.get(
+    //       "{{route('dollarget')}}",function(data.status){
+    //           alert("数据:" + data　+ status);
+    //       }
+    // );
 
 
 

@@ -1,5 +1,5 @@
 
-@extends('layout.topic.adminyu')
+@extends('layout.admin')
 
 @section('head')
 <!--  -->
@@ -31,13 +31,14 @@
 <!-- 操作button -->
  <script src="/static/layui/layui.js"></script>
 <!-- 表格table -->
-<table class="layui-table" lay-data="{width: 892, height:332, url:'/home/layui', page:true, id:'idTest'}" lay-filter="demo">
+<table class="layui-table" lay-data="{width: 892, height:500, url:'/home/layui', page:true, id:'idTest'}" lay-filter="demo">
   <thead>
     <tr>
       <th lay-data="{type:'checkbox', fixed: 'left'}"></th>
-      <th lay-data="{field:'art_id', width:80, sort: true, fixed: true}">ID</th>
-      <th lay-data="{field:'title', width:80}">标题</th>
-      <th lay-data="{field:'content', width:160}">内容</th>
+      <th lay-data="{field:'id', width:80, sort: true, fixed: true}">ID</th>
+      <th lay-data="{field:'username', width:150, sort: true, fixed: true}">用户名</th>
+      <th lay-data="{field:'title', width:180 , fixed: true}">标题</th>
+      <th lay-data="{field:'content', width:320 }">内容</th>
       <!-- <th lay-data="{field:'experience', width:80, sort: true}">积分</th> -->
       
       <!-- <th lay-data="{field:'wealth', width:135, sort: true}">财富</th>

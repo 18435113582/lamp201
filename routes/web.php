@@ -324,17 +324,21 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 
 	// Route::resource('/arts','ArticleController'); //    '/admin'
 	//后台文章列表 /admin/arts
-	Route::resource('arts','ArticleController');    //   '/admin/arts/create' 
-	Route::get('arts/create','ArticleController@create');  //'发布文章'
-	Route::post('arts/store','ArticleController@store');   //接收数据
-	
-	Route::get('arts/delete','ArticleController@delete');
-	// return view('admin.addarticle',['title'=>'添加文章']);
+	Route::resource('arts','ArticleController')->middleware('login');    //   '/admin/arts/create' 
+	Route::get('arts/create','ArticleController@create')->middleware('login');  //'发布文章'
+	Route::post('arts/store','ArticleController@store')->middleware('login');   //接收数据
+	Route::get('arts/delete','ArticleController@delete')->middleware('login');
 
-	Route::post('com','CommentController@store')->name('getajax');
-	Route::get('com/3','CommentController@show')->name('dollarget');
-	Route::resource('/comments','CommentsController');
 
+	//=================评论路由=======================
+	//前台
+	Route::post('com','CommentController@store')->name('getajax'); //接收评论
+	Route::get('com/3','CommentController@show')->name('dollarget');  //显示评论
+	//后台
+	Route::get('com/del/{id}','CommentController@delete')->middleware('login'); //删除评论
+	Route::get('com/index','CommentController@index')->middleware('login');//后台浏览评论
+
+	//=================评论路由=======================
 	//可以利用route()函数返回路由别名对应的路由
 	// Route::get('art',function(){
 		// return route('art');
@@ -351,12 +355,12 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 });
 
 
-//社区前台
+//=============================社区前台==========================
 	Route::group(['namespace'=>'home','prefix'=>'home'],function(){
-	Route::get('arts/index','ArticleController@Index');     //文章列表
-	Route::get('arts/create','ArticleController@create');
-	Route::get('arts/show/{id}','ArticleController@show');		//展示文章	
-	Route::get('arts/pub','ArticleController@publish');  	//发布文章
+	Route::get('arts/index','ArticleController@Index')->middleware('homeLogin');     //文章列表
+	Route::get('arts/create','ArticleController@create')->middleware('homeLogin');
+	Route::get('arts/show/{id}','ArticleController@show')->middleware('homeLogin');		//展示文章	
+	Route::get('arts/pub','ArticleController@publish')->middleware('homeLogin');  	//发布文章
 	Route::post('arts/store','ArticleController@store');	//接收文章	
 	
 
@@ -366,17 +370,17 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 	// 数据接口
 	Route::get('home/layui','home\LayuiController@layui');
 	//删除
-	Route::get('arts/delete','home\LayuiController@delete');
+	Route::get('arts/delete','home\LayuiController@delete')->middleware('login');
 	//后台详情
-	Route::get('arts/detail','home\LayuiController@detail');
+	Route::get('arts/detail','home\LayuiController@detail')->middleware('login');
 //友情链接管理
 Route::group([],function(){
-	Route::get('admin/link/index','LinkController@index');
-	Route::get('admin/link/create','LinkController@create');
-	Route::post('admin/link/store','LinkController@store');
-	Route::get('admin/link/del/{id}','LinkController@del');
-	Route::get('admin/link/edit/{id}','LinkController@edit');
-	Route::post('admin/link/update','LinkController@update');
+	Route::get('admin/link/index','LinkController@index')->middleware('login');
+	Route::get('admin/link/create','LinkController@create')->middleware('login');
+	Route::post('admin/link/store','LinkController@store')->middleware('login');
+	Route::get('admin/link/del/{id}','LinkController@del')->middleware('login');
+	Route::get('admin/link/edit/{id}','LinkController@edit')->middleware('login');
+	Route::post('admin/link/update','LinkController@update')->middleware('login');
 
 
 });

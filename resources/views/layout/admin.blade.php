@@ -48,7 +48,11 @@
         
             <!-- Logo Wrapper, images put within this wrapper will always be vertically centered -->
             <div id="mws-logo-wrap">
+<<<<<<< HEAD
                 <span style="color:yellow;font-size:30px;">鸿鹄商城后台</span>
+=======
+                <span style="color:yellow;font-size:30px;">鸿鹄组</span>
+>>>>>>> origin/Yu
             </div>
         </div>
         
@@ -253,6 +257,19 @@ Messages
                     </li>
                 </ul>
             </div>
+<<<<<<< HEAD
+=======
+            <div id="mws-navigation">
+                <ul>
+                    <li>
+                        <a href="#"><i class="icon-list"></i>评论管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/com/index">评论列表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+>>>>>>> origin/Yu
              <div id="mws-navigation">
                 <ul>
                     <li>
