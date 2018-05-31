@@ -155,6 +155,7 @@ Route::group(['middleware'=>'login'],function(){
 
 	//价格管理
 	Route::get('admin/priceIndex','admin\ServerController@priceIndex');
+	Route::get('admin/priceIndex','admin\ServerController@priceIndex');
 	//添加价格
 	Route::get('admin/priceAdd','admin\ServerController@priceAdd');
 	Route::post('admin/addPrice','admin\ModelController@oneAdd');
