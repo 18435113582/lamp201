@@ -43,8 +43,22 @@
             </label>
         </div>
         <div class="dataTables_filter" id="DataTables_Table_1_filter">
+            <label>产品系列选择:</label>
+            
+                <select class="small" name="cid">
+                    <option value="">全部</option>
+                    @foreach($cate as $k=>$v)
+                    <option 
+                        @if($v->cid == $cid) 
+                            selected
+                        @endif   
+                    value="{{$v->cid}}">{{$v->cname}}</option>
+
+                    @endforeach
+                </select>
+             
             <label>
-                关键字:
+                颜色:
                 <input type="text" aria-controls="DataTables_Table_1" name="search" value="{{$search}}">
             </label>
             <button class='btn btn-info'>搜索</button>
