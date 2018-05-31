@@ -23,11 +23,11 @@ Route::get('admin/loginout','admin\LoginController@loginout');
 //后台控制
 
 
-Route::get('admin/index','admin\IndexController@index');
+
 
 Route::group(['middleware'=>'login'],function(){
 	
-
+	Route::get('admin/index','admin\IndexController@index');
 	Route::get('admin/pass','admin\LoginController@pass');
 	Route::post('admin/changepass','admin\LoginController@changePass');
 	Route::post('admin/ajax','admin\IndexController@userAjax');
@@ -61,7 +61,7 @@ Route::group([],function(){
 	Route::get('home/pass','home\LoginController@pass');
 	Route::post('home/changepass','home\LoginController@changePass');	
 	Route::get('home/mail','home\IndexController@mail');
-	Route::get('home/index','home\IndexController@index');
+	// Route::get('home/index','home\IndexController@index');
 	
 
 });
@@ -394,31 +394,36 @@ Route::group([],function(){
 
 	//lipeng   start
 	Route::get('/','home\GoodsController@first');
-	Route::resource('admin/cate','admin\CateController');
-	Route::resource('admin/goods','admin\GoodsController');
+	Route::resource('admin/cate','admin\CateController')->middleware('login');
+	Route::resource('admin/goods','admin\GoodsController')->middleware('login');
 	Route::get('home/shop','home\GoodsController@index');
 	Route::get('home/read/{id}','home\GoodsController@read');
+
 	Route::get('cart/create','home\CartController@create');
 	Route::get('cart/index','home\CartController@index');
 	Route::get('cart/delete','home\CartController@delete');
 	Route::get('cart/cnt','home\CartController@cnt');
+
 	Route::get('order/create','home\OrdersController@create');
 	Route::post('order/save','home\OrdersController@save');
 	Route::get('order/index','home\OrdersController@index');
 	Route::get('order/det/{id}','home\OrdersController@det');
-	Route::get('img/create','admin\ImgController@create');
-	Route::post('img/save','admin\ImgController@save');
-	Route::get('img/index','admin\ImgController@index');
-	Route::get('img/edit/{id}','admin\ImgController@edit');
-	Route::post('img/update/{id}','admin\ImgController@update');
-	Route::post('img/delete/{id}','admin\ImgController@delete');
-	Route::get('admin/orders','admin\OrdersController@index');
-	Route::get('admin/orders/det/{id}','admin\OrdersController@det');
-	Route::get('admin/orders/edit/{id}','admin\OrdersController@edit');
-	Route::post('admin/orders/update/{id}','admin\OrdersController@update');
-	Route::get('/admin/orders/go','admin\OrdersController@go');
-	Route::get('/goods/down/{id}','admin\GoodsController@down');
-	Route::get('/goods/up/{id}','admin\GoodsController@up');
+
+	Route::get('img/create','admin\ImgController@create')->middleware('login');
+	Route::post('img/save','admin\ImgController@save')->middleware('login');
+	Route::get('img/index','admin\ImgController@index')->middleware('login');
+	Route::get('img/edit/{id}','admin\ImgController@edit')->middleware('login');
+	Route::post('img/update/{id}','admin\ImgController@update')->middleware('login');
+	Route::post('img/delete/{id}','admin\ImgController@delete')->middleware('login');
+
+	Route::get('admin/orders','admin\OrdersController@index')->middleware('login');
+	Route::get('admin/orders/det/{id}','admin\OrdersController@det')->middleware('login');
+	Route::get('admin/orders/edit/{id}','admin\OrdersController@edit')->middleware('login');
+	Route::post('admin/orders/update/{id}','admin\OrdersController@update')->middleware('login');
+	Route::get('/admin/orders/go','admin\OrdersController@go')->middleware('login');
+	
+	Route::get('/goods/down/{id}','admin\GoodsController@down')->middleware('login');
+	Route::get('/goods/up/{id}','admin\GoodsController@up')->middleware('login');
 	Route::get('/order/status','home\OrdersController@qrsh');
 	Route::get('/order/cancel','home\OrdersController@qxdd');
 
@@ -433,7 +438,7 @@ Route::group([],function(){
 
 	// 配件价格
 	Route::get('home/price','home\ServerController@price');
-	Route::get('home/priceAjax','admin\ModelController@priceAjax');
+	Route::get('home/priceAjax','admin\ModelController@priceAjax')->middleware('login');
 
 });
 

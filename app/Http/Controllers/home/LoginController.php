@@ -29,12 +29,8 @@ class LoginController extends Controller
 
     	$data = DB::table('user')->where('username',$res)->first();
 
-        
-
-        
-
         session(['homeFlag'=>true,'homeInfo'=>$data]);
-
+        
     	if(!$data){
 
     		 return back()->with('err','账号或者密码错误!');
