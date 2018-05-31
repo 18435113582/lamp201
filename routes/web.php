@@ -61,7 +61,7 @@ Route::group([],function(){
 	Route::get('home/pass','home\LoginController@pass');
 	Route::post('home/changepass','home\LoginController@changePass');	
 	Route::get('home/mail','home\IndexController@mail');
-	// Route::get('home/index','home\IndexController@index');
+
 	
 
 });

@@ -172,9 +172,18 @@ class UserController extends Controller
         //
         //表单验证
         $res = DB::table('user')->where('id',$id)->first();
-        $date = '@'.unlink('.'.$res->profile);
+        
 
-        if(!$date){
+        /*if($res->profile){
+
+            $data = '@'.unlink('.'.$res->profile);
+        }else{
+            return back();
+        }*/
+
+        $data = '@'.unlink('.'.$res->profile);
+
+        if(!$data){
 
             return back();
         }

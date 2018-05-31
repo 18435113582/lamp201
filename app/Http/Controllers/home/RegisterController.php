@@ -82,7 +82,7 @@ class RegisterController extends Controller
             return back()->with('msg','验证码不一致!');
         }
 
-        $res['profile'] = '/uploads/3546_1526121763.jpg';
+        $res['profile'] = '/uploads/111111.jpg';
 
         $res['status'] = 0;
 
