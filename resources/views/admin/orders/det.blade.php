@@ -73,7 +73,7 @@
                     <td>{{$v->cnt}}</td>
                     <td>
 						<img src="{{$v->zp}}" alt="">
-						{{$v->gname}}
+						{{$v->zname}}
                     </td>
                 </tr>
                 @endforeach

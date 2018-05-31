@@ -15,21 +15,42 @@ class GoodsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
-    {
+    {   
+        $cate = DB::table('shop_cates')->
+        select(DB::raw('*,concat(path,cid) as paths'))->
+        orderBy('paths')->
+        get();
+         foreach($cate as $k=>$v)
+        {
+            $foo = explode(',',$v->path);
+            $level  = count($foo)-2;
+
+            $v->cname = str_repeat('&nbsp;',$level*8).'|--'.$v->cname;
+        }
         $arr = $request->all();
+        $condition = [];
+        
+        if ($search = $request->input('search')){
+            $condition[] = ['color','like','%'.$search.'%',];
+        }
+        if ($cid = $request->input('cid')){
+            $condition[] = ['cid','=',$cid];
+        }
         $res = DB::table('shop_goods')
-        ->where('gname','like','%'.$request->input('search').'%')
+        ->where($condition)
         ->paginate($request->input('num',10));
 
         $num = $request->input('num');
         $search = $request->input('search');
-
+        $cid = $request->input('cid');
         return view('admin.goods.index',[
             'title'=>'商品列表',
             'res'=>$res,
             'num'=>$num,
             'search'=>$search,
-            'request'=>$arr
+            'request'=>$arr,
+            'cate'=>$cate,
+            'cid'=>$cid
         ]);
     }
 

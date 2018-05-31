@@ -70,13 +70,18 @@
                     	订单号
                     </th>
                     <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
+                    rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
+                    style="width: 200px;">
+                       订单用户ID
+                    </th>
+                    <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
                     rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
-                    style="width: 150px;">
+                    style="width: 50px;">
                         收货人
                     </th>
                      <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
                     rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending"
-                    style="width: 500px;">
+                    style="width: 400px;">
                         收货地址
                     </th>
                     <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
@@ -105,7 +110,7 @@
                     </th>
                     <th class="sorting" role="columnheader" tabindex="0" aria-controls="DataTables_Table_1"
                     rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending"
-                    style="width: 500px;">
+                    style="width: 600px;">
                        操作
                     </th>
                     
@@ -123,6 +128,9 @@
 
                     <td class="">
                         {{$v->oid}}
+                    </td>
+                    <td class="">
+                        {{$v->uid}}
                     </td>
                     <td class="">
                         {{$v->rec}}
@@ -233,7 +241,7 @@
             
         $('.go').click(function(){
             var oid = $(this).parents('tr').find('td').eq(0).text();
-            var status = $(this).parents('tr').find('td').eq(7);
+            var status = $(this).parents('tr').find('td').eq(8);
             var go = $(this);
             
             $.get('/admin/orders/go',{oid:oid},function(data){
