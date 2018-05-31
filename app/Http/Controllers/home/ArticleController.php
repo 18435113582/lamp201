@@ -5,6 +5,7 @@ namespace App\Http\Controllers\home;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Article;
+use App\Models\Comment;
 use App\Models\User;
 use DB;
 class ArticleController extends Controller
@@ -14,7 +15,7 @@ class ArticleController extends Controller
     {	
     	
         // $page = DB::table('article')->paginate(5);
-        $user = DB::table('user')->join('article','user.id','=','article.user_id')->paginate(2);
+        $user = DB::table('user')->join('article','user.id','=','article.user_id')->paginate(3);
         // $uuu = $user->paginate(1);
         $comment = DB::table('article')->join('comments','article.id','=','comments.art_id')->get();
 
@@ -96,11 +97,13 @@ class ArticleController extends Controller
     public function show($id)
     {
         //
-        $allarticle = Article::where('art_id',$id)->first();
-        // dd($allarticle);
+        $allarticle = Article::where('id',$id)->first();
+        $com = Comment::where('art_id',$id)->get();
+        // dd($com);
         return view('home.topic.article',[
             'article'=>$allarticle ,
             'title'=>$allarticle['title'],
+            'comments' => $com
         ]);
     }
 

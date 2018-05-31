@@ -178,7 +178,7 @@ body>iframe#blockbyte-bs-overlay {
       <i class="op-icon icon-arrow-l-s1"></i>
       </a>
       <div class="brand">
-        <a href="#" >    <!-- 跳回首页 -->
+        <a href="/home/arts/index" >    <!-- 跳回首页 -->
           <i class="op-icon icon-n-logo"><area shape="rect" coords="-88,-281,-294,-320" href="./images/icon-sprite.png" alt=""></i></a>
       </div>
       <!-- <ul class="nav">
@@ -199,8 +199,8 @@ body>iframe#blockbyte-bs-overlay {
         </li>
       </ul> -->
       <div class="right-nav">
-        <a class="" target="_self" href="#"><i class="layui-icon layui-icon-close"  style="font-size:26px"></i></a>
-        <a class="" target="_self" href="#" id="Top_Member" aj-state="loaded"><span><i class="layui-icon layui-icon-username" style="font-size:26px"></i><!-- <img class="avater" src="/home/topic/images/noavatar_big.png"> --><!-- <u></u> --></span></a>
+        <a class="" target="_self" href="#"><i class="layui-icon layui-icon-home"  style="font-size:26px"></i></a>
+        <a class="" target="_self" href="#" id="Top_Member" aj-state="loaded"><span><i class="layui-icon layui-icon-close" style="font-size:26px"></i><!-- <img class="avater" src="/home/topic/images/noavatar_big.png"> --><!-- <u></u> --></span></a>
       </div>
     </div>
   </div>

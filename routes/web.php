@@ -217,16 +217,6 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 	Route::post('com','CommentController@store')->name('getajax');
 	Route::get('com/3','CommentController@show')->name('dollarget');
 	Route::resource('/comments','CommentsController');
-});
-
-
-//社区前台
-	Route::group(['namespace'=>'home','prefix'=>'home'],function(){
-	Route::get('arts/index','ArticleController@Index');     //文章列表
-	Route::get('arts/create','ArticleController@create');
-	Route::get('arts/show','ArticleController@show');		//展示文章	
-	Route::get('arts/pub','ArticleController@publish');  	//发布文章
-	Route::post('arts/store','ArticleController@store');	//接收文章	
 
 	//可以利用route()函数返回路由别名对应的路由
 	// Route::get('art',function(){
@@ -241,13 +231,17 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 	// GET		/article/{id}/edit	edit			编辑（显示表单）
 	// PUT/PATCH	/article/{id}	save			保存你编辑的数据
 	// GET		/article/{id}		destroy			删除
+});
 
 
+//社区前台
+	Route::group(['namespace'=>'home','prefix'=>'home'],function(){
+	Route::get('arts/index','ArticleController@Index');     //文章列表
+	Route::get('arts/create','ArticleController@create');
+	Route::get('arts/show/{id}','ArticleController@show');		//展示文章	
+	Route::get('arts/pub','ArticleController@publish');  	//发布文章
+	Route::post('arts/store','ArticleController@store');	//接收文章	
 	
-
-
-
-
 
 
 });

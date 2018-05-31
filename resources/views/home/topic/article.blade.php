@@ -18,7 +18,7 @@
        </a> -->
         <div class="info">
           <div class="nickname">
-            <a href="#">夏目贵治</a>
+            <a href="#">session(用户名)</a>
           </div>
           <div class="aid-text">
             <!-- <span><i class="op-icon icon-td-date"></i>05-08 23:37</span><span class="pc-style"><i class="op-icon icon-td-look"></i>170306</span><span class="pc-style"><i class="op-icon icon-td-reply"></i>1417</span> -->
@@ -30,11 +30,11 @@
           {{$article->title}}
         </div>
         <div class="content __reader_view_article_wrap_3243753196643948__">
-        <a type="3" class="C3fcab8" href="#">#遇见夏天#
-          </a><a type="3" class="C3fcab8" href="#">#我们正年轻#</a><a type="3" class="C3fcab8" href="#">#星拍客精选#</a><br>
-          <div style="width:400px;height: 400px;border:solid red 1px"><p>内容{{$article->content}}</p></div>
+       <!--  <a type="3" class="C3fcab8" href="#">#遇见夏天#
+          </a><a type="3" class="C3fcab8" href="#">#我们正年轻#</a><a type="3" class="C3fcab8" href="#">#星拍客精选#</a><br> -->
+          <div><p>{{$article->content}}</p></div>
           
-          <a type="1" class="C3fcab8" href="#" uid="12415956">@颜小爱</a><a type="1" class="C3fcab8" href="#" uid="12572031">@咋拍</a><a type="1" class="C3fcab8" href="#" uid="5038772">@大版主</a><br>
+         <!--  <a type="1" class="C3fcab8" href="#" uid="12415956">@颜小爱</a><a type="1" class="C3fcab8" href="#" uid="12572031">@咋拍</a><a type="1" class="C3fcab8" href="#" uid="5038772">@大版主</a> --><br>
           
         </div>
       </div>
@@ -53,7 +53,7 @@
   {{csrf_field()}}
     <div class="Editor p1">
       用户：
-      <input name="username" id="username" value="">
+      <input name="username" id="username" value="" >
       <br>
       评论：
       <textarea name="content" id="content" value="" style="display: block;"></textarea>
@@ -77,22 +77,23 @@
       <div class="commit-list">  
            
 		<!-- 一个评论块START -->
+    @foreach($comments as $k => $v)
         <div class="commit-item" data-id="418390840" id="floor_2" data-time="1525795816">
          
           <div class="info-wrap">
             <div class="nickname">
-              <a href="#">$user</a><span name="like" class="" aj-param="{&quot;type&quot;:1,&quot;tid&quot;:269189916,&quot;pid&quot;:418390840,&quot;author_uid&quot;:8152652}"><i class="op-icon icon-th-like mobile-style"></i></span>
+              <a href="#" onclick="return false;">$user</a><span name="like" class="" aj-param="{&quot;type&quot;:1,&quot;tid&quot;:269189916,&quot;pid&quot;:418390840,&quot;author_uid&quot;:8152652}"><i class="op-icon icon-th-like mobile-style"></i></span>
             </div>
           
             <div class="dropdown">
               <div class="drop-btn desc">
-                 $comments->content
+                 {{$v->content}}
               </div>
             </div>
             <!-- reply======================================================= -->
         </div>
       </div>
-      
+    @endforeach  
     <!-- 一个评论块END -->
 
             <!-- reply======================================================= -->
@@ -163,7 +164,7 @@
             });
     }
     $.get(
-          '{{route(dollarget)}}',function(data.status){
+          "{{route('dollarget')}}",function(data.status){
               alert("数据:" + data　+ status);
           }
     );
