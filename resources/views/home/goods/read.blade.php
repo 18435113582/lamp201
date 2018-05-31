@@ -324,7 +324,7 @@
 
                                         <a  class="oc-btn btn-master btn-size-master" id="goBuy" data-targetext="立即购买"
                                         data-sticky>
-                                            立即购买
+                                            加入购物车
                                         </a>
                                        <script>
                                             var count = $('#input-num').attr('value');
