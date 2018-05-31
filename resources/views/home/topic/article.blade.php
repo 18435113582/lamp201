@@ -58,6 +58,7 @@
      <!--  用户： -->
     <input type="hidden" name="user_id" id="user_id" value="{{session('homeInfo')->id}}" >
     <input type="hidden" name="username" id="" value="{{session('homeInfo')->username}}" >
+    <input type="hidden" name="art_title" id="" value="{{$article->title}}" >
     <input type="hidden" name="art_id" id="" value="{{$article->id}}" >
       <br>
 

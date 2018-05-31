@@ -25,12 +25,6 @@ class CommentController extends Controller
         $data = DB::table('comments')->insert($res);
 
         echo $data;
-
-        
-
-
-
-      
      
     }
     // //返回显示评论
@@ -41,6 +35,16 @@ class CommentController extends Controller
     //     return view();
     // }
 
+    public function index()
+    {
+        $com = DB::table('comments')->get();
 
+        return view('admin.topic.comlist',['com'=>$com]);
+    }
+    public function delete($id)
+    {
+        $num = DB::table('comments')->where('id',$id)->delete();
+        return redirect('/admin/com/index');
+    }
 
 }

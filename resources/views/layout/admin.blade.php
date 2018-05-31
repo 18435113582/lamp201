@@ -252,6 +252,16 @@ Messages
                     </li>
                 </ul>
             </div>
+            <div id="mws-navigation">
+                <ul>
+                    <li>
+                        <a href="#"><i class="icon-list"></i>评论管理</a>
+                        <ul class="closed">
+                            <li><a href="/admin/com/index">评论列表</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
              <div id="mws-navigation">
                 <ul>
                     <li>

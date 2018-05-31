@@ -330,8 +330,13 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 
 
 	//=================评论路由=======================
+	//前台
 	Route::post('com','CommentController@store')->name('getajax'); //接收评论
 	Route::get('com/3','CommentController@show')->name('dollarget');  //显示评论
+	//后台
+	Route::get('com/del/{id}','CommentController@delete')->middleware('login'); //删除评论
+	Route::get('com/index','CommentController@index')->middleware('login');//后台浏览评论
+
 	//=================评论路由=======================
 	//可以利用route()函数返回路由别名对应的路由
 	// Route::get('art',function(){
