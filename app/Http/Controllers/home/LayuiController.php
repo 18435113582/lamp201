@@ -12,17 +12,19 @@ class LayuiController extends Controller
 {
     //
    
-    public function layui()
+    public function layui() //    /home/layui
     {
 
-    	$allarticle = Article::get();
+    	// $allarticle = Article::get();
+        $allarticle = DB::table('article')->join('user','user.id','=','article.user_id')->get();
+        // dd($allarticle);
         foreach($allarticle as $k => $v)
         {
            
-            $attr['art_id'] = $v->art_id;
+            $attr['id'] = $k+1;
             $attr['title'] = $v->title;
             $attr['content'] = $v->content;
-            // $attr['user_id'] = $v->user_id;
+            $attr['username'] = $v->username;
            
             $j[] = $attr;
           

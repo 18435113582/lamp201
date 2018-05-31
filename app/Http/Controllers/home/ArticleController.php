@@ -97,13 +97,22 @@ class ArticleController extends Controller
     public function show($id)
     {
         //
+        $com= [];
+
+        //=====
         $allarticle = Article::where('id',$id)->first();
+        $a = $allarticle['user_id'];
+        $b = DB::table('user')->select('username')->where('id',$a)->get();
+        // dd($b[0]->username);
         $com = Comment::where('art_id',$id)->get();
         // dd($com);
         return view('home.topic.article',[
             'article'=>$allarticle ,
             'title'=>$allarticle['title'],
-            'comments' => $com
+             'user' => $b[0]->username,
+            'comments' => $com,
+
+
         ]);
     }
 
