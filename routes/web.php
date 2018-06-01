@@ -369,9 +369,9 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 	// 数据接口
 	Route::get('home/layui','home\LayuiController@layui');
 	//删除
-	Route::get('arts/delete','home\LayuiController@delete')->middleware('login');
+	Route::get('arts/delete','home\LayuiController@delete');
 	//后台详情
-	Route::get('arts/detail','home\LayuiController@detail')->middleware('login');
+	Route::get('arts/detail','home\LayuiController@detail');
 //友情链接管理
 Route::group([],function(){
 	Route::get('admin/link/index','LinkController@index')->middleware('login');

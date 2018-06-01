@@ -93,7 +93,7 @@ layui.use('table', function(){
         layer.close(index);
    // $('#delit').click(function(){
 
-         $.get("/arts/delete",{id:id},function(data){
+         $.get("arts/delete",{id:id},function(data){
               if(data){
               layer.msg('删除成功',{time:2000});
         }else {
