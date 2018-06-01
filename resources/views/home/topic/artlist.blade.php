@@ -43,13 +43,16 @@
 	 
     </tr>
 
- 
 
   </tbody>
 
-  	<!-- endforeach -->
+    <!-- endforeach -->
   @endforeach
 </table>
+
+    
+ 
+
 		
 	
 <style type="text/css">
@@ -127,7 +130,10 @@
         }
     </style>
 	<center>
-    			{{$user->links()}}
+        <div style="height:70px">
+            
+            {{$user->links()}}
+        </div>
 	</center>
 
 

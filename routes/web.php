@@ -360,7 +360,7 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 	Route::get('arts/create','ArticleController@create')->middleware('homeLogin');
 	Route::get('arts/show/{id}','ArticleController@show')->middleware('homeLogin');		//展示文章	
 	Route::get('arts/pub','ArticleController@publish')->middleware('homeLogin');  	//发布文章
-	Route::post('arts/store','ArticleController@store');	//接收文章	
+	Route::post('arts/store','ArticleController@store')->middleware('homeLogin');	//接收文章	
 	
 
 
