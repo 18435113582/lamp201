@@ -361,7 +361,7 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 	Route::get('arts/create','ArticleController@create')->middleware('homeLogin');
 	Route::get('arts/show/{id}','ArticleController@show')->middleware('homeLogin');		//展示文章	
 	Route::get('arts/pub','ArticleController@publish')->middleware('homeLogin');  	//发布文章
-	Route::post('arts/store','ArticleController@store');	//接收文章	
+	Route::post('arts/store','ArticleController@store')->middleware('homeLogin');	//接收文章	
 	
 
 
@@ -370,9 +370,9 @@ Route::group(['namespace'=>'admin','prefix'=>'admin'],function(){
 	// 数据接口
 	Route::get('home/layui','home\LayuiController@layui');
 	//删除
-	Route::get('arts/delete','home\LayuiController@delete')->middleware('login');
+	Route::get('arts/delete','home\LayuiController@delete');
 	//后台详情
-	Route::get('arts/detail','home\LayuiController@detail')->middleware('login');
+	Route::get('arts/detail','home\LayuiController@detail');
 //友情链接管理
 Route::group([],function(){
 	Route::get('admin/link/index','LinkController@index')->middleware('login');

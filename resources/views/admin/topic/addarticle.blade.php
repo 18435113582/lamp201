@@ -16,6 +16,7 @@
 		<div id='title' border='solid 1px red'>
 			<span>标题:</span><br>
 			<input type="text" name='title' style='width:450px'>
+			<input type="hidden" name="id" id="user_id" value="2" >
 		</div>
 		<!-- <div id='title' border='solid 1px red'>
 			<span>用户名:</span><br>

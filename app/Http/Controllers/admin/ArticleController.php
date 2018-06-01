@@ -59,6 +59,7 @@ class ArticleController extends Controller
 
         $allarticle->title = $request->get('title');
         $allarticle->content = $request->get('content');
+        $allarticle->user_id  = $request->get('id');                             
         
         // $article->user_id = $request->user()->id;
         if($allarticle->save()){

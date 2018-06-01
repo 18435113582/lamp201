@@ -15,7 +15,7 @@ class ArticleController extends Controller
     {	
     	
         // $page = DB::table('article')->paginate(5);
-        $user = DB::table('user')->join('article','user.id','=','article.user_id')->paginate(3);
+        $user = DB::table('user')->join('article','user.id','=','article.user_id')->paginate(5);
         // $uuu = $user->paginate(1);
         $comment = DB::table('article')->join('comments','article.id','=','comments.art_id')->get();
 
@@ -71,6 +71,7 @@ class ArticleController extends Controller
      */
    public function store(Request $request)
    {
+        // dd($request);
         $this -> validate($request,[
             'title' => 'required|unique:article|max:255',
             'content' => 'required',
@@ -78,7 +79,7 @@ class ArticleController extends Controller
         $allarticle = new Article;
         $allarticle -> title = $request->get('title');
         $allarticle -> content = $request->get('content');
-        // $allarticle -> user_id = $request->user()->id;
+        $allarticle -> user_id = $request->get('id');
         // return $allarticle;die;
         if($allarticle->save()){
             return redirect('home/arts/index');
@@ -110,7 +111,8 @@ class ArticleController extends Controller
             'article'=>$allarticle ,
             'title'=>$allarticle['title'],
              'user' => $b[0]->username,
-            'comments' => $com,
+             'comuser'=> session('homeInfo')->username,
+            'comments' => $com
 
 
         ]);

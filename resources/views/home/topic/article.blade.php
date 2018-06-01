@@ -89,7 +89,7 @@
          
           <div class="info-wrap">
             <div class="nickname">
-              <a href="#" onclick="return false;">{{$user}}</a><span name="like" class="" aj-param="{&quot;type&quot;:1,&quot;tid&quot;:269189916,&quot;pid&quot;:418390840,&quot;author_uid&quot;:8152652}"><i class="op-icon icon-th-like mobile-style"></i></span>
+              <a href="#" onclick="return false;">{{$comuser}}</a><span name="like" class="" aj-param="{&quot;type&quot;:1,&quot;tid&quot;:269189916,&quot;pid&quot;:418390840,&quot;author_uid&quot;:8152652}"><i class="op-icon icon-th-like mobile-style"></i></span>
             </div>
           
             <div class="dropdown">

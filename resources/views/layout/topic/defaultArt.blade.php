@@ -199,6 +199,8 @@ body>iframe#blockbyte-bs-overlay {
         </li>
       </ul> -->
       <div class="right-nav">
+        <!-- <a href="/home/arts/pub" class="layui-btn layui-btn-lg layui-btn-xs" style="margin-right:50px">发布文章</a>    -->
+        <a class="" target="_self" href="/home/arts/pub"><i class="layui-icon layui-icon-add-1"  style="font-size:26px"></i></a>
         <a class="" target="_self" href="/"><i class="layui-icon layui-icon-home"  style="font-size:26px"></i></a>
         <a class="" target="_self" href="/home/loginout" id="Top_Member" aj-state="loaded"><span><i class="layui-icon layui-icon-close" style="font-size:26px"></i><!-- <img class="avater" src="/home/topic/images/noavatar_big.png"> --><!-- <u></u> --></span></a>
       </div>
